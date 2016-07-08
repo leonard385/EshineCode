@@ -1,0 +1,328 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1893C9411C4BBD960077B809 /* TimeDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1893C9401C4BBD960077B809 /* TimeDownView.m */; };
+		1898F4071C48C4C900EAE08C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1898F4061C48C4C900EAE08C /* main.m */; };
+		1898F40A1C48C4C900EAE08C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1898F4091C48C4C900EAE08C /* AppDelegate.m */; };
+		1898F40D1C48C4C900EAE08C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1898F40C1C48C4C900EAE08C /* ViewController.m */; };
+		1898F4101C48C4C900EAE08C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1898F40E1C48C4C900EAE08C /* Main.storyboard */; };
+		1898F4121C48C4C900EAE08C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1898F4111C48C4C900EAE08C /* Assets.xcassets */; };
+		1898F4151C48C4C900EAE08C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1898F4131C48C4C900EAE08C /* LaunchScreen.storyboard */; };
+		1898F41E1C48C89200EAE08C /* QosTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1898F41D1C48C89200EAE08C /* QosTimer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1893C93F1C4BBD960077B809 /* TimeDownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeDownView.h; sourceTree = "<group>"; };
+		1893C9401C4BBD960077B809 /* TimeDownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeDownView.m; sourceTree = "<group>"; };
+		1898F4021C48C4C900EAE08C /* 请求验证码倒计时Label.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "请求验证码倒计时Label.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1898F4061C48C4C900EAE08C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1898F4081C48C4C900EAE08C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1898F4091C48C4C900EAE08C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1898F40B1C48C4C900EAE08C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1898F40C1C48C4C900EAE08C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1898F40F1C48C4C900EAE08C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1898F4111C48C4C900EAE08C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1898F4141C48C4C900EAE08C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1898F4161C48C4C900EAE08C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1898F41C1C48C89200EAE08C /* QosTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QosTimer.h; sourceTree = "<group>"; };
+		1898F41D1C48C89200EAE08C /* QosTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QosTimer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1898F3FF1C48C4C900EAE08C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1898F3F91C48C4C900EAE08C = {
+			isa = PBXGroup;
+			children = (
+				1898F4041C48C4C900EAE08C /* 请求验证码倒计时Label */,
+				1898F4031C48C4C900EAE08C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1898F4031C48C4C900EAE08C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1898F4021C48C4C900EAE08C /* 请求验证码倒计时Label.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1898F4041C48C4C900EAE08C /* 请求验证码倒计时Label */ = {
+			isa = PBXGroup;
+			children = (
+				18E1632A1D2F964400C974EC /* timeDown */,
+				1898F4081C48C4C900EAE08C /* AppDelegate.h */,
+				1898F4091C48C4C900EAE08C /* AppDelegate.m */,
+				1898F40B1C48C4C900EAE08C /* ViewController.h */,
+				1898F40C1C48C4C900EAE08C /* ViewController.m */,
+				1898F40E1C48C4C900EAE08C /* Main.storyboard */,
+				1898F4111C48C4C900EAE08C /* Assets.xcassets */,
+				1898F4131C48C4C900EAE08C /* LaunchScreen.storyboard */,
+				1898F4161C48C4C900EAE08C /* Info.plist */,
+				1898F4051C48C4C900EAE08C /* Supporting Files */,
+			);
+			path = "请求验证码倒计时Label";
+			sourceTree = "<group>";
+		};
+		1898F4051C48C4C900EAE08C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1898F4061C48C4C900EAE08C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18E1632A1D2F964400C974EC /* timeDown */ = {
+			isa = PBXGroup;
+			children = (
+				1898F41C1C48C89200EAE08C /* QosTimer.h */,
+				1898F41D1C48C89200EAE08C /* QosTimer.m */,
+				1893C93F1C4BBD960077B809 /* TimeDownView.h */,
+				1893C9401C4BBD960077B809 /* TimeDownView.m */,
+			);
+			name = timeDown;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1898F4011C48C4C900EAE08C /* 请求验证码倒计时Label */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1898F4191C48C4C900EAE08C /* Build configuration list for PBXNativeTarget "请求验证码倒计时Label" */;
+			buildPhases = (
+				1898F3FE1C48C4C900EAE08C /* Sources */,
+				1898F3FF1C48C4C900EAE08C /* Frameworks */,
+				1898F4001C48C4C900EAE08C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "请求验证码倒计时Label";
+			productName = "请求验证码倒计时Label";
+			productReference = 1898F4021C48C4C900EAE08C /* 请求验证码倒计时Label.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1898F3FA1C48C4C900EAE08C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = eshine;
+				TargetAttributes = {
+					1898F4011C48C4C900EAE08C = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 1898F3FD1C48C4C900EAE08C /* Build configuration list for PBXProject "请求验证码倒计时Label" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1898F3F91C48C4C900EAE08C;
+			productRefGroup = 1898F4031C48C4C900EAE08C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1898F4011C48C4C900EAE08C /* 请求验证码倒计时Label */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1898F4001C48C4C900EAE08C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1898F4151C48C4C900EAE08C /* LaunchScreen.storyboard in Resources */,
+				1898F4121C48C4C900EAE08C /* Assets.xcassets in Resources */,
+				1898F4101C48C4C900EAE08C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1898F3FE1C48C4C900EAE08C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1898F40D1C48C4C900EAE08C /* ViewController.m in Sources */,
+				1898F41E1C48C89200EAE08C /* QosTimer.m in Sources */,
+				1898F40A1C48C4C900EAE08C /* AppDelegate.m in Sources */,
+				1893C9411C4BBD960077B809 /* TimeDownView.m in Sources */,
+				1898F4071C48C4C900EAE08C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1898F40E1C48C4C900EAE08C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1898F40F1C48C4C900EAE08C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1898F4131C48C4C900EAE08C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1898F4141C48C4C900EAE08C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1898F4171C48C4C900EAE08C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1898F4181C48C4C900EAE08C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1898F41A1C48C4C900EAE08C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "请求验证码倒计时Label/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eshine.--------Label";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1898F41B1C48C4C900EAE08C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "请求验证码倒计时Label/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eshine.--------Label";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1898F3FD1C48C4C900EAE08C /* Build configuration list for PBXProject "请求验证码倒计时Label" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1898F4171C48C4C900EAE08C /* Debug */,
+				1898F4181C48C4C900EAE08C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1898F4191C48C4C900EAE08C /* Build configuration list for PBXNativeTarget "请求验证码倒计时Label" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1898F41A1C48C4C900EAE08C /* Debug */,
+				1898F41B1C48C4C900EAE08C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1898F3FA1C48C4C900EAE08C /* Project object */;
+}

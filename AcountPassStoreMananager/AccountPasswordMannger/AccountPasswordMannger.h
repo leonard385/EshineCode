@@ -13,7 +13,7 @@
 + (NSDictionary *)GetAccountAndPassword;
 + (NSDictionary *)GetAccountAndUserProp;
 
-+ (void)SaveAccount:(NSString *)account andPassword:(NSString *)password andUserProp:(NSNumber *)userProp;
++ (void)SaveAccount:(NSString *)account andPassword:(NSString *)password;
 
 + (BOOL)ClearPassWord;
 

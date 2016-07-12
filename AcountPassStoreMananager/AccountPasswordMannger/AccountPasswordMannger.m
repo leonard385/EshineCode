@@ -11,15 +11,14 @@
 
 #define kService @"com.eshineTech.JyBsem"
 #define kAccount @"account"
-#define KuserProp @"userProp"
+
 
 @implementation AccountPasswordMannger
 
-+ (void)SaveAccount:(NSString *)account andPassword:(NSString *)password andUserProp:(NSNumber *)userProp
++ (void)SaveAccount:(NSString *)account andPassword:(NSString *)password
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:account forKey:kAccount];
-    [defaults setObject:userProp forKey:KuserProp];
     [defaults synchronize];
     [SSKeychain setPassword:password forService:kService account:account];
 }
@@ -36,17 +35,6 @@
     }
 }
 
-+ (NSDictionary *)GetAccountAndUserProp {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    NSString *account = [defaults objectForKey:kAccount];
-    NSString *userProp = [defaults objectForKey:KuserProp];
-    if (account) {
-        return @{account:userProp};
-    } else {
-        return @{@"": @""};
-    }
-}
 
 + (BOOL)ClearPassWord {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];

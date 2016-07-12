@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-
+typedef void(^APGetDateBlock)(NSString *Acount,NSString *PassWord);
 @interface AccountPasswordMannger : NSObject
 
-+ (NSDictionary *)GetAccountAndPassword;
++ (void)GetAccountAndPassword:(APGetDateBlock)DateBlock;
 
 + (void)SaveAccount:(NSString *)account andPassword:(NSString *)password;
 

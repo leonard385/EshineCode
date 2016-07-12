@@ -29,8 +29,12 @@
 #pragma mark -  读取保存在本地的账号密码
 -(void)LVReadStoreAcount
 {
-    NSDictionary *AcountPass = [AccountPasswordMannger GetAccountAndPassword];
-    NSLog(@"读取值：%@",AcountPass);
+   [AccountPasswordMannger GetAccountAndPassword:^(NSString *Acount, NSString *PassWord) {
+        _AcountTextFild.text = Acount;
+        _PassWordTextFild.text = PassWord;
+       [MBProgressHUD showSuccess:@"读取成功"];
+    }];
+ 
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,7 +51,8 @@
 }
 - (IBAction)ReadPass:(id)sender {
     [self LVReadStoreAcount];
-    [MBProgressHUD showSuccess:@"读取成功"];
+    
+    
 }
 
 - (IBAction)ClearPassClick:(id)sender {

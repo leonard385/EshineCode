@@ -164,7 +164,6 @@
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
-                        <action selector="LVLoginInbtnClick:" destination="-1" eventType="touchUpInside" id="D60-bz-g4j"/>
                         <action selector="ReadPass:" destination="-1" eventType="touchUpInside" id="BCu-zx-5PJ"/>
                     </connections>
                 </button>
@@ -182,7 +181,6 @@
                     </state>
                     <connections>
                         <action selector="ClearPassClick:" destination="-1" eventType="touchUpInside" id="HSj-wb-rW8"/>
-                        <action selector="LVLoginInbtnClick:" destination="-1" eventType="touchUpInside" id="LX5-f8-Ww8"/>
                     </connections>
                 </button>
             </subviews>

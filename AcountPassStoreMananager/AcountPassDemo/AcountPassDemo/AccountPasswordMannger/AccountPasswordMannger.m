@@ -9,7 +9,7 @@
 #import "AccountPasswordMannger.h"
 #import <SSKeychain/SSKeychain.h>
 
-#define kService @"com.eshineTech.JyBsem"
+#define kService @"com.eshine.AcountPassDemo"
 #define kAccount @"account"
 
 
@@ -23,15 +23,13 @@
     [SSKeychain setPassword:password forService:kService account:account];
 }
 
-+ (NSDictionary *)GetAccountAndPassword {
++ (void)GetAccountAndPassword:(APGetDateBlock)DateBlock{
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     NSString *account = [defaults objectForKey:kAccount];
     if (account) {
         NSString *password = [SSKeychain passwordForService:kService account:account] ? [SSKeychain passwordForService:kService account:account] : @"";
-        return @{account:password};
-    } else {
-        return @{@"": @""};
+         DateBlock(account,password);
     }
 }
 

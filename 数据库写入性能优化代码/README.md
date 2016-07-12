@@ -10,7 +10,7 @@
 通过上面三步可以极高的提快数据库写入速度。
 
 实测数据：
-5000条Model数据  1~2内
+5000条Model数据  1~2(s)内
 
 参考资料：[Fastest way to insert many rows into sqlite db on iPhone](http://stackoverflow.com/questions/11784143/fastest-way-to-insert-many-rows-into-sqlite-db-on-iphone)
 

@@ -1,0 +1,13 @@
+PODS:
+  - MBProgressHUD (0.9.1)
+  - SSKeychain (1.4.0)
+
+DEPENDENCIES:
+  - MBProgressHUD (= 0.9.1)
+  - SSKeychain
+
+SPEC CHECKSUMS:
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  SSKeychain: c71293fa57216a40ab06c23f4085387583293de4
+
+COCOAPODS: 0.39.0

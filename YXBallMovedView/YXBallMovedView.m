@@ -109,11 +109,7 @@
 }
 
 - (void)calculateTimer
-{
-    if (deltaTime == 60) {
-        deltaTime = 0;
-    }
-    
+{   
     deltaTime++;
     NSInteger hours   = deltaTime / 3600;
     NSInteger minutes = (deltaTime%3600) / 60;

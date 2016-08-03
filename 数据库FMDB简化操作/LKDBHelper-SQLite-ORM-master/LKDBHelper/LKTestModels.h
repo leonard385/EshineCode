@@ -38,7 +38,7 @@
 @property NSUInteger  age;
 @property BOOL isGirl;
 
-@property(strong,nonatomic)LKTestForeign* address;
+@property(strong,nonatomic)LKTestForeign* address;//类属性
 @property(strong,nonatomic)NSArray* blah;
 @property(strong,nonatomic)NSDictionary* hoho;
 

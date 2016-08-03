@@ -109,6 +109,15 @@
     
     //更改主键继续插入   Insert the change after the primary key
     test.age = 17;
+    
+    //新外键
+    LKTestForeign* foreign2 = [[LKTestForeign alloc]init];
+    foreign2.address = @":asdasdasdfsdfsasdsdas";
+    foreign2.postcode  = 12334156;
+    foreign2.addid = 213214;
+    
+    test.address = foreign2;
+
     [globalHelper insertToDB:test];
     
     //事物  transaction
@@ -150,12 +159,12 @@
     //查询   search
     NSMutableArray* searchResultArray = nil;
     
-    [LKTest searchWithSQL:@"select * from @t,LKTestAddress"];
+    NSMutableArray * array = [LKTest searchWithSQL:@"select * from @t,LKTestAddress"];
     
     addText(@"\n search one: \n");
     ///同步搜索 执行sql语句 把结果变为LKTest对象
     ///Synchronous search executes the SQL statement put the results into a LKTest object
-    searchResultArray = [globalHelper searchWithSQL:@"select * from @t" toClass:[LKTest class]];
+    searchResultArray = [globalHelper searchWithSQL:@"select * from @t where MyAge = '16'" toClass:[LKTest class]];
     for (id obj in searchResultArray) {
         addText(@"%@",[obj printAllPropertys]);
     }

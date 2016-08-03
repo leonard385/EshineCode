@@ -24,6 +24,7 @@
     return db;
 }
 
+
 //在类 初始化的时候
 +(void)initialize
 {

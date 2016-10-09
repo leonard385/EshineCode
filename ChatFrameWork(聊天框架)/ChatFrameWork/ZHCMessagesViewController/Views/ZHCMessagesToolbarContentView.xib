@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ZHCMessagesToolbarContentView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wJP-Cy-tqp" customClass="ZHCMessagesComposerTextView">
+                    <rect key="frame" x="50" y="7" width="178" height="30"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="aQL-O5-M53"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="r97-I5-KPA"/>
+                        <constraint firstAttribute="height" constant="30" id="vPT-RH-5OQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iHo-qd-XdV">
+                    <rect key="frame" x="236" y="6" width="34" height="32"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="34" id="UnP-KQ-qqV"/>
+                        <constraint firstAttribute="height" constant="32" id="g1w-5g-xU1"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckC-xA-7HE">
+                    <rect key="frame" x="278" y="6" width="34" height="32"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="j6S-MS-nd2"/>
+                        <constraint firstAttribute="width" constant="34" id="lYR-KK-YAj"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3K6-tC-y9x">
+                    <rect key="frame" x="8" y="6" width="34" height="32"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="34" id="UCB-B7-9Gg"/>
+                        <constraint firstAttribute="height" constant="32" id="a9Y-i5-ZAC"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="iHo-qd-XdV" secondAttribute="bottom" constant="6" id="1zi-UI-tMT"/>
+                <constraint firstItem="3K6-tC-y9x" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="By2-4Z-b0k"/>
+                <constraint firstAttribute="bottom" secondItem="ckC-xA-7HE" secondAttribute="bottom" constant="6" id="Ii5-Up-BOK"/>
+                <constraint firstAttribute="trailing" secondItem="ckC-xA-7HE" secondAttribute="trailing" constant="8" id="JXo-JG-Lsl"/>
+                <constraint firstItem="ckC-xA-7HE" firstAttribute="leading" secondItem="iHo-qd-XdV" secondAttribute="trailing" constant="8" id="Kfp-IT-vQW"/>
+                <constraint firstAttribute="bottom" secondItem="wJP-Cy-tqp" secondAttribute="bottom" constant="7" id="PyI-Kz-7eQ"/>
+                <constraint firstItem="iHo-qd-XdV" firstAttribute="leading" secondItem="wJP-Cy-tqp" secondAttribute="trailing" constant="8" id="Z6E-Lo-NOi"/>
+                <constraint firstAttribute="bottom" secondItem="3K6-tC-y9x" secondAttribute="bottom" constant="6" id="dip-ot-gdB"/>
+                <constraint firstItem="wJP-Cy-tqp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="7" id="gXM-ls-1oU"/>
+                <constraint firstItem="wJP-Cy-tqp" firstAttribute="leading" secondItem="3K6-tC-y9x" secondAttribute="trailing" constant="8" id="uaK-jr-kIq"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="leftBarButtonContainerView" destination="3K6-tC-y9x" id="fIX-yH-D5S"/>
+                <outlet property="leftBarButtonContainerViewWidthConstraint" destination="UCB-B7-9Gg" id="0aD-Ne-asm"/>
+                <outlet property="leftHorizontalSpacingConstraint" destination="By2-4Z-b0k" id="onk-p4-rev"/>
+                <outlet property="middleBarButtonContainerView" destination="iHo-qd-XdV" id="1dt-yP-2hs"/>
+                <outlet property="middleBarButtonContainerViewWidthConstraint" destination="UnP-KQ-qqV" id="Mmr-R3-Jmn"/>
+                <outlet property="middleHorizontalSpacingConstraint" destination="Kfp-IT-vQW" id="RXB-Th-nfg"/>
+                <outlet property="rightBarButtonContainerView" destination="ckC-xA-7HE" id="Bc6-8S-MKM"/>
+                <outlet property="rightBarButtonContainerViewWidthConstraint" destination="lYR-KK-YAj" id="MQE-0j-MUi"/>
+                <outlet property="rightHorizontalSpacingConstraint" destination="JXo-JG-Lsl" id="N7A-dB-y3D"/>
+                <outlet property="textView" destination="wJP-Cy-tqp" id="7WW-qN-Q3N"/>
+            </connections>
+            <point key="canvasLocation" x="464" y="217"/>
+        </view>
+    </objects>
+</document>

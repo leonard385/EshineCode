@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="155" id="KGk-i7-Jjw" customClass="ZHCMessagesTableViewCellIncoming">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="155"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="154"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AtY-PM-nfv" customClass="ZHCMessagesLabel">
+                        <rect key="frame" x="1" y="1" width="319" height="0.0"/>
+                        <color key="backgroundColor" red="1" green="0.98795333259999996" blue="0.70285626430000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="21" id="ww7-Dl-7gY"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bubble top Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fic-Hc-208" customClass="ZHCMessagesLabel">
+                        <rect key="frame" x="0.0" y="21" width="320" height="17"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="20" id="vpV-cn-FkY"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QkL-sf-hMh">
+                        <rect key="frame" x="8" y="103" width="35" height="35"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MT2-UV-87k">
+                                <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="2sx-vs-Ils"/>
+                            <constraint firstAttribute="bottom" secondItem="MT2-UV-87k" secondAttribute="bottom" id="HzY-YP-NUN"/>
+                            <constraint firstItem="MT2-UV-87k" firstAttribute="top" secondItem="QkL-sf-hMh" secondAttribute="top" id="bnG-LY-5ze"/>
+                            <constraint firstAttribute="height" constant="35" id="hm5-Qh-N3m"/>
+                            <constraint firstAttribute="trailing" secondItem="MT2-UV-87k" secondAttribute="trailing" id="o49-SL-TAO"/>
+                            <constraint firstItem="MT2-UV-87k" firstAttribute="leading" secondItem="QkL-sf-hMh" secondAttribute="leading" id="olB-c7-tvT"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cell bottom Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qk1-EK-aBJ" customClass="ZHCMessagesLabel">
+                        <rect key="frame" x="0.0" y="138" width="320" height="17"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="20" id="Jps-Pu-i6x"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WFt-sQ-v6q">
+                        <rect key="frame" x="51" y="38" width="231" height="100"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sbx-FP-qUK">
+                                <rect key="frame" x="0.0" y="0.0" width="231" height="100"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6I0-MX-RPY" customClass="ZHCMessagesCellTextView">
+                                <rect key="frame" x="13" y="0.0" width="218" height="100"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6I0-MX-RPY" firstAttribute="trailing" secondItem="Sbx-FP-qUK" secondAttribute="trailing" id="6J4-SZ-6HE"/>
+                            <constraint firstAttribute="bottom" secondItem="Sbx-FP-qUK" secondAttribute="bottom" id="9vr-3o-0Pf"/>
+                            <constraint firstItem="6I0-MX-RPY" firstAttribute="bottom" secondItem="Sbx-FP-qUK" secondAttribute="bottom" id="Gl0-oX-ItP"/>
+                            <constraint firstAttribute="width" constant="231" id="Obi-DU-Sgb"/>
+                            <constraint firstItem="Sbx-FP-qUK" firstAttribute="leading" secondItem="WFt-sQ-v6q" secondAttribute="leading" id="gmG-Nb-wqY"/>
+                            <constraint firstItem="Sbx-FP-qUK" firstAttribute="top" secondItem="WFt-sQ-v6q" secondAttribute="top" id="hiV-kl-EK5"/>
+                            <constraint firstItem="6I0-MX-RPY" firstAttribute="leading" secondItem="WFt-sQ-v6q" secondAttribute="leading" constant="13" id="rqM-cm-odB"/>
+                            <constraint firstItem="6I0-MX-RPY" firstAttribute="top" secondItem="Sbx-FP-qUK" secondAttribute="top" id="soD-v6-rnN"/>
+                            <constraint firstAttribute="trailing" secondItem="Sbx-FP-qUK" secondAttribute="trailing" id="uvN-S7-KSD"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cell top Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HX7-0h-z6r" customClass="ZHCMessagesLabel">
+                        <rect key="frame" x="0.0" y="1" width="320" height="20"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="HkL-DB-4bE"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Fic-Hc-208" firstAttribute="top" secondItem="HX7-0h-z6r" secondAttribute="bottom" id="9Ne-nj-BrF"/>
+                    <constraint firstItem="AtY-PM-nfv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-7" id="Jyb-aJ-y1c"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Fic-Hc-208" secondAttribute="trailing" constant="-8" id="LIe-Yu-USL"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="AtY-PM-nfv" secondAttribute="trailing" constant="-8" id="Nre-sd-PFr"/>
+                    <constraint firstItem="qk1-EK-aBJ" firstAttribute="top" secondItem="WFt-sQ-v6q" secondAttribute="bottom" id="OVM-2M-cF0"/>
+                    <constraint firstItem="WFt-sQ-v6q" firstAttribute="leading" secondItem="QkL-sf-hMh" secondAttribute="trailing" constant="8" id="PLC-Py-OSa"/>
+                    <constraint firstItem="qk1-EK-aBJ" firstAttribute="top" secondItem="QkL-sf-hMh" secondAttribute="bottom" id="PqG-Xt-w1a"/>
+                    <constraint firstItem="WFt-sQ-v6q" firstAttribute="top" secondItem="Fic-Hc-208" secondAttribute="bottom" id="QdV-TT-57M"/>
+                    <constraint firstItem="AtY-PM-nfv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-7" id="Qm5-A5-nRM"/>
+                    <constraint firstItem="Fic-Hc-208" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="VEf-Nh-XnF"/>
+                    <constraint firstItem="HX7-0h-z6r" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="YYW-8S-XtT"/>
+                    <constraint firstItem="QkL-sf-hMh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="gF6-27-URa"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="qk1-EK-aBJ" secondAttribute="bottom" constant="-9" id="nZX-sW-9uo"/>
+                    <constraint firstAttribute="trailing" secondItem="HX7-0h-z6r" secondAttribute="trailing" id="oQg-bq-UL7"/>
+                    <constraint firstItem="HX7-0h-z6r" firstAttribute="top" secondItem="AtY-PM-nfv" secondAttribute="bottom" id="p6i-WP-JH6"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="qk1-EK-aBJ" secondAttribute="trailing" constant="-8" id="uMD-h4-iFD"/>
+                    <constraint firstItem="qk1-EK-aBJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="yYJ-n8-uBC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="avatarContainerView" destination="QkL-sf-hMh" id="w4B-Lf-GqN"/>
+                <outlet property="avatarContainerViewHeightConstraint" destination="hm5-Qh-N3m" id="eKg-43-aIo"/>
+                <outlet property="avatarContainerViewHorizontallyWithSuperViewConstraint" destination="gF6-27-URa" id="OAw-qn-zW8"/>
+                <outlet property="avatarContainerViewWidthConstraint" destination="2sx-vs-Ils" id="Zmb-zE-tL7"/>
+                <outlet property="avatarImageView" destination="MT2-UV-87k" id="f3S-nU-EVj"/>
+                <outlet property="cellBottomLabel" destination="qk1-EK-aBJ" id="oje-6f-qMX"/>
+                <outlet property="cellBottomLabelHeightConstraint" destination="Jps-Pu-i6x" id="0OL-cR-TNK"/>
+                <outlet property="cellTopLabel" destination="HX7-0h-z6r" id="xeh-85-G4U"/>
+                <outlet property="cellTopLabelHeightConstraint" destination="HkL-DB-4bE" id="M24-ZL-8RT"/>
+                <outlet property="cellsSpaceConstraint" destination="ww7-Dl-7gY" id="Tqa-8n-wnr"/>
+                <outlet property="cellsSpaceLabel" destination="AtY-PM-nfv" id="3Ii-Ah-YQQ"/>
+                <outlet property="messageBubbleContainerSpaceWithAvatarView" destination="PLC-Py-OSa" id="fZE-EV-Hgk"/>
+                <outlet property="messageBubbleContainerView" destination="WFt-sQ-v6q" id="eaD-J6-PRk"/>
+                <outlet property="messageBubbleContainerWidth" destination="Obi-DU-Sgb" id="0ri-XL-9gC"/>
+                <outlet property="messageBubbleImageView" destination="Sbx-FP-qUK" id="mXx-3q-OP8"/>
+                <outlet property="messageBubbleTopLabel" destination="Fic-Hc-208" id="8rU-nK-nm6"/>
+                <outlet property="messageBubbleTopLabelHeightConstraint" destination="vpV-cn-FkY" id="g07-ji-xAQ"/>
+                <outlet property="textView" destination="6I0-MX-RPY" id="4jS-p4-H0K"/>
+                <outlet property="textViewAvatarHorizontalSpaceConstraint" destination="rqM-cm-odB" id="P4T-Px-21r"/>
+                <outlet property="textViewBottomVerticalSpaceConstraint" destination="Gl0-oX-ItP" id="a5x-uW-3qW"/>
+                <outlet property="textViewMarginHorizontalSpaceConstraint" destination="6J4-SZ-6HE" id="wcP-OT-GZd"/>
+                <outlet property="textViewTopVerticalSpaceConstraint" destination="soD-v6-rnN" id="3NQ-g6-g3p"/>
+            </connections>
+            <point key="canvasLocation" x="272" y="494.5"/>
+        </tableViewCell>
+    </objects>
+</document>

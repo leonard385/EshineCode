@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZHCMessagesViewController">
+            <connections>
+                <outlet property="inputMessageBarView" destination="6fi-Eo-nLP" id="Riw-Nv-eYc"/>
+                <outlet property="inputViewBottomLayoutGuide" destination="T92-E3-yMO" id="hth-5P-JbW"/>
+                <outlet property="messageTableView" destination="Hcn-J0-AYf" id="VJB-gg-ScF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hcn-J0-AYf" customClass="ZHCMessagesTableView">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Zs6-xN-6ok"/>
+                        <outlet property="delegate" destination="-1" id="V4J-wd-rd2"/>
+                    </connections>
+                </tableView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6fi-Eo-nLP" customClass="ZHCMessagesInputToolbar">
+                    <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                    <items/>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="6fi-Eo-nLP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7d9-Qc-dQC"/>
+                <constraint firstAttribute="bottom" secondItem="Hcn-J0-AYf" secondAttribute="bottom" id="FLJ-hv-4EC"/>
+                <constraint firstItem="Hcn-J0-AYf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="No2-Pw-KHm"/>
+                <constraint firstAttribute="trailing" secondItem="6fi-Eo-nLP" secondAttribute="trailing" id="OWx-m0-qk3"/>
+                <constraint firstAttribute="bottom" secondItem="6fi-Eo-nLP" secondAttribute="bottom" id="T92-E3-yMO"/>
+                <constraint firstItem="Hcn-J0-AYf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="e0b-ip-qMv"/>
+                <constraint firstAttribute="trailing" secondItem="Hcn-J0-AYf" secondAttribute="trailing" id="nrf-6t-FxS"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

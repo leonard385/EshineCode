@@ -1,0 +1,45 @@
+<html>
+    <header>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script type="text/javascript">
+            <!--            document.write(encodeURI("share://shareClick?title='分享的标题'&content='分享的内容'&imagePath='图片地址'"))-->
+            
+        function loadURL(url) {
+            var iFrame;
+            iFrame = document.createElement("iframe");
+            iFrame.setAttribute("src", url);
+            iFrame.setAttribute("style", "display:none;");
+            iFrame.setAttribute("height", "0px");
+            iFrame.setAttribute("width", "0px");
+            iFrame.setAttribute("frameborder", "0");
+            document.body.appendChild(iFrame);
+            // 发起请求后这个 iFrame 就没用了，所以把它从 dom 上移除掉
+            iFrame.parentNode.removeChild(iFrame);
+            iFrame = null;
+        }
+        function shareClick1() {
+            loadURL("share://shareClick?title=分享的标题&content=分享的内容&imagePath=图片地址");
+        }
+    
+        function landscape() {
+            loadURL("landscape://lanscapeAction");
+        }
+        
+        function portrait() {
+            loadURL("portrait://portraitAction");
+        }
+        
+        </script>
+    </header>
+    
+    <body>
+        <br/>
+        <br/>
+        <button type="button" onclick="shareClick1()">分享按钮1</button>
+        
+        <button type="button" onclick="landscape()">横屏</button>
+        
+        <button type="button" onclick="portrait()">竖屏</button>
+        
+    </body>
+</html>

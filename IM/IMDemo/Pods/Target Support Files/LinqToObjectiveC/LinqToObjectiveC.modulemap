@@ -1,0 +1,6 @@
+framework module LinqToObjectiveC {
+  umbrella header "LinqToObjectiveC-umbrella.h"
+
+  export *
+  module * { export * }
+}

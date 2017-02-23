@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IMMessageViewController">
+            <connections>
+                <outlet property="btnSendMessage" destination="tPT-ic-WhL" id="Xae-bi-Jhx"/>
+                <outlet property="messageToSendInput" destination="7Yh-21-x1C" id="ebh-WR-CVq"/>
+                <outlet property="textFieldRecieve" destination="4oO-fr-Nic" id="A5d-wq-bmj"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入你要发送的消息" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Yh-21-x1C">
+                    <rect key="frame" x="10" y="80" width="355" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="9a9-Zb-jgH"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="接收到的消息" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDM-TD-Xas">
+                    <rect key="frame" x="10" y="251" width="355" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="pWR-Bh-8ZF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPT-ic-WhL">
+                    <rect key="frame" x="10" y="135" width="355" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="2uU-Cr-dne"/>
+                    </constraints>
+                    <state key="normal" title="发送消息"/>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="接收到的消息" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4oO-fr-Nic">
+                    <rect key="frame" x="10" y="195" width="355" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="4Mw-2H-vpP"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发送的消息只支持文本消息(Stomp协议本身决定)发送中文需要进行编码" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfg-Lw-S0k">
+                    <rect key="frame" x="10" y="292" width="355" height="375"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="CDM-TD-Xas" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="0VN-Du-1X8"/>
+                <constraint firstItem="4oO-fr-Nic" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="1ts-2p-Ybz"/>
+                <constraint firstItem="4oO-fr-Nic" firstAttribute="top" secondItem="tPT-ic-WhL" secondAttribute="bottom" constant="30" id="4kG-Z9-5QS"/>
+                <constraint firstAttribute="trailing" secondItem="7Yh-21-x1C" secondAttribute="trailing" constant="10" id="6HL-k3-XqH"/>
+                <constraint firstItem="tPT-ic-WhL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="7sb-9t-g9l"/>
+                <constraint firstItem="CDM-TD-Xas" firstAttribute="top" secondItem="4oO-fr-Nic" secondAttribute="bottom" constant="26" id="Mis-Mf-lhT"/>
+                <constraint firstItem="dfg-Lw-S0k" firstAttribute="top" secondItem="CDM-TD-Xas" secondAttribute="bottom" constant="20" id="S8l-xJ-6T2"/>
+                <constraint firstAttribute="bottom" secondItem="dfg-Lw-S0k" secondAttribute="bottom" id="TdS-5x-j2P"/>
+                <constraint firstAttribute="trailing" secondItem="CDM-TD-Xas" secondAttribute="trailing" constant="10" id="Tkl-BD-pOC"/>
+                <constraint firstItem="tPT-ic-WhL" firstAttribute="top" secondItem="7Yh-21-x1C" secondAttribute="bottom" constant="20" id="XBC-vD-HnT"/>
+                <constraint firstAttribute="trailing" secondItem="dfg-Lw-S0k" secondAttribute="trailing" constant="10" id="XLg-1J-kmz"/>
+                <constraint firstAttribute="trailing" secondItem="4oO-fr-Nic" secondAttribute="trailing" constant="10" id="XSL-dZ-Hmf"/>
+                <constraint firstItem="7Yh-21-x1C" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="ZmU-AH-boQ"/>
+                <constraint firstAttribute="trailing" secondItem="tPT-ic-WhL" secondAttribute="trailing" constant="10" id="dSr-W8-HOu"/>
+                <constraint firstItem="dfg-Lw-S0k" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="lfV-OO-VTu"/>
+                <constraint firstItem="7Yh-21-x1C" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="m93-6A-Q7q"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="56.5"/>
+        </view>
+    </objects>
+</document>

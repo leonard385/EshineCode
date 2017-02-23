@@ -1,0 +1,68 @@
+PODS:
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - CocoaAsyncSocket (7.3.4)
+  - DZNEmptyDataSet (1.8.1)
+  - IQKeyboardManager (3.3.4)
+  - LinqToObjectiveC (2.1.0)
+  - Masonry (0.6.3)
+  - MBProgressHUD (0.9.1)
+  - MJExtension (3.0.7)
+  - MJRefresh (3.0.7)
+  - StompKit (0.1.1):
+    - CocoaAsyncSocket (= 7.3.4)
+
+DEPENDENCIES:
+  - AFNetworking (= 2.6.3)
+  - DZNEmptyDataSet (~> 1.8.1)
+  - IQKeyboardManager (= 3.3.4)
+  - LinqToObjectiveC (= 2.1.0)
+  - Masonry (= 0.6.3)
+  - MBProgressHUD (= 0.9.1)
+  - MJExtension (= 3.0.7)
+  - MJRefresh (= 3.0.7)
+  - StompKit (from `https://github.com/mobile-web-messaging/StompKit.git`)
+
+EXTERNAL SOURCES:
+  StompKit:
+    :git: https://github.com/mobile-web-messaging/StompKit.git
+
+CHECKOUT OPTIONS:
+  StompKit:
+    :commit: 923219a74c68568610d7a7bf8105de05eabcdb5e
+    :git: https://github.com/mobile-web-messaging/StompKit.git
+
+SPEC CHECKSUMS:
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  CocoaAsyncSocket: f62306fd366dcd81d4fe160e6c296ea872276f41
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  IQKeyboardManager: ac803e61e5b50efae6b3aeedd95a02c7c7d3b2b3
+  LinqToObjectiveC: f0e40c137a458b6b9725c4c7b6a575c0c72e3aec
+  Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  MJExtension: 290cc966f0f849b12b6391a38e296e0004ae8e5e
+  MJRefresh: f3e1228ec3d38c7ba5208d58032631a52f39f495
+  StompKit: db29fc74ef02fdd965bacf75713659bced3d23fa
+
+PODFILE CHECKSUM: e2711335679e71a2f0adc7593e4e19d3784552c9
+
+COCOAPODS: 1.0.0.rc.2

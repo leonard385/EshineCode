@@ -1,0 +1,14 @@
+platform :ios, '8.0'
+use_frameworks!
+
+target 'IMDemo' do
+pod 'AFNetworking’,’2.6.3’
+pod 'MJRefresh','3.0.7'
+pod 'MJExtension','3.0.7'
+pod 'MBProgressHUD','0.9.1'
+pod 'Masonry','0.6.3'
+pod 'IQKeyboardManager','3.3.4'
+pod 'DZNEmptyDataSet','~>1.8.1'
+pod 'LinqToObjectiveC','2.1.0'
+pod 'StompKit', :git => 'https://github.com/mobile-web-messaging/StompKit.git'
+end

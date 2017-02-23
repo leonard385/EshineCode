@@ -7,11 +7,11 @@
 2. 消息收发功能 （收发中文需要进行相应的编解码）
 ~~~
 
-![](../src.1.png)
-![](../src.2.png)
+![](./src/1.png)
+![](./src/2.png)
 
-![](../src.3.png)
-![](../src.4.png)
+![](./src/3.png)
+![](./src/4.png)
 
 
 ##podfile
@@ -27,8 +27,8 @@ end
 
 StompKit 在原有的基础上进行了更改：
 
-![](../src/5.png)
+![](./src/5.png)
 在frame的header部分添加了host = '/'
 
 不添加会登录不上，提示
-![](../src/6.png)
+![](./src/6.png)

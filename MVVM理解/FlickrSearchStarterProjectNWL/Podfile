@@ -1,0 +1,6 @@
+platform :ios, '7.0'
+
+pod 'ReactiveCocoa'
+pod 'objectiveflickr'
+pod 'LinqToObjectiveC'
+pod 'SDWebImage'

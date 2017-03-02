@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="myCell" rowHeight="68" id="dbt-pG-kfz" customClass="RWTRecentSearchItemTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dbt-pG-kfz" id="qib-4F-YwE">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" alpha="0.5499999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9KX-Yp-LqP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+                    </imageView>
+                    <view alpha="0.75000000000000022" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l2E-QG-zys">
+                        <rect key="frame" x="0.0" y="35" width="320" height="33"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgC-9Q-0TK">
+                        <rect key="frame" x="20" y="41" width="45" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0E-uq-Xp7">
+                        <rect key="frame" x="193" y="41" width="36" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9KX-Yp-LqP" firstAttribute="top" secondItem="qib-4F-YwE" secondAttribute="topMargin" constant="-8" id="3lJ-5G-mBC"/>
+                    <constraint firstItem="9KX-Yp-LqP" firstAttribute="leading" secondItem="qib-4F-YwE" secondAttribute="leadingMargin" constant="-8" id="7Tw-Yh-9SD"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="l2E-QG-zys" secondAttribute="bottom" constant="-9" id="DJI-FQ-1oX"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="l2E-QG-zys" secondAttribute="trailing" constant="-8" id="EDI-47-XDo"/>
+                    <constraint firstItem="l2E-QG-zys" firstAttribute="centerY" secondItem="J0E-uq-Xp7" secondAttribute="centerY" id="EjA-a7-zov"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="9KX-Yp-LqP" secondAttribute="trailing" constant="-8" id="H3C-mD-rTQ"/>
+                    <constraint firstItem="bgC-9Q-0TK" firstAttribute="leading" secondItem="qib-4F-YwE" secondAttribute="leadingMargin" constant="12" id="IfZ-zQ-ldu"/>
+                    <constraint firstItem="J0E-uq-Xp7" firstAttribute="top" secondItem="qib-4F-YwE" secondAttribute="topMargin" constant="33" id="KpL-kw-7Iu"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="J0E-uq-Xp7" secondAttribute="bottom" constant="-3" id="SVJ-W5-seh"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="bgC-9Q-0TK" secondAttribute="bottom" constant="-3" id="ihF-fz-71y"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="9KX-Yp-LqP" secondAttribute="bottom" constant="-9" id="jeE-mm-k0c"/>
+                    <constraint firstItem="l2E-QG-zys" firstAttribute="leading" secondItem="qib-4F-YwE" secondAttribute="leadingMargin" constant="-8" id="tjt-Ds-ZsY"/>
+                    <constraint firstItem="J0E-uq-Xp7" firstAttribute="leading" secondItem="qib-4F-YwE" secondAttribute="leadingMargin" constant="185" id="xze-uj-wzk"/>
+                    <constraint firstItem="bgC-9Q-0TK" firstAttribute="top" secondItem="qib-4F-YwE" secondAttribute="topMargin" constant="33" id="yqu-BU-rxe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="searchLabel" destination="bgC-9Q-0TK" id="chA-Nn-J8B"/>
+                <outlet property="thumbnailImage" destination="9KX-Yp-LqP" id="QDh-k4-E0b"/>
+                <outlet property="totalResultsLabel" destination="J0E-uq-Xp7" id="Ug2-gI-jo5"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

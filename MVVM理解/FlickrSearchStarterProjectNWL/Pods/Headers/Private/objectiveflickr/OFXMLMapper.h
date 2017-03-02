@@ -1,0 +1,1 @@
+../../../objectiveflickr/Source/OFXMLMapper.h

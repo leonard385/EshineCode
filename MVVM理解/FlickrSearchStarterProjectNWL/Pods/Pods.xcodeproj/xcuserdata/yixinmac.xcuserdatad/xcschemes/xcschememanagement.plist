@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>LinqToObjectiveC.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ReactiveCocoa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>objectiveflickr.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>7E541DB54EDDCF73D6CC979B37313340</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7FB6C6DA6DC5EABF2181879D30C9CFD0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>991727858D981E09E4F1B728E2EF8324</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CB89328D220141AA6A34A79E1AABCABE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E84B8811FCA99973072222CA3E833D26</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

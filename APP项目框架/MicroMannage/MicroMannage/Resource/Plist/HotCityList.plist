@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>DICCityID</key>
+		<integer>257</integer>
+		<key>CityName</key>
+		<string>广州市</string>
+		<key>cityType</key>
+		<integer>2</integer>
+		<key>CityIndex</key>
+		<string>常用</string>
+		<key>DICCitySize</key>
+		<integer>23512176</integer>
+	</dict>
+	<dict>
+		<key>DICCityID</key>
+		<integer>119</integer>
+		<key>CityName</key>
+		<string>东莞市</string>
+		<key>cityType</key>
+		<integer>2</integer>
+		<key>CityIndex</key>
+		<string>常用</string>
+		<key>DICCitySize</key>
+		<integer>13149866</integer>
+	</dict>
+	<dict>
+		<key>DICCityID</key>
+		<integer>138</integer>
+		<key>CityName</key>
+		<string>佛山市</string>
+		<key>cityType</key>
+		<integer>2</integer>
+		<key>CityIndex</key>
+		<string>常用</string>
+		<key>DICCitySize</key>
+		<integer>16560533</integer>
+	</dict>
+	<dict>
+		<key>DICCityID</key>
+		<integer>140</integer>
+		<key>CityName</key>
+		<string>珠海市</string>
+		<key>cityType</key>
+		<integer>2</integer>
+		<key>CityIndex</key>
+		<string>常用</string>
+		<key>DICCitySize</key>
+		<integer>4136504</integer>
+	</dict>
+</array>
+</plist>

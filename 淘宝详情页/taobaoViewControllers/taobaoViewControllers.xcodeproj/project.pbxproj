@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F7061F071E73BBB600EDE124 /* WLBaseScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7061F061E73BBB600EDE124 /* WLBaseScrollController.m */; };
+		F7061F0D1E73C41300EDE124 /* WLPageViewConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7061F0C1E73C41300EDE124 /* WLPageViewConfigModel.m */; };
+		F7061F101E73D09500EDE124 /* oneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7061F0F1E73D09500EDE124 /* oneViewController.m */; };
+		F792EEE21E73975600203DEF /* WLSegmentMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = F792EEE11E73975600203DEF /* WLSegmentMenuView.m */; };
+		F792EEE51E7397B500203DEF /* WLSegmentContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F792EEE41E7397B500203DEF /* WLSegmentContainerView.m */; };
+		F7A9F6F31E7293E000198ABD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A9F6F21E7293E000198ABD /* main.m */; };
+		F7A9F6F61E7293E000198ABD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A9F6F51E7293E000198ABD /* AppDelegate.m */; };
+		F7A9F6F91E7293E000198ABD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A9F6F81E7293E000198ABD /* ViewController.m */; };
+		F7A9F6FC1E7293E000198ABD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7A9F6FA1E7293E000198ABD /* Main.storyboard */; };
+		F7A9F6FE1E7293E000198ABD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7A9F6FD1E7293E000198ABD /* Assets.xcassets */; };
+		F7A9F7011E7293E000198ABD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7A9F6FF1E7293E000198ABD /* LaunchScreen.storyboard */; };
+		F7A9F70C1E7293E000198ABD /* taobaoViewControllersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A9F70B1E7293E000198ABD /* taobaoViewControllersTests.m */; };
+		F7A9F71D1E7294C800198ABD /* WLPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A9F7181E7294C800198ABD /* WLPageViewController.m */; };
+		F7A9F71F1E7294C800198ABD /* WLTouchTableTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A9F71C1E7294C800198ABD /* WLTouchTableTableView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F7A9F7081E7293E000198ABD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7A9F6E61E7293E000198ABD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7A9F6ED1E7293E000198ABD;
+			remoteInfo = taobaoViewControllers;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F7061F051E73BBB600EDE124 /* WLBaseScrollController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLBaseScrollController.h; sourceTree = "<group>"; };
+		F7061F061E73BBB600EDE124 /* WLBaseScrollController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLBaseScrollController.m; sourceTree = "<group>"; };
+		F7061F0B1E73C41300EDE124 /* WLPageViewConfigModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLPageViewConfigModel.h; sourceTree = "<group>"; };
+		F7061F0C1E73C41300EDE124 /* WLPageViewConfigModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLPageViewConfigModel.m; sourceTree = "<group>"; };
+		F7061F0E1E73D09500EDE124 /* oneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oneViewController.h; sourceTree = "<group>"; };
+		F7061F0F1E73D09500EDE124 /* oneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = oneViewController.m; sourceTree = "<group>"; };
+		F792EEE01E73975600203DEF /* WLSegmentMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLSegmentMenuView.h; sourceTree = "<group>"; };
+		F792EEE11E73975600203DEF /* WLSegmentMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLSegmentMenuView.m; sourceTree = "<group>"; };
+		F792EEE31E7397B500203DEF /* WLSegmentContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLSegmentContainerView.h; sourceTree = "<group>"; };
+		F792EEE41E7397B500203DEF /* WLSegmentContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLSegmentContainerView.m; sourceTree = "<group>"; };
+		F7A9F6EE1E7293E000198ABD /* taobaoViewControllers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taobaoViewControllers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7A9F6F21E7293E000198ABD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F7A9F6F41E7293E000198ABD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F7A9F6F51E7293E000198ABD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F7A9F6F71E7293E000198ABD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F7A9F6F81E7293E000198ABD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F7A9F6FB1E7293E000198ABD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F7A9F6FD1E7293E000198ABD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F7A9F7001E7293E000198ABD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F7A9F7021E7293E000198ABD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7A9F7071E7293E000198ABD /* taobaoViewControllersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = taobaoViewControllersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7A9F70B1E7293E000198ABD /* taobaoViewControllersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = taobaoViewControllersTests.m; sourceTree = "<group>"; };
+		F7A9F70D1E7293E000198ABD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7A9F7171E7294C800198ABD /* WLPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLPageViewController.h; sourceTree = "<group>"; };
+		F7A9F7181E7294C800198ABD /* WLPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLPageViewController.m; sourceTree = "<group>"; };
+		F7A9F71B1E7294C800198ABD /* WLTouchTableTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLTouchTableTableView.h; sourceTree = "<group>"; };
+		F7A9F71C1E7294C800198ABD /* WLTouchTableTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLTouchTableTableView.m; sourceTree = "<group>"; };
+		F7A9F7231E72A03600198ABD /* WLPageMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLPageMacros.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F7A9F6EB1E7293E000198ABD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7A9F7041E7293E000198ABD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F7A9F6E51E7293E000198ABD = {
+			isa = PBXGroup;
+			children = (
+				F7A9F6F01E7293E000198ABD /* taobaoViewControllers */,
+				F7A9F70A1E7293E000198ABD /* taobaoViewControllersTests */,
+				F7A9F6EF1E7293E000198ABD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F7A9F6EF1E7293E000198ABD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7A9F6EE1E7293E000198ABD /* taobaoViewControllers.app */,
+				F7A9F7071E7293E000198ABD /* taobaoViewControllersTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F7A9F6F01E7293E000198ABD /* taobaoViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F7A9F7161E7294C800198ABD /* WLPageController */,
+				F7A9F6F41E7293E000198ABD /* AppDelegate.h */,
+				F7A9F6F51E7293E000198ABD /* AppDelegate.m */,
+				F7A9F6F71E7293E000198ABD /* ViewController.h */,
+				F7A9F6F81E7293E000198ABD /* ViewController.m */,
+				F7061F0E1E73D09500EDE124 /* oneViewController.h */,
+				F7061F0F1E73D09500EDE124 /* oneViewController.m */,
+				F7A9F6FA1E7293E000198ABD /* Main.storyboard */,
+				F7A9F6FD1E7293E000198ABD /* Assets.xcassets */,
+				F7A9F6FF1E7293E000198ABD /* LaunchScreen.storyboard */,
+				F7A9F7021E7293E000198ABD /* Info.plist */,
+				F7A9F6F11E7293E000198ABD /* Supporting Files */,
+			);
+			path = taobaoViewControllers;
+			sourceTree = "<group>";
+		};
+		F7A9F6F11E7293E000198ABD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F7A9F6F21E7293E000198ABD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F7A9F70A1E7293E000198ABD /* taobaoViewControllersTests */ = {
+			isa = PBXGroup;
+			children = (
+				F7A9F70B1E7293E000198ABD /* taobaoViewControllersTests.m */,
+				F7A9F70D1E7293E000198ABD /* Info.plist */,
+			);
+			path = taobaoViewControllersTests;
+			sourceTree = "<group>";
+		};
+		F7A9F7161E7294C800198ABD /* WLPageController */ = {
+			isa = PBXGroup;
+			children = (
+				F7A9F7231E72A03600198ABD /* WLPageMacros.h */,
+				F7A9F7171E7294C800198ABD /* WLPageViewController.h */,
+				F7A9F7181E7294C800198ABD /* WLPageViewController.m */,
+				F7A9F71B1E7294C800198ABD /* WLTouchTableTableView.h */,
+				F7A9F71C1E7294C800198ABD /* WLTouchTableTableView.m */,
+				F7061F051E73BBB600EDE124 /* WLBaseScrollController.h */,
+				F7061F061E73BBB600EDE124 /* WLBaseScrollController.m */,
+				F792EEE01E73975600203DEF /* WLSegmentMenuView.h */,
+				F792EEE11E73975600203DEF /* WLSegmentMenuView.m */,
+				F792EEE31E7397B500203DEF /* WLSegmentContainerView.h */,
+				F792EEE41E7397B500203DEF /* WLSegmentContainerView.m */,
+				F7061F0B1E73C41300EDE124 /* WLPageViewConfigModel.h */,
+				F7061F0C1E73C41300EDE124 /* WLPageViewConfigModel.m */,
+			);
+			path = WLPageController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F7A9F6ED1E7293E000198ABD /* taobaoViewControllers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7A9F7101E7293E000198ABD /* Build configuration list for PBXNativeTarget "taobaoViewControllers" */;
+			buildPhases = (
+				F7A9F6EA1E7293E000198ABD /* Sources */,
+				F7A9F6EB1E7293E000198ABD /* Frameworks */,
+				F7A9F6EC1E7293E000198ABD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = taobaoViewControllers;
+			productName = taobaoViewControllers;
+			productReference = F7A9F6EE1E7293E000198ABD /* taobaoViewControllers.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F7A9F7061E7293E000198ABD /* taobaoViewControllersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7A9F7131E7293E000198ABD /* Build configuration list for PBXNativeTarget "taobaoViewControllersTests" */;
+			buildPhases = (
+				F7A9F7031E7293E000198ABD /* Sources */,
+				F7A9F7041E7293E000198ABD /* Frameworks */,
+				F7A9F7051E7293E000198ABD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7A9F7091E7293E000198ABD /* PBXTargetDependency */,
+			);
+			name = taobaoViewControllersTests;
+			productName = taobaoViewControllersTests;
+			productReference = F7A9F7071E7293E000198ABD /* taobaoViewControllersTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F7A9F6E61E7293E000198ABD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = xunyijia;
+				TargetAttributes = {
+					F7A9F6ED1E7293E000198ABD = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = XHWG785JV3;
+						ProvisioningStyle = Automatic;
+					};
+					F7A9F7061E7293E000198ABD = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F7A9F6ED1E7293E000198ABD;
+					};
+				};
+			};
+			buildConfigurationList = F7A9F6E91E7293E000198ABD /* Build configuration list for PBXProject "taobaoViewControllers" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F7A9F6E51E7293E000198ABD;
+			productRefGroup = F7A9F6EF1E7293E000198ABD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7A9F6ED1E7293E000198ABD /* taobaoViewControllers */,
+				F7A9F7061E7293E000198ABD /* taobaoViewControllersTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F7A9F6EC1E7293E000198ABD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7A9F7011E7293E000198ABD /* LaunchScreen.storyboard in Resources */,
+				F7A9F6FE1E7293E000198ABD /* Assets.xcassets in Resources */,
+				F7A9F6FC1E7293E000198ABD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7A9F7051E7293E000198ABD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F7A9F6EA1E7293E000198ABD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7A9F71D1E7294C800198ABD /* WLPageViewController.m in Sources */,
+				F7A9F6F91E7293E000198ABD /* ViewController.m in Sources */,
+				F7061F0D1E73C41300EDE124 /* WLPageViewConfigModel.m in Sources */,
+				F792EEE51E7397B500203DEF /* WLSegmentContainerView.m in Sources */,
+				F7061F101E73D09500EDE124 /* oneViewController.m in Sources */,
+				F7061F071E73BBB600EDE124 /* WLBaseScrollController.m in Sources */,
+				F7A9F71F1E7294C800198ABD /* WLTouchTableTableView.m in Sources */,
+				F792EEE21E73975600203DEF /* WLSegmentMenuView.m in Sources */,
+				F7A9F6F61E7293E000198ABD /* AppDelegate.m in Sources */,
+				F7A9F6F31E7293E000198ABD /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7A9F7031E7293E000198ABD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7A9F70C1E7293E000198ABD /* taobaoViewControllersTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F7A9F7091E7293E000198ABD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7A9F6ED1E7293E000198ABD /* taobaoViewControllers */;
+			targetProxy = F7A9F7081E7293E000198ABD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F7A9F6FA1E7293E000198ABD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7A9F6FB1E7293E000198ABD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F7A9F6FF1E7293E000198ABD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7A9F7001E7293E000198ABD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F7A9F70E1E7293E000198ABD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F7A9F70F1E7293E000198ABD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F7A9F7111E7293E000198ABD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = XHWG785JV3;
+				INFOPLIST_FILE = taobaoViewControllers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xunyijia.taobaoViewControllers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F7A9F7121E7293E000198ABD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = XHWG785JV3;
+				INFOPLIST_FILE = taobaoViewControllers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xunyijia.taobaoViewControllers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F7A9F7141E7293E000198ABD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = taobaoViewControllersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xunyijia.taobaoViewControllersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/taobaoViewControllers.app/taobaoViewControllers";
+			};
+			name = Debug;
+		};
+		F7A9F7151E7293E000198ABD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = taobaoViewControllersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xunyijia.taobaoViewControllersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/taobaoViewControllers.app/taobaoViewControllers";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F7A9F6E91E7293E000198ABD /* Build configuration list for PBXProject "taobaoViewControllers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7A9F70E1E7293E000198ABD /* Debug */,
+				F7A9F70F1E7293E000198ABD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7A9F7101E7293E000198ABD /* Build configuration list for PBXNativeTarget "taobaoViewControllers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7A9F7111E7293E000198ABD /* Debug */,
+				F7A9F7121E7293E000198ABD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7A9F7131E7293E000198ABD /* Build configuration list for PBXNativeTarget "taobaoViewControllersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7A9F7141E7293E000198ABD /* Debug */,
+				F7A9F7151E7293E000198ABD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F7A9F6E61E7293E000198ABD /* Project object */;
+}

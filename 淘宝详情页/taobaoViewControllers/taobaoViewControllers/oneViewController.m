@@ -17,11 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, k_WL_Screen_Width, k_visalViewHeight) style:UITableViewStylePlain];
+    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, k_WL_Screen_Width, self.view.bounds.size.height) style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.rowHeight = 60.0f;
-    _tableView.backgroundColor = [UIColor blueColor];
+    _tableView.backgroundColor = [UIColor redColor];
     [self.view  addSubview:_tableView];
     // Do any additional setup after loading the view.
 }
@@ -31,7 +31,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10.0f;
+    return 11.0f;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

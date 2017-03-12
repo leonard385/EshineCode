@@ -9,22 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "WLPageMacros.h"
 #import "WLPageViewConfigModel.h"
+#import "WLPageViewController.h"
+#import "WLTouchTableTableView.h"
 @interface WLPageViewController : UIViewController
-/**
- *  子控制器
- */
+@property (nonatomic ,strong) WLTouchTableTableView * mainTableView;
 @property (nonatomic, nullable, copy) NSArray<UIViewController *> *viewControllers;
-
-/**
- *  各个控制器标题
- *  Titles of view controllers in page controller.
- */
 @property (nonatomic, nullable, copy) NSArray<NSString *> *titles;
-
-//头视图
-@property(nonatomic,strong)UIView *headView;
-
+@property(nonatomic,strong)UIView *WLtableHeadView; //头视图
 @property(nonatomic,strong)WLPageViewConfigModel *configModel;
 
 - (instancetype)initWithControllers:(NSArray *)viewControlers titles:(NSArray *)titles config:(WLPageViewConfigModel*)config;
+
+- (instancetype)initWithControllers:(NSArray *)viewControlers titles:(NSArray *)titles;
 @end

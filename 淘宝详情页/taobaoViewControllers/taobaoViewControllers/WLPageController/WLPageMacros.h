@@ -19,12 +19,10 @@
 
 #define k_titleSizeSelected 19.0f
 #define k_titleSizeNormal   15.0f
-#define k_titleColorSelected  WLHEXCOLOR(0x3c4a55)
-#define k_titleColorNormal  WLHEXCOLOR(0x1997eb)
+#define k_titleColorSelected  WLHEXCOLOR(0x1997eb)
+#define k_titleColorNormal  WLHEXCOLOR(0x3c4a55)
 #define k_progressColor   WLHEXCOLOR(0x1997eb)
 #define k_progressHight 1.0f
-#define k_menuHight 41.0f
-
-#define k_visalViewHeight k_WL_Screen_Height - 64.0f
+#define k_menuHight 43.0f
 
 #endif /* WLPageMacros_h */

@@ -32,6 +32,7 @@
         _configModel = configModel;
         _titles = titles;
         [self SMSetUpSubviews];
+        [self progressLineMoveTo:0];
     }
     return self;
 }
@@ -39,20 +40,20 @@
 
 #pragma mark  -  SMSetUpSubviews
 -(void)SMSetUpSubviews{
-    [_btnItems removeAllObjects];
-    float avgWidth = (self.frame.size.width/_titles.count);
+    float avgWidth = (self.frame.size.width / _titles.count);
     for (int i = 0;i < _titles.count;i++){
         UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        btn.frame = CGRectMake(i*(self.frame.size.width/self.titles.count),0, self.frame.size.width/_titles.count, k_menuHight);
+        btn.frame = CGRectMake( i * ( self.frame.size.width / self.titles.count),0, self.frame.size.width/_titles.count, self.bounds.size.height);
         btn.tag = i;
         [btn setTitle:_titles[i] forState:UIControlStateNormal];
         [btn setTitleColor:_configModel.titleColorNormal forState:UIControlStateNormal];
         [btn setTitleColor:_configModel.titleColorSelected forState:UIControlStateSelected];
-        [btn addTarget:self action:@selector(menuBtnClick:) forControlEvents:(UIControlEventTouchUpInside)];
         [btn.titleLabel setFont:[UIFont systemFontOfSize:_configModel.titleSizeNormal]];
+        [btn addTarget:self action:@selector(menuBtnClick:) forControlEvents:(UIControlEventTouchUpInside)];
         [self addSubview:btn];
-        [_btnItems addObject:btn];
+        [self.btnItems addObject:btn];
     }
+    
     CGFloat linPading = 12.0f * 2.0f;
     CGFloat lineW = avgWidth - linPading;
     _progressLine = [[UILabel alloc]initWithFrame:CGRectMake( (avgWidth - lineW) / 2,self.frame.size.height - _configModel.progressHeight - 0.5f, lineW, _configModel.progressHeight)];
@@ -74,17 +75,20 @@
 }
 
 -(void)progressLineMoveTo:(NSUInteger)index{
+    //btn选择
+    UIButton *indexBtn = _btnItems[index];
+    
     [UIView animateWithDuration:0.2 animations:^{
         CGPoint frame = self.progressLine.center;
         frame.x = self.frame.size.width/(self.titles.count*2) + (self.frame.size.width/self.titles.count) * index;
         self.progressLine.center = frame;
-        [_currentSelectedBtn.titleLabel setFont:[UIFont systemFontOfSize:_configModel.titleSizeSelected]];
+        [_currentSelectedBtn.titleLabel setFont:[UIFont systemFontOfSize:_configModel.titleSizeNormal]];
+        [indexBtn.titleLabel setFont:[UIFont systemFontOfSize:_configModel.titleSizeSelected]];
+    }completion:^(BOOL finished) {
+        _currentSelectedBtn.selected = NO;
+        _currentSelectedBtn = indexBtn;
+        _currentSelectedBtn.selected = YES;
     }];
-    
-    UIButton *indexBtn = _btnItems[index];
-    _currentSelectedBtn.selected = NO;
-    _currentSelectedBtn = indexBtn;
-    _currentSelectedBtn.selected = YES;
 }
 /*
 // Only override drawRect: if you perform custom drawing.

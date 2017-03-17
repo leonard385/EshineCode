@@ -1,0 +1,570 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8A66E00E1E686E900057017D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A66E00D1E686E900057017D /* main.m */; };
+		8A66E0111E686E900057017D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A66E0101E686E900057017D /* AppDelegate.m */; };
+		8A66E0141E686E900057017D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A66E0131E686E900057017D /* ViewController.m */; };
+		8A66E0171E686E900057017D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A66E0151E686E900057017D /* Main.storyboard */; };
+		8A66E01A1E686E900057017D /* ZWOpenFileDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8A66E0181E686E900057017D /* ZWOpenFileDemo.xcdatamodeld */; };
+		8A66E01C1E686E900057017D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A66E01B1E686E900057017D /* Assets.xcassets */; };
+		8A66E01F1E686E900057017D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A66E01D1E686E900057017D /* LaunchScreen.storyboard */; };
+		8A66E02A1E686E910057017D /* ZWOpenFileDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A66E0291E686E910057017D /* ZWOpenFileDemoTests.m */; };
+		8A66E0351E686E910057017D /* ZWOpenFileDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A66E0341E686E910057017D /* ZWOpenFileDemoUITests.m */; };
+		8A66E0461E68733B0057017D /* Reader.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8A66E0451E68733B0057017D /* Reader.pdf */; };
+		8A66E0491E6877970057017D /* QuickLookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A66E0481E6877970057017D /* QuickLookViewController.m */; };
+		8A66E04C1E687A030057017D /* OpenRemoteFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A66E04B1E687A030057017D /* OpenRemoteFileViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8A66E0261E686E910057017D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A66E0011E686E900057017D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A66E0081E686E900057017D;
+			remoteInfo = ZWOpenFileDemo;
+		};
+		8A66E0311E686E910057017D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A66E0011E686E900057017D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A66E0081E686E900057017D;
+			remoteInfo = ZWOpenFileDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8A66E0091E686E900057017D /* ZWOpenFileDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZWOpenFileDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A66E00D1E686E900057017D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8A66E00F1E686E900057017D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8A66E0101E686E900057017D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8A66E0121E686E900057017D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8A66E0131E686E900057017D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8A66E0161E686E900057017D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8A66E0191E686E900057017D /* ZWOpenFileDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ZWOpenFileDemo.xcdatamodel; sourceTree = "<group>"; };
+		8A66E01B1E686E900057017D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8A66E01E1E686E900057017D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8A66E0201E686E900057017D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A66E0251E686E910057017D /* ZWOpenFileDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZWOpenFileDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A66E0291E686E910057017D /* ZWOpenFileDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWOpenFileDemoTests.m; sourceTree = "<group>"; };
+		8A66E02B1E686E910057017D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A66E0301E686E910057017D /* ZWOpenFileDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZWOpenFileDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A66E0341E686E910057017D /* ZWOpenFileDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWOpenFileDemoUITests.m; sourceTree = "<group>"; };
+		8A66E0361E686E910057017D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A66E0451E68733B0057017D /* Reader.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Reader.pdf; sourceTree = "<group>"; };
+		8A66E0471E6877970057017D /* QuickLookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickLookViewController.h; sourceTree = "<group>"; };
+		8A66E0481E6877970057017D /* QuickLookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickLookViewController.m; sourceTree = "<group>"; };
+		8A66E04A1E687A030057017D /* OpenRemoteFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenRemoteFileViewController.h; sourceTree = "<group>"; };
+		8A66E04B1E687A030057017D /* OpenRemoteFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenRemoteFileViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A66E0061E686E900057017D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A66E0221E686E910057017D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A66E02D1E686E910057017D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8A66E0001E686E900057017D = {
+			isa = PBXGroup;
+			children = (
+				8A66E00B1E686E900057017D /* ZWOpenFileDemo */,
+				8A66E0281E686E910057017D /* ZWOpenFileDemoTests */,
+				8A66E0331E686E910057017D /* ZWOpenFileDemoUITests */,
+				8A66E00A1E686E900057017D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8A66E00A1E686E900057017D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A66E0091E686E900057017D /* ZWOpenFileDemo.app */,
+				8A66E0251E686E910057017D /* ZWOpenFileDemoTests.xctest */,
+				8A66E0301E686E910057017D /* ZWOpenFileDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A66E00B1E686E900057017D /* ZWOpenFileDemo */ = {
+			isa = PBXGroup;
+			children = (
+				8A66E0451E68733B0057017D /* Reader.pdf */,
+				8A66E00F1E686E900057017D /* AppDelegate.h */,
+				8A66E0101E686E900057017D /* AppDelegate.m */,
+				8A66E0121E686E900057017D /* ViewController.h */,
+				8A66E0131E686E900057017D /* ViewController.m */,
+				8A66E0471E6877970057017D /* QuickLookViewController.h */,
+				8A66E0481E6877970057017D /* QuickLookViewController.m */,
+				8A66E04A1E687A030057017D /* OpenRemoteFileViewController.h */,
+				8A66E04B1E687A030057017D /* OpenRemoteFileViewController.m */,
+				8A66E0151E686E900057017D /* Main.storyboard */,
+				8A66E01B1E686E900057017D /* Assets.xcassets */,
+				8A66E01D1E686E900057017D /* LaunchScreen.storyboard */,
+				8A66E0201E686E900057017D /* Info.plist */,
+				8A66E0181E686E900057017D /* ZWOpenFileDemo.xcdatamodeld */,
+				8A66E00C1E686E900057017D /* Supporting Files */,
+			);
+			path = ZWOpenFileDemo;
+			sourceTree = "<group>";
+		};
+		8A66E00C1E686E900057017D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8A66E00D1E686E900057017D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8A66E0281E686E910057017D /* ZWOpenFileDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				8A66E0291E686E910057017D /* ZWOpenFileDemoTests.m */,
+				8A66E02B1E686E910057017D /* Info.plist */,
+			);
+			path = ZWOpenFileDemoTests;
+			sourceTree = "<group>";
+		};
+		8A66E0331E686E910057017D /* ZWOpenFileDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8A66E0341E686E910057017D /* ZWOpenFileDemoUITests.m */,
+				8A66E0361E686E910057017D /* Info.plist */,
+			);
+			path = ZWOpenFileDemoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8A66E0081E686E900057017D /* ZWOpenFileDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A66E0391E686E910057017D /* Build configuration list for PBXNativeTarget "ZWOpenFileDemo" */;
+			buildPhases = (
+				8A66E0051E686E900057017D /* Sources */,
+				8A66E0061E686E900057017D /* Frameworks */,
+				8A66E0071E686E900057017D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZWOpenFileDemo;
+			productName = ZWOpenFileDemo;
+			productReference = 8A66E0091E686E900057017D /* ZWOpenFileDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8A66E0241E686E910057017D /* ZWOpenFileDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A66E03C1E686E910057017D /* Build configuration list for PBXNativeTarget "ZWOpenFileDemoTests" */;
+			buildPhases = (
+				8A66E0211E686E910057017D /* Sources */,
+				8A66E0221E686E910057017D /* Frameworks */,
+				8A66E0231E686E910057017D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A66E0271E686E910057017D /* PBXTargetDependency */,
+			);
+			name = ZWOpenFileDemoTests;
+			productName = ZWOpenFileDemoTests;
+			productReference = 8A66E0251E686E910057017D /* ZWOpenFileDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8A66E02F1E686E910057017D /* ZWOpenFileDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A66E03F1E686E910057017D /* Build configuration list for PBXNativeTarget "ZWOpenFileDemoUITests" */;
+			buildPhases = (
+				8A66E02C1E686E910057017D /* Sources */,
+				8A66E02D1E686E910057017D /* Frameworks */,
+				8A66E02E1E686E910057017D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A66E0321E686E910057017D /* PBXTargetDependency */,
+			);
+			name = ZWOpenFileDemoUITests;
+			productName = ZWOpenFileDemoUITests;
+			productReference = 8A66E0301E686E910057017D /* ZWOpenFileDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8A66E0011E686E900057017D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = zhengyawei;
+				TargetAttributes = {
+					8A66E0081E686E900057017D = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = PT88Q3CF88;
+						ProvisioningStyle = Automatic;
+					};
+					8A66E0241E686E910057017D = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = PT88Q3CF88;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8A66E0081E686E900057017D;
+					};
+					8A66E02F1E686E910057017D = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = PT88Q3CF88;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8A66E0081E686E900057017D;
+					};
+				};
+			};
+			buildConfigurationList = 8A66E0041E686E900057017D /* Build configuration list for PBXProject "ZWOpenFileDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8A66E0001E686E900057017D;
+			productRefGroup = 8A66E00A1E686E900057017D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8A66E0081E686E900057017D /* ZWOpenFileDemo */,
+				8A66E0241E686E910057017D /* ZWOpenFileDemoTests */,
+				8A66E02F1E686E910057017D /* ZWOpenFileDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8A66E0071E686E900057017D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A66E01F1E686E900057017D /* LaunchScreen.storyboard in Resources */,
+				8A66E0461E68733B0057017D /* Reader.pdf in Resources */,
+				8A66E01C1E686E900057017D /* Assets.xcassets in Resources */,
+				8A66E0171E686E900057017D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A66E0231E686E910057017D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A66E02E1E686E910057017D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A66E0051E686E900057017D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A66E0141E686E900057017D /* ViewController.m in Sources */,
+				8A66E0111E686E900057017D /* AppDelegate.m in Sources */,
+				8A66E04C1E687A030057017D /* OpenRemoteFileViewController.m in Sources */,
+				8A66E00E1E686E900057017D /* main.m in Sources */,
+				8A66E01A1E686E900057017D /* ZWOpenFileDemo.xcdatamodeld in Sources */,
+				8A66E0491E6877970057017D /* QuickLookViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A66E0211E686E910057017D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A66E02A1E686E910057017D /* ZWOpenFileDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A66E02C1E686E910057017D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A66E0351E686E910057017D /* ZWOpenFileDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8A66E0271E686E910057017D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A66E0081E686E900057017D /* ZWOpenFileDemo */;
+			targetProxy = 8A66E0261E686E910057017D /* PBXContainerItemProxy */;
+		};
+		8A66E0321E686E910057017D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A66E0081E686E900057017D /* ZWOpenFileDemo */;
+			targetProxy = 8A66E0311E686E910057017D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8A66E0151E686E900057017D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A66E0161E686E900057017D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8A66E01D1E686E900057017D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A66E01E1E686E900057017D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8A66E0371E686E910057017D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8A66E0381E686E910057017D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8A66E03A1E686E910057017D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PT88Q3CF88;
+				INFOPLIST_FILE = ZWOpenFileDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhengyawei.ZWOpenFileDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8A66E03B1E686E910057017D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PT88Q3CF88;
+				INFOPLIST_FILE = ZWOpenFileDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhengyawei.ZWOpenFileDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8A66E03D1E686E910057017D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = PT88Q3CF88;
+				INFOPLIST_FILE = ZWOpenFileDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhengyawei.ZWOpenFileDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZWOpenFileDemo.app/ZWOpenFileDemo";
+			};
+			name = Debug;
+		};
+		8A66E03E1E686E910057017D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = PT88Q3CF88;
+				INFOPLIST_FILE = ZWOpenFileDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhengyawei.ZWOpenFileDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZWOpenFileDemo.app/ZWOpenFileDemo";
+			};
+			name = Release;
+		};
+		8A66E0401E686E910057017D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = PT88Q3CF88;
+				INFOPLIST_FILE = ZWOpenFileDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhengyawei.ZWOpenFileDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZWOpenFileDemo;
+			};
+			name = Debug;
+		};
+		8A66E0411E686E910057017D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = PT88Q3CF88;
+				INFOPLIST_FILE = ZWOpenFileDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhengyawei.ZWOpenFileDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZWOpenFileDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A66E0041E686E900057017D /* Build configuration list for PBXProject "ZWOpenFileDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A66E0371E686E910057017D /* Debug */,
+				8A66E0381E686E910057017D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A66E0391E686E910057017D /* Build configuration list for PBXNativeTarget "ZWOpenFileDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A66E03A1E686E910057017D /* Debug */,
+				8A66E03B1E686E910057017D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8A66E03C1E686E910057017D /* Build configuration list for PBXNativeTarget "ZWOpenFileDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A66E03D1E686E910057017D /* Debug */,
+				8A66E03E1E686E910057017D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8A66E03F1E686E910057017D /* Build configuration list for PBXNativeTarget "ZWOpenFileDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A66E0401E686E910057017D /* Debug */,
+				8A66E0411E686E910057017D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8A66E0181E686E900057017D /* ZWOpenFileDemo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8A66E0191E686E900057017D /* ZWOpenFileDemo.xcdatamodel */,
+			);
+			currentVersion = 8A66E0191E686E900057017D /* ZWOpenFileDemo.xcdatamodel */;
+			path = ZWOpenFileDemo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8A66E0011E686E900057017D /* Project object */;
+}

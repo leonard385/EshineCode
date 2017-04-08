@@ -1,0 +1,301 @@
+//
+//  MMMyShareViewController.m
+//  MicroMannage
+//
+//  Created by 倪望龙 on 2017/3/6.
+//  Copyright © 2017年 xunyijia. All rights reserved.
+//
+
+#import "MMMyShareViewController.h"
+#import "MMUpDownButton.h"
+@interface MMMyShareViewController ()
+@property(nonatomic,strong)UIScrollView *fatherScrollerView;
+@property(nonatomic,strong)UIView *fatherContentView;
+@property(nonatomic,strong)UILabel *QrcodeTitle;
+@property(nonatomic,strong)UIImageView* Qrimage;
+@property(nonatomic,strong)UILabel *LableShare;
+@property(nonatomic,strong)UIView *leftLine;
+@property(nonatomic,strong)UIView *rightLine;
+@property(nonatomic,strong)MMUpDownButton *btnSinaShare;
+@property(nonatomic,strong)MMUpDownButton *btnWxShare;
+@property(nonatomic,strong)MMUpDownButton *btnWxFriendShare;
+@property(nonatomic,strong)MMUpDownButton *btnWxCollect;
+@property(nonatomic,strong)MMUpDownButton *btnQQShare;
+@property(nonatomic,strong)MMUpDownButton *btnSMSShare;
+@end
+
+#define kSrcollerViewHeight 626.0f
+
+@implementation MMMyShareViewController
+
+-(UIScrollView *)fatherScrollerView{
+    if(_fatherScrollerView == nil){
+        _fatherScrollerView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height)];
+        [_fatherScrollerView setShowsVerticalScrollIndicator:YES];
+        _fatherScrollerView.showsHorizontalScrollIndicator = NO;
+        [_fatherScrollerView setContentSize:CGSizeMake(self.view.width, kSrcollerViewHeight)];
+        _fatherScrollerView.backgroundColor = [UIColor whiteColor];
+    }
+    return _fatherScrollerView;
+}
+
+-(UIView *)fatherContentView{
+    if(_fatherContentView == nil){
+        _fatherContentView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.width, kSrcollerViewHeight)];
+        _fatherContentView.backgroundColor = [UIColor whiteColor];
+    }
+    return _fatherContentView;
+}
+
+-(UILabel *)QrcodeTitle{
+    if(_QrcodeTitle == nil){
+        _QrcodeTitle = [UILabel new];
+        [_QrcodeTitle setText:@"扫一扫即可下载客户端"];
+        [_QrcodeTitle setFont:[UIFont systemFontOfSize:16.0f]];
+        [_QrcodeTitle setTextAlignment:NSTextAlignmentCenter];
+        [_QrcodeTitle setTextColor:HEXCOLOR(0x333333)];
+    }
+    return _QrcodeTitle;
+}
+
+-(UIImageView *)Qrimage{
+    if(_Qrimage == nil){
+        _Qrimage = [UIImageView new];
+        
+        _Qrimage.layer.borderColor = HEXCOLOR(0xcccccc).CGColor;
+        _Qrimage.layer.shadowOpacity = 0.6;
+        _Qrimage.layer.shadowColor = [UIColor grayColor].CGColor;
+        _Qrimage.layer.shadowRadius = 5.0f;
+        _Qrimage.layer.shadowOffset  = CGSizeMake(0, 10);
+        _Qrimage.backgroundColor = [UIColor redColor];
+    }
+    return _Qrimage;
+}
+
+-(UILabel *)LableShare{
+    if(_LableShare == nil){
+        _LableShare = [UILabel new];
+        [_LableShare setText:@"通过第三方分享"];
+        [_LableShare setFont:[UIFont systemFontOfSize:16.0f]];
+        [_LableShare setTextAlignment:NSTextAlignmentCenter];
+        [_LableShare setTextColor:HEXCOLOR(0x333333)];
+    }
+    return _LableShare;
+}
+
+-(UIView *)leftLine{
+    if(_leftLine == nil){
+        _leftLine = [UIView new];
+        _leftLine.backgroundColor = HEXCOLOR(0xcccccc);
+    }
+    return _leftLine;
+}
+
+-(UIView *)rightLine{
+    if(_rightLine == nil){
+        _rightLine = [UIView new];
+        _rightLine.backgroundColor = HEXCOLOR(0xcccccc);
+    }
+    return _rightLine;
+}
+
+-(MMUpDownButton *)btnSinaShare{
+    if(_btnSinaShare == nil){
+        _btnSinaShare = [MMUpDownButton new];
+        [_btnSinaShare setTitle:@"新浪分享" forState:UIControlStateNormal];
+        [_btnSinaShare.titleLabel setFont:[UIFont systemFontOfSize:16.0f]];
+        [_btnSinaShare setTitleColor:HEXCOLOR(0x333333) forState:UIControlStateNormal];
+        [_btnSinaShare setImage:[UIImage imageNamed:@"content_xl"] forState:UIControlStateNormal];
+        
+    }
+    return _btnSinaShare;
+}
+
+-(MMUpDownButton *)btnWxShare{
+    if(_btnWxShare == nil){
+        _btnWxShare = [MMUpDownButton new];
+        [_btnWxShare setTitle:@"微信好友" forState:UIControlStateNormal];
+        [_btnWxShare.titleLabel setFont:[UIFont systemFontOfSize:16.0f]];
+        [_btnWxShare setTitleColor:HEXCOLOR(0x333333) forState:UIControlStateNormal];
+        [_btnWxShare setImage:[UIImage imageNamed:@"content_wx"] forState:UIControlStateNormal];
+        
+    }
+    return _btnWxShare;
+}
+
+-(MMUpDownButton *)btnWxFriendShare{
+    if(_btnWxFriendShare == nil){
+        _btnWxFriendShare = [MMUpDownButton new];
+        [_btnWxFriendShare setTitle:@"微信朋友圈" forState:UIControlStateNormal];
+        [_btnWxFriendShare.titleLabel setFont:[UIFont systemFontOfSize:16.0f]];
+        [_btnWxFriendShare setTitleColor:HEXCOLOR(0x333333) forState:UIControlStateNormal];
+        [_btnWxFriendShare setImage:[UIImage imageNamed:@"content_pyq"] forState:UIControlStateNormal];
+        
+    }
+    return _btnWxFriendShare;
+}
+
+-(MMUpDownButton *)btnWxCollect{
+    if(_btnWxCollect == nil){
+        _btnWxCollect = [MMUpDownButton new];
+        [_btnWxCollect setTitle:@"微信收藏" forState:UIControlStateNormal];
+        [_btnWxCollect.titleLabel setFont:[UIFont systemFontOfSize:16.0f]];
+        [_btnWxCollect setTitleColor:HEXCOLOR(0x333333) forState:UIControlStateNormal];
+        [_btnWxCollect setImage:[UIImage imageNamed:@"content_sc"] forState:UIControlStateNormal];
+        
+    }
+    return _btnWxCollect;
+}
+
+-(MMUpDownButton *)btnQQShare{
+    if(_btnQQShare == nil){
+        _btnQQShare = [MMUpDownButton new];
+        [_btnQQShare setTitle:@"QQ" forState:UIControlStateNormal];
+        [_btnQQShare.titleLabel setFont:[UIFont systemFontOfSize:16.0f]];
+        [_btnQQShare setTitleColor:HEXCOLOR(0x333333) forState:UIControlStateNormal];
+        [_btnQQShare setImage:[UIImage imageNamed:@"content_qq"] forState:UIControlStateNormal];
+        
+    }
+    return _btnQQShare;
+}
+
+-(MMUpDownButton *)btnSMSShare{
+    if(_btnSMSShare == nil){
+        _btnSMSShare = [MMUpDownButton new];
+        [_btnSMSShare setTitle:@"短信" forState:UIControlStateNormal];
+        [_btnSMSShare.titleLabel setFont:[UIFont systemFontOfSize:16.0f]];
+        [_btnSMSShare setTitleColor:HEXCOLOR(0x333333) forState:UIControlStateNormal];
+        [_btnSMSShare setImage:[UIImage imageNamed:@"content_dx"] forState:UIControlStateNormal];
+        
+    }
+    return _btnSMSShare;
+}
+
+
+-(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if(self){
+        self.title = @"分享给好友";
+    }
+    return self;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self MSSetupSubViews];
+    // Do any additional setup after loading the view from its nib.
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+}
+
+
+
+-(void)MSSetupSubViews{
+    [self.view addSubview:self.fatherScrollerView];
+    [_fatherScrollerView addSubview:self.fatherContentView];
+    [_fatherContentView addSubview:self.QrcodeTitle];
+    [_fatherContentView addSubview:self.Qrimage];
+    [_fatherContentView addSubview:self.LableShare];
+    [_fatherContentView addSubview:self.leftLine];
+    [_fatherContentView addSubview:self.rightLine];
+    [_fatherContentView addSubview:self.btnSinaShare];
+    [_fatherContentView addSubview:self.btnWxShare];
+    [_fatherContentView addSubview:self.btnWxFriendShare];
+    [_fatherContentView addSubview:self.btnWxCollect];
+    [_fatherContentView addSubview:self.btnQQShare];
+    [_fatherContentView addSubview:self.btnSMSShare];
+    
+    [_QrcodeTitle mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(_fatherContentView).with.offset(26.0f);
+        make.left.mas_equalTo(_fatherContentView).with.offset(12.0f);
+        make.right.mas_equalTo(_fatherContentView).with.offset(-12.0f);
+        make.height.mas_equalTo(26.0f);
+    }];
+    
+    [_Qrimage mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(_QrcodeTitle.mas_bottom).with.offset(31.0f);
+        make.centerX.mas_equalTo(_fatherContentView);
+        make.size.mas_equalTo(CGSizeMake(198.0f, 198.0f));
+    }];
+    
+    [_LableShare mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(_fatherContentView);
+        make.size.mas_equalTo(CGSizeMake(124.0f, 26.0f));
+        make.top.mas_equalTo(_Qrimage.mas_bottom).with.offset(43.0f);
+    }];
+    
+    [_leftLine mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(_fatherContentView).with.offset(12.0f);
+        make.right.mas_equalTo(_LableShare.mas_left);
+        make.centerY.mas_equalTo(_LableShare);
+        make.height.mas_equalTo(1.0f);
+    }];
+    
+    [_rightLine mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(_LableShare.mas_right);
+        make.right.mas_equalTo(_fatherContentView).with.offset(-12.0f);
+        make.centerY.mas_equalTo(_LableShare);
+        make.height.mas_equalTo(1.0f);
+    }];
+    
+    [_btnSinaShare mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(_LableShare.mas_bottom).with.offset(26.0f);
+        make.left.mas_equalTo(_fatherContentView);
+        make.right.mas_equalTo(_btnWxShare.mas_left);
+        make.height.mas_equalTo(_btnSinaShare.mas_width);
+        make.width.mas_equalTo(_btnWxShare);
+    }];
+    
+    [_btnWxShare mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(_btnSinaShare);
+        make.left.mas_equalTo(_btnSinaShare.mas_right);
+        make.right.mas_equalTo(_btnWxFriendShare.mas_left);
+        make.bottom.mas_equalTo(_btnSinaShare);
+        make.width.mas_equalTo(_btnSinaShare);
+    }];
+    
+    [_btnWxFriendShare mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(_btnSinaShare);
+        make.left.mas_equalTo(_btnWxShare.mas_right);
+        make.right.mas_equalTo(_btnWxCollect.mas_left);
+        make.bottom.mas_equalTo(_btnSinaShare);
+        make.width.mas_equalTo(_btnWxShare);
+    }];
+    
+    [_btnWxCollect mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(_btnSinaShare);
+        make.left.mas_equalTo(_btnWxFriendShare.mas_right);
+        make.right.mas_equalTo(_fatherContentView);
+        make.bottom.mas_equalTo(_btnSinaShare);
+        make.width.mas_equalTo(_btnWxFriendShare);
+    }];
+    
+    [_btnQQShare mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(_btnSinaShare.mas_bottom);
+        make.left.right.height.mas_equalTo(_btnSinaShare);
+    }];
+    
+    [_btnSMSShare mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(_btnQQShare);
+        make.left.right.height.mas_equalTo(_btnWxShare);
+    }];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end

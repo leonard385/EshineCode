@@ -1,0 +1,28 @@
+//
+//  MMWorkDetailHeadFrame.h
+//  MicroMannage
+//
+//  Created by 倪望龙 on 2017/3/21.
+//  Copyright © 2017年 xunyijia. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "MMWorkDetailHeadModel.h"
+@interface MMWorkDetailHeadFrame : NSObject
+@property(nonatomic,assign)CGRect titleFrame;
+@property(nonatomic,assign)CGRect headImageFrame;
+@property(nonatomic,assign)CGRect userNameFrame;
+@property(nonatomic,assign)CGRect timeFrame;
+@property(nonatomic,assign)CGRect iconFrame;
+@property(nonatomic,assign)CGRect dateFrame;
+@property(nonatomic,assign)CGRect contentFrame;
+@property(nonatomic,assign)CGFloat contentLines;
+@property(nonatomic,assign)CGRect lineFrame;
+@property(nonatomic,assign)CGRect btnDropFrame;
+@property(nonatomic,assign)CGRect lineViewFrame;
+
+@property(nonatomic,assign)CGFloat contentHeight;
+@property(nonatomic,assign,getter=isDrop)BOOL drop;
+
+@property(nonatomic,strong)MMWorkDetailHeadModel *viewModel;
+@end

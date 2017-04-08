@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>icon</key>
+		<string>icon_zongrenshu</string>
+		<key>title</key>
+		<string>总员工人数</string>
+		<key>percent</key>
+		<integer>2</integer>
+		<key>num</key>
+		<integer>899</integer>
+	</dict>
+	<dict>
+		<key>icon</key>
+		<string>icon_xzry</string>
+		<key>title</key>
+		<string>新增员工</string>
+		<key>percent</key>
+		<integer>2</integer>
+		<key>num</key>
+		<integer>26</integer>
+	</dict>
+	<dict>
+		<key>icon</key>
+		<string>icon_lzry</string>
+		<key>title</key>
+		<string>离职员工</string>
+		<key>percent</key>
+		<integer>1</integer>
+		<key>num</key>
+		<integer>10</integer>
+		<key>New item</key>
+		<string></string>
+	</dict>
+</array>
+</plist>

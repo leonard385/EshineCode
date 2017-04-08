@@ -1,0 +1,1 @@
+link ../../../IQKeyboardManager/IQKeyBoardManager/IQSegmentedNextPrevious/IQSegmentedNextPrevious.h

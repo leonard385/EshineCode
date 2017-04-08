@@ -1,0 +1,144 @@
+//
+//  MMRankingTimeTableViewCell.m
+//  MicroMannage
+//
+//  Created by 倪望龙 on 2017/3/8.
+//  Copyright © 2017年 xunyijia. All rights reserved.
+//
+
+#import "MMRankingTimeTableViewCell.h"
+#import "YYText.h"
+@interface MMRankingTimeTableViewCell()
+@property(nonatomic,strong)UILabel *LableIndex;
+@property(nonatomic,strong)UIImageView *headImageView;
+@property(nonatomic,strong)UILabel *lableName;
+@property(nonatomic,strong)YYLabel *lableTime;
+@end
+
+@implementation MMRankingTimeTableViewCell
+
+-(UILabel *)LableIndex{
+    if(_LableIndex == nil){
+        _LableIndex = [UILabel new];
+        [_LableIndex setFont:[UIFont systemFontOfSize:15.0f]];
+        [_LableIndex setTextColor:HEXCOLOR(0x666666)];
+    }
+    return _LableIndex;
+}
+
+-(UIImageView *)headImageView{
+    if(_headImageView == nil){
+        _headImageView = [UIImageView new];
+        _headImageView.backgroundColor = [UIColor redColor];
+        _headImageView.layer.cornerRadius = 16.0f;
+        _headImageView.layer.masksToBounds = YES;
+    }
+    return _headImageView;
+}
+
+-(UILabel *)lableName{
+    if(_lableName == nil){
+        _lableName = [UILabel new];
+        [_lableName setTextColor:HEXCOLOR(0x666666)];
+        [_lableName setFont:[UIFont systemFontOfSize:14.0f]];
+        _lableName.text = @"吴书";
+    }
+    return _lableName;
+}
+
+-(YYLabel *)lableTime{
+    if(_lableTime == nil){
+        _lableTime = [YYLabel new];
+        NSMutableAttributedString *text = [self RAGetAttributeDateStr:@"80"];
+        _lableTime.attributedText = text;
+        [_lableTime setTextAlignment:NSTextAlignmentRight];
+    }
+    return _lableTime;
+}
+
+-(UIView *)cellLine{
+    if(_cellLine == nil){
+        _cellLine = [UIView new];
+        _cellLine.backgroundColor = HEXCOLOR(kLineColor);
+    }
+    return _cellLine;
+}
+
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    // Initialization code
+}
+
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if(self){
+        [self RTSetUpSubviews];
+    }
+    return self;
+}
+
+-(void)RTSetUpSubviews{
+    [self.contentView addSubview:self.LableIndex];
+    [self.contentView addSubview:self.headImageView];
+    [self.contentView addSubview:self.lableName];
+    [self.contentView addSubview:self.lableTime];
+    [self.contentView addSubview:self.cellLine];
+    
+    [_LableIndex mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.bottom.mas_equalTo(self.contentView);
+        make.left.mas_equalTo(self.contentView).with.offset(18.0f);
+        make.width.mas_equalTo(17.0f);
+    }];
+    [_headImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.mas_equalTo(self.contentView);
+        make.left.mas_equalTo(_LableIndex.mas_right).with.offset(6.0f);
+        make.size.mas_equalTo(CGSizeMake(32.0f, 32.0f));
+    }];
+    
+    [_lableName mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.bottom.mas_equalTo(self.contentView);
+        make.left.mas_equalTo(_headImageView.mas_right).with.offset(10.0f);
+        make.right.mas_equalTo(self.lableTime.mas_left).with.offset(-10.0f);
+    }];
+    
+    [_lableTime mas_makeConstraints:^(MASConstraintMaker *make) {
+       make.top.bottom.mas_equalTo(self.contentView);
+       make.right.mas_equalTo(self.contentView).with.offset(-19.0f);
+        make.width.mas_equalTo(60.0f);
+    }];
+    
+    [_cellLine mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.bottom.mas_equalTo(self.contentView);
+        make.left.mas_equalTo(self.contentView).with.offset(52.0f);
+        make.height.mas_equalTo(0.5f);
+    }];
+    
+}
+
+
+-(NSMutableAttributedString*)RAGetAttributeDateStr:(NSString *)date{
+    NSMutableAttributedString *text = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"%@小时",date]];
+    NSRange range0 = [[text string] rangeOfString:date options:NSCaseInsensitiveSearch];
+    
+    [text yy_setFont:[UIFont systemFontOfSize:12] range:range0];
+    [text yy_setColor:HEXCOLOR(0xff4b0d) range:range0];
+    
+    NSRange range1 = [[text string] rangeOfString:@"小时" options:NSCaseInsensitiveSearch];
+    [text yy_setFont:[UIFont systemFontOfSize:11] range:range1];
+    [text yy_setColor:HEXCOLOR(0x999999) range:range1];
+    return text;
+}
+
+-(void)setIndex:(NSString *)index{
+    _index = index;
+    _LableIndex.text = index;
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+
+    // Configure the view for the selected state
+}
+
+@end

@@ -1,0 +1,140 @@
+//
+//  MMKnowlegeTableViewCell.m
+//  MicroMannage
+//
+//  Created by 倪望龙 on 2017/3/9.
+//  Copyright © 2017年 xunyijia. All rights reserved.
+//
+
+#import "MMKnowlegeTableViewCell.h"
+
+@interface MMKnowlegeTableViewCell()
+@property(nonatomic,strong)UIButton *cellContentView;
+@property(nonatomic,strong)UIImageView *logoImageView;//头像
+@property(nonatomic,strong)UILabel *lableTitle;//标题
+@property(nonatomic,strong)UILabel *lableSubTitle;//小标题
+@property(nonatomic,strong)UILabel *lableSocial;//社交
+@end
+
+@implementation MMKnowlegeTableViewCell
+
+-(UIButton *)cellContentView{
+    if(_cellContentView == nil){
+        _cellContentView = [UIButton new];
+        _cellContentView.backgroundColor = [UIColor whiteColor];
+        _cellContentView.layer.borderColor = HEXCOLOR(0xcccccc).CGColor;
+        _cellContentView.layer.borderWidth = 0.5f;
+        _cellContentView.layer.cornerRadius = 5.0f;
+        _cellContentView.layer.masksToBounds = YES;
+        [_cellContentView setBackgroundColor:HEXCOLOR(0xdddddd) forState:UIControlStateHighlighted];
+        [_cellContentView addTarget:self action:@selector(btnCellClick) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _cellContentView;
+}
+
+-(UIImageView *)logoImageView{
+    if(_logoImageView == nil){
+        _logoImageView = [UIImageView new];
+        _logoImageView.backgroundColor = [UIColor redColor];
+        _logoImageView.layer.cornerRadius = 30.0f;
+        _logoImageView.layer.masksToBounds = YES;
+    }
+    return _logoImageView;
+}
+
+-(UILabel *)lableTitle{
+    if(_lableTitle == nil){
+        _lableTitle = [UILabel new];
+        [_lableTitle setTextColor:HEXCOLOR(0x333333)];
+        [_lableTitle setFont:[UIFont systemFontOfSize:14.0f]];
+        _lableTitle.text = @"套餐学习";
+    }
+    return _lableTitle;
+}
+
+-(UILabel *)lableSubTitle{
+    if(_lableSubTitle == nil){
+        _lableSubTitle = [UILabel new];
+        [_lableSubTitle setTextColor:HEXCOLOR(0x666666)];
+        [_lableSubTitle setFont:[UIFont systemFontOfSize:14.0f]];
+        _lableSubTitle.text = @"套餐学习";
+    }
+    return _lableSubTitle;
+}
+
+-(UILabel *)lableSocial{
+    if(_lableSocial == nil){
+        _lableSocial = [UILabel new];
+        [_lableSocial setTextColor:HEXCOLOR(0x999999)];
+        [_lableSocial setFont:[UIFont systemFontOfSize:10.0f]];
+        _lableSocial.text = @"20条收录   156人关注";
+    }
+    return _lableSocial;
+}
+
+
+
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    // Initialization code
+}
+
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if(self){
+        [self KTSetUpSubviews];
+    }
+    return self;
+}
+
+-(void)KTSetUpSubviews{
+    [self.contentView addSubview:self.cellContentView];
+    [self.cellContentView addSubview:self.logoImageView];
+    [self.cellContentView addSubview:self.lableTitle];
+    [self.cellContentView addSubview:self.lableSubTitle];
+    [self.cellContentView addSubview:self.lableSocial];
+    
+    
+    [_cellContentView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(self.contentView).with.insets(UIEdgeInsetsMake(5.0f, 12.0f, 5.0f, 12.0f));
+    }];
+    
+    [_logoImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(60.0f, 60.0f));
+        make.centerY.mas_equalTo(self.cellContentView);
+        make.left.mas_equalTo(_cellContentView).with.offset(12.0f);
+    }];
+    
+    [_lableTitle mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(_logoImageView.mas_right).with.offset(12.0f);
+        make.right.mas_equalTo(_cellContentView.mas_right).with.offset(-12.0f);
+        make.top.mas_equalTo(_logoImageView);
+        make.height.mas_equalTo(22.0f);
+    }];
+    
+    [_lableSubTitle mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.mas_equalTo(_lableTitle);
+        make.bottom.mas_equalTo(_lableSocial.mas_top);
+        make.top.mas_equalTo(_lableTitle.mas_bottom);
+    }];
+    
+    [_lableSocial mas_makeConstraints:^(MASConstraintMaker *make) {
+       make.left.right.mas_equalTo(_lableTitle);
+       make.bottom.mas_equalTo(_logoImageView);
+       make.height.mas_equalTo(16.0f);
+    }];
+    
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+    // Configure the view for the selected state
+}
+
+-(void)btnCellClick{
+    _KTCellClickBlock ? _KTCellClickBlock():nil;
+}
+
+
+@end

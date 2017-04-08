@@ -1,0 +1,84 @@
+//
+//  BSENaVViewController.m
+//  BSEM
+//
+//  Created by 逸信Mac on 16/3/2.
+//  Copyright © 2016年 逸信Mac. All rights reserved.
+//
+
+#import "BSENavigationController.h"
+@interface BSENavigationController ()
+
+@end
+
+@implementation BSENavigationController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+//    [self setupNavigationBarTheme];
+    // Do any additional setup after loading the view.
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
+#pragma mark - 设置navbar的字体和背景
+- (void)setupNavigationBarTheme {
+    //设置全局navBar字体颜色与背景颜色
+    UINavigationBar *navBar = [UINavigationBar appearance];
+    //设置字体颜色
+    NSDictionary *attrNavBar = @{NSFontAttributeName : [UIFont systemFontOfSize:18.0f], NSForegroundColorAttributeName : HEXCOLOR(0x333333)};
+    [navBar setTitleTextAttributes:attrNavBar];
+    //设置背景颜色
+    [navBar setBarTintColor:[UIColor whiteColor]];
+    
+    
+    if ([UIDevice currentDevice].systemVersion.integerValue >= 8.0) {
+        [navBar setTranslucent:NO];
+    }
+}
+
+#pragma mark - 全局返回键以及抽屉事件设置
+-(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    if(self.childViewControllers.count > 0){
+        //设置返回键
+        [self setUpBackBtn:viewController];
+        //隐藏tabbar
+        viewController.hidesBottomBarWhenPushed = YES;
+
+    }
+    [super pushViewController:viewController animated:animated];
+}
+
+#pragma mark - 返回键样式设置
+-(void)setUpBackBtn:(UIViewController *)Controller
+{
+    UIButton *LeftItem = [UIButton buttonWithType:UIButtonTypeSystem];
+    LeftItem.frame = CGRectMake(0, 0, 12, 19);
+    [LeftItem setBackgroundImage:[UIImage imageNamed:@"return"] forState:UIControlStateNormal];
+    [LeftItem addTarget:self action:@selector(BackBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *customLeftItem = [[UIBarButtonItem alloc] initWithCustomView:LeftItem];
+    Controller.navigationItem.leftBarButtonItem = customLeftItem;
+}
+-(void)BackBtnClick
+{
+    [self popViewControllerAnimated:YES];
+}
+
+
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end

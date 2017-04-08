@@ -1,0 +1,36 @@
+//
+//  MMMineHeadView.m
+//  MicroMannage
+//
+//  Created by 倪望龙 on 2017/3/6.
+//  Copyright © 2017年 xunyijia. All rights reserved.
+//
+
+#import "MMMineHeadView.h"
+
+@interface MMMineHeadView()
+@property(nonatomic,strong)UITapGestureRecognizer *tap;
+@end
+
+@implementation MMMineHeadView
+-(void)awakeFromNib{
+    [super awakeFromNib];
+    [self MHSetUpSubviews];
+}
+
+
+-(void)MHSetUpSubviews{
+    _tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(MHHeadViewClick)];
+    [_tap setNumberOfTapsRequired:1];
+    [_tap setNumberOfTouchesRequired:1];
+    [self.ImageHeadView addGestureRecognizer:_tap];
+    _ImageHeadView.layer.cornerRadius = 5.0f;
+    _ImageHeadView.layer.masksToBounds = YES;
+    
+    
+}
+
+-(void)MHHeadViewClick{
+    
+}
+@end

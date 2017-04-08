@@ -1,0 +1,96 @@
+//
+//  MMDetailTaskFrame.m
+//  MicroMannage
+//
+//  Created by 倪望龙 on 2017/3/21.
+//  Copyright © 2017年 xunyijia. All rights reserved.
+//
+
+#import "MMDetailTaskFrame.h"
+#import "NSString+Size.h"
+
+@implementation MMDetailTaskFrame
+-(void)setViewModel:(MMDetailTaskModel *)viewModel{
+    _viewModel = viewModel;
+    
+    CGFloat headViewX = 0;
+    CGFloat headViewY = 0;
+    CGFloat headViewW = kScreenWidth;
+    CGFloat headViewH = 10.0f;
+    _headViewFrame = CGRectMake(headViewX, headViewY,headViewW, headViewH);
+    
+    CGFloat titleFrameX = 0;
+    CGFloat titleFrameY = 0;
+    CGFloat titleFrameW = kScreenWidth;
+    CGFloat titleFrameH = 44.0f;
+    _titleFrame = CGRectMake(titleFrameX, titleFrameY,titleFrameW, titleFrameH);
+    
+    CGFloat titleContentX = 12.0f;
+    CGFloat titleContentY = CGRectGetMaxY(_titleFrame);
+    CGFloat titleContentW = kScreenWidth - 12.0f * 2.0f;
+    CGFloat titleContentH = [viewModel.title sizeWithFont:[UIFont systemFontOfSize:16.0f] constrainedToWidth:titleContentW].height;
+    _titleContentFrame = CGRectMake(titleContentX, titleContentY,titleContentW, titleContentH);
+   
+    CGFloat taskLineX = titleContentX;
+    CGFloat taskLineY = CGRectGetMaxY(_titleContentFrame) + 15.0f;
+    CGFloat taskLineW = titleContentW;
+    CGFloat taskLineH = 0.5f;
+    _taskLineFrame = CGRectMake(taskLineX, taskLineY,taskLineW, taskLineH);
+    
+    if(viewModel.name != nil){
+        CGFloat headImageX = titleContentX;
+        CGFloat headImageY = CGRectGetMaxY(_taskLineFrame) + 12.0f;
+        CGFloat headImageW = 26.0f;
+        CGFloat headImageH = headImageW;
+        _headImageFrame = CGRectMake(headImageX, headImageY,headImageW, headImageH);
+        
+        
+        CGFloat nameX = CGRectGetMaxX(_headImageFrame) + 12.0f;
+        CGFloat nameY = headImageY;
+        CGFloat nameW = kScreenWidth - nameX - 12.0f;
+        CGFloat nameH = 16.0f;
+        _nameFrame = CGRectMake(nameX, nameY,nameW, nameH);
+        
+        CGFloat timeX = nameX;
+        CGFloat timeY = CGRectGetMaxY(_nameFrame) + 3.0f;
+        CGFloat timeW = nameW;
+        CGFloat timeH = 15.0f;
+        _timeFrame = CGRectMake(timeX, timeY,timeW, timeH);
+        
+        NSString *firstChart = viewModel.chatContents.firstObject;
+        CGFloat firstChatX = nameX;
+        CGFloat firstChatY = CGRectGetMaxY(_timeFrame) + 6.0f;
+        CGFloat firstChatW = nameW;
+        CGFloat firstChatH = [firstChart sizeWithFont:[UIFont systemFontOfSize:13.0f] constrainedToWidth:firstChatW].height;
+        _firstChatFrame = CGRectMake(firstChatX, firstChatY,firstChatW, firstChatH);
+        
+        //chartContent
+        NSArray *chart = viewModel.chatContents;
+        [chart enumerateObjectsUsingBlock:^(NSString *  _Nonnull content, NSUInteger idx, BOOL * _Nonnull stop) {
+            
+        }];
+        
+    }
+    
+    //     titleFrame;//标题
+    //     titleContentFrame;//任务内容
+    //     taskLineFrame;//分割线
+    //     headImageFrame;//用户头像
+    //     nameFrame;//用户名称
+    //     timeFrame;//回复时间
+    //     firstChatFrame;//最后回复的时间
+    //     chatContentFrame;//回复内容
+    //     contentFrames;//回复内容内部视图
+    //     showAllFrame;//显示所有
+    //     contentLineFrame;//聊天分割线
+    //     btnChartFrame;//评论
+    //     btnCompleteFrame;//完成
+    
+    
+    
+}
+
+-(void)refresh{
+    [self setViewModel:_viewModel];
+}
+@end

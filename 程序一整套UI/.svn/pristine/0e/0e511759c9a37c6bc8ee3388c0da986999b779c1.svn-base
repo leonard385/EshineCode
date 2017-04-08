@@ -1,0 +1,100 @@
+//
+//  MMExamViewController.m
+//  MicroMannage
+//
+//  Created by 倪望龙 on 2017/3/17.
+//  Copyright © 2017年 xunyijia. All rights reserved.
+//
+
+#import "MMExamViewController.h"
+#import "MMExamCollectionCell.h"
+@class MMExamModel;
+@interface MMExamViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+@property(nonatomic,strong)UICollectionView *collectView;
+@property(nonatomic,strong)UICollectionViewFlowLayout *flowLayout;
+@property(nonatomic,strong)NSArray *plistArray;
+@end
+
+@implementation MMExamViewController
+
+-(NSArray *)plistArray{
+    if(_plistArray  == nil){
+        NSString *plistPath  =  [[NSBundle mainBundle]pathForResource:@"MMExam.plist" ofType:nil];
+        NSArray *listArray = [NSArray arrayWithContentsOfFile:plistPath];
+        _plistArray = [MMExamModel mj_objectArrayWithKeyValuesArray:listArray];
+    }
+    return _plistArray;
+}
+
+-(UICollectionViewFlowLayout *)flowLayout{
+    if(_flowLayout == nil){
+        _flowLayout = [UICollectionViewFlowLayout new];
+        _flowLayout.itemSize = CGSizeMake(kScreenWidth,kScreenHeight  - kNavigationBarAndStateBarHeight);
+        _flowLayout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
+        _flowLayout.minimumLineSpacing = 0.0f;
+        _flowLayout.minimumInteritemSpacing = 0.0f;
+        _flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    }
+    return _flowLayout;
+}
+-(UICollectionView *)collectView{
+    if(_collectView == nil){
+        _collectView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth,kScreenHeight - kNavigationBarAndStateBarHeight) collectionViewLayout:self.flowLayout];
+        [_collectView registerClass:[MMExamCollectionCell class] forCellWithReuseIdentifier:@"MMExamCollectionCell"];
+        _collectView.showsHorizontalScrollIndicator = NO;
+        _collectView.backgroundColor = [UIColor whiteColor];
+        _collectView.pagingEnabled = YES;
+        _collectView.delegate = self;
+        _collectView.dataSource = self;
+    }
+    return _collectView;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self EVSetUpSubviews];
+    // Do any additional setup after loading the view.
+}
+
+-(void)EVSetUpSubviews{
+    [self.view addSubview:self.collectView];
+}
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return 1.0f;
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return self.plistArray.count;
+}
+
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    MMExamCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MMExamCollectionCell" forIndexPath:indexPath];
+    MMExamModel *model = self.plistArray[indexPath.row];
+    [cell setCellModel:model];
+    return cell;
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
+
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end

@@ -1,0 +1,29 @@
+//
+//  MMTrainItemCell.m
+//  MicroMannage
+//
+//  Created by 倪望龙 on 2017/3/22.
+//  Copyright © 2017年 xunyijia. All rights reserved.
+//
+
+#import "MMTrainItemCell.h"
+@interface MMTrainItemCell()
+@property(nonatomic,strong)UILabel *lableContent;//内容
+@property(nonatomic,strong)UITableView * tableView;//tableView
+@property(nonatomic,strong)UIView *verLine;//竖线
+@end
+
+@implementation MMTrainItemCell
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    // Initialization code
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+
+    // Configure the view for the selected state
+}
+
+@end

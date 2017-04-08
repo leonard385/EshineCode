@@ -1,0 +1,141 @@
+//
+//  MMEvaluationRecordHeadView.m
+//  MicroMannage
+//
+//  Created by 倪望龙 on 2017/3/16.
+//  Copyright © 2017年 xunyijia. All rights reserved.
+//
+
+#import "MMEvaluationRecordHeadView.h"
+#import "MMEvaluationRecordItem.h"
+#import "MMEvaluationRecordViewItem.h"
+@interface MMEvaluationRecordHeadView()
+@property(nonatomic,strong)MMEvaluationRecordItem *record;
+@property(nonatomic,strong)MMEvaluationRecordViewItem *itemUndo;
+@property(nonatomic,strong)MMEvaluationRecordViewItem *itemError;
+@property(nonatomic,strong)MMEvaluationRecordViewItem *itemTrue;
+@property(nonatomic,strong)UIView *bar;
+@property(nonatomic,strong)UILabel *lableTitle;
+@end
+
+@implementation MMEvaluationRecordHeadView
+-(MMEvaluationRecordItem *)record{
+    if(_record == nil){
+        _record = [MMEvaluationRecordItem new];
+        _record.layer.borderWidth = 1.5f;
+        _record.layer.borderColor = HEXCOLOR(kBlueColor).CGColor;
+        _record.layer.cornerRadius = 78.5f;
+        _record.num = @"80";
+    }
+    return _record;
+}
+
+-(MMEvaluationRecordViewItem *)itemUndo{
+    if(_itemUndo == nil){
+        _itemUndo = [[MMEvaluationRecordViewItem alloc]initWithTitle:@"未做题" NumColor:HEXCOLOR(kBlueColor)];
+        _itemUndo.num = @"40";
+    }
+    return _itemUndo;
+}
+
+-(MMEvaluationRecordViewItem *)itemError{
+    if(_itemError == nil){
+        _itemError = [[MMEvaluationRecordViewItem alloc]initWithTitle:@"答错题" NumColor:HEXCOLOR(0xff4b0d)];
+        _itemError.num = @"5";
+    }
+    return _itemError;
+}
+
+-(MMEvaluationRecordViewItem *)itemTrue{
+    if(_itemTrue == nil){
+        _itemTrue = [[MMEvaluationRecordViewItem alloc]initWithTitle:@"答对题" NumColor:HEXCOLOR(kBlueColor)];
+        _itemTrue.num = @"220";
+    }
+    return _itemTrue;
+}
+
+-(UIView *)bar{
+    if(_bar == nil){
+        _bar = [UIView new];
+        _bar.backgroundColor = HEXCOLOR(0xefeff4);
+    }
+    return _bar;
+}
+
+-(UILabel *)lableTitle{
+    if(_lableTitle == nil){
+        _lableTitle = [UILabel new];
+        [_lableTitle setTextColor:HEXCOLOR(0x333333)];
+        [_lableTitle setFont:[UIFont systemFontOfSize:16.0f]];
+        _lableTitle.text = @"历史成绩";
+    }
+    return _lableTitle;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self RHSetUpSubViews];
+    }
+    return self;
+}
+
+-(void)RHSetUpSubViews{
+    [self addSubview:self.record];
+    [self addSubview:self.itemUndo];
+    [self addSubview:self.itemError];
+    [self addSubview:self.itemTrue];
+    [self addSubview:self.bar];
+    [self.bar addSubview:self.lableTitle];
+   
+    [_record mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self).with.offset(26.0f);
+        make.size.mas_equalTo(CGSizeMake(157.0f, 157.0f));
+        make.centerX.mas_equalTo(self);
+    }];
+    
+    [_itemUndo mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(_record.mas_bottom).with.offset(26.0f);
+        make.left.mas_equalTo(self).with.offset(12.0f);
+        make.height.mas_equalTo(64.0f);
+        make.width.mas_equalTo(_itemError);
+    }];
+    
+    [_itemError mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(_itemUndo);
+        make.left.mas_equalTo(_itemUndo.mas_right);
+        make.height.mas_equalTo(64.0f);
+        make.width.mas_equalTo(_itemTrue);
+    }];
+    
+    [_itemTrue mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(_itemError);
+         make.left.mas_equalTo(_itemError.mas_right);
+        make.height.mas_equalTo(64.0f);
+        make.width.mas_equalTo(_itemError);
+        make.right.mas_equalTo(self).with.offset(-12.0f);
+    }];
+    
+    [_bar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.mas_equalTo(self);
+        make.height.mas_equalTo(44.0f);
+    }];
+    [_lableTitle mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(_bar).with.insets(UIEdgeInsetsMake(0, 12.0f, 0, 12.0f));
+    }];
+}
+
+-(void)setBestScore:(NSString *)bestScore{
+    _bestScore = bestScore;
+}
+
+/*
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect {
+    // Drawing code
+}
+*/
+
+@end

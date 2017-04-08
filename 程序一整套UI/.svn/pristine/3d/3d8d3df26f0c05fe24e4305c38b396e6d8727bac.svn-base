@@ -1,0 +1,99 @@
+//
+//  MMSegmentView.m
+//  MicroMannage
+//
+//  Created by 倪望龙 on 2017/3/13.
+//  Copyright © 2017年 xunyijia. All rights reserved.
+//
+
+#import "WLSegmentView.h"
+#define kbtnItemTagOffset 100
+@interface  WLSegmentView()
+@property(nonatomic,strong)UIView *progressLayer;
+@property(nonatomic,strong)NSArray *titles;
+@property(nonatomic,strong)UIButton *selectedBtn;
+@property(nonatomic,assign)CGFloat avgW;
+@property(nonatomic,strong)NSMutableArray *btnItems;
+@end
+@implementation WLSegmentView
+-(NSMutableArray *)btnItems{
+    if(_btnItems == nil){
+        _btnItems = [NSMutableArray new];
+    }
+    return _btnItems;
+}
+
+-(instancetype)initWithFrame:(CGRect)frame withTitles:(NSArray *)titles{
+    self = [super initWithFrame:frame];
+    if(self){
+        self.layer.borderWidth = 1.0f;
+        self.layer.borderColor = HEXCOLOR(kBlueColor).CGColor;
+        self.layer.cornerRadius = self.frame.size.height / 2.0f;
+        self.layer.masksToBounds = YES;
+        _titles = titles;
+        //progress
+        CGFloat containerW = self.frame.size.width;
+        _avgW = containerW / titles.count;
+        CGFloat containerH = self.frame.size.height;
+        _progressLayer = [[UIView alloc]init];
+        _progressLayer.frame = CGRectMake(0, 0, _avgW + containerH/4, containerH);
+        _progressLayer.layer.cornerRadius = containerH / 2.0f;
+        _progressLayer.backgroundColor = HEXCOLOR(kBlueColor);
+        _progressLayer.layer.masksToBounds = YES;
+        [self addSubview:_progressLayer];
+        //btn
+        [titles enumerateObjectsUsingBlock:^(NSString*  _Nonnull title, NSUInteger idx, BOOL * _Nonnull stop)  {
+            UIButton * btnItem = [UIButton buttonWithType:UIButtonTypeCustom];
+            btnItem.frame = CGRectMake( idx * _avgW,0, _avgW, containerH);
+            btnItem.tag = idx + kbtnItemTagOffset;
+            [btnItem setTitle:title forState:UIControlStateNormal];
+            [btnItem.titleLabel setFont:[UIFont systemFontOfSize:12.0f]];
+            [btnItem setTitleColor:HEXCOLOR(kBlueColor) forState:UIControlStateNormal];
+            [btnItem setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
+            if(idx == 0){
+                _selectedBtn = btnItem;
+                _selectedBtn.selected = YES;
+            }
+            [btnItem addTarget:self action:@selector(menuBtnClick:) forControlEvents:(UIControlEventTouchUpInside)];
+            [self.btnItems addObject:btnItem];
+            [self addSubview:btnItem];
+        }];
+    }
+    return self;
+}
+
+#pragma mark - 按钮点击progress移动动画效果
+-(void)menuBtnClick:(UIButton *)sender{
+    NSUInteger tag = sender.tag - kbtnItemTagOffset;
+    [self SVprogressLineMoveTo:tag];
+    if ([_delegate respondsToSelector:@selector(WLSegmentBtnClickAtIndex:)]){
+        [_delegate WLSegmentBtnClickAtIndex:tag];
+    }
+}
+
+-(void)SVprogressLineMoveTo:(NSUInteger)index{
+    
+    UIButton *sender = _btnItems[index];
+    [UIView animateWithDuration:0.2 delay:0.0f usingSpringWithDamping:0.6 initialSpringVelocity:10.0f options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        CGPoint center = sender.center;
+        self.progressLayer.center = center;
+        _selectedBtn.selected = NO;
+        _selectedBtn = sender;
+        _selectedBtn.selected = YES;
+        
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+
+
+
+/*
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect {
+    // Drawing code
+}
+*/
+
+@end

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>店长岗前培训</string>
+		<key>num</key>
+		<string>20</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>有效的时间管理</string>
+		<key>num</key>
+		<string>60</string>
+	</dict>
+</array>
+</plist>

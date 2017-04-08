@@ -1,0 +1,97 @@
+//
+//  MMEvaluationRecordViewController.m
+//  MicroMannage
+//
+//  Created by 倪望龙 on 2017/3/15.
+//  Copyright © 2017年 xunyijia. All rights reserved.
+//
+
+#import "MMEvaluationRecordViewController.h"
+#import "MMEvaluationRecordHeadView.h"
+#import "MMEvaluationRecordCell.h"
+@class MMEvaluationRecordModel;
+@interface MMEvaluationRecordViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property(nonatomic,strong)MMEvaluationRecordHeadView *headView;
+@property(nonatomic,strong)NSArray *plistArray;
+
+@end
+
+@implementation MMEvaluationRecordViewController
+-(NSArray *)plistArray{
+    if(_plistArray  == nil){
+        NSString *plistPath  =  [[NSBundle mainBundle]pathForResource:@"MMEvaluationRecord.plist" ofType:nil];
+        NSArray *listArray = [NSArray arrayWithContentsOfFile:plistPath];
+        _plistArray = [MMEvaluationRecordModel mj_objectArrayWithKeyValuesArray:listArray];
+    }
+    return _plistArray;
+}
+
+-(MMEvaluationRecordHeadView *)headView{
+    if(_headView == nil){
+        _headView = [[MMEvaluationRecordHeadView alloc]initWithFrame:CGRectMake(0, 0, self.view.width, 200.0f)];
+    }
+    return _headView;
+}
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self ERSetUpSubviews];
+    // Do any additional setup after loading the view.
+}
+
+-(void)ERSetUpSubviews{
+    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0,0,self.view.width,self.view.height+(kNavigationBarAndStateBarHeight)) style:UITableViewStylePlain];
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    self.tableView.backgroundColor = [UIColor whiteColor];
+    [self.tableView registerClass:[MMEvaluationRecordCell class] forCellReuseIdentifier:@"MMEvaluationRecordCell"];
+
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.rowHeight = 78.0f;
+    self.tableView.tableHeaderView = self.headView;
+    [self.view addSubview:self.tableView];
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1.0f;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.plistArray.count;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    MMEvaluationRecordCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MMEvaluationRecordCell"];
+    if(cell == nil){
+        cell = [[MMEvaluationRecordCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MMEvaluationRecordCell"];
+    }
+    MMEvaluationRecordModel *model = self.plistArray[indexPath.row];
+    [cell setCellModel:model];
+    
+    if(indexPath.row == self.plistArray.count - 1){
+        cell.cellLine.hidden = YES;
+    }
+    return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end

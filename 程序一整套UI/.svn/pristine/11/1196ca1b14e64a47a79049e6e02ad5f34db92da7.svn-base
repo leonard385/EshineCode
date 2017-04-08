@@ -1,0 +1,17 @@
+//
+//  MMMineHeadView.h
+//  MicroMannage
+//
+//  Created by 倪望龙 on 2017/3/6.
+//  Copyright © 2017年 xunyijia. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface MMMineHeadView : UIView
+@property (weak, nonatomic) IBOutlet UIImageView *ImageHeadView;//头像
+@property (weak, nonatomic) IBOutlet UILabel *LableUserName;//用户名
+@property (weak, nonatomic) IBOutlet UILabel *LableSubTitle;//
+@property (weak, nonatomic) IBOutlet UIButton *BtnQrcode;//二维码
+
+@end

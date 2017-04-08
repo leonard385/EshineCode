@@ -1,0 +1,183 @@
+//
+//  MMHomeHeadView.m
+//  MicroMannage
+//
+//  Created by 倪望龙 on 2017/3/6.
+//  Copyright © 2017年 xunyijia. All rights reserved.
+//
+
+#import "MMHomeHeadView.h"
+#import "SDCycleScrollView.h"
+#import "MMHomeFuncBtnItem.h"
+#import "MMHomeBtnItemModel.h"
+
+#define kcycleViewH 209.0f
+#define ksubContentH 105.0f
+#define kfuncScrollerH 87.0f
+#define kpageControlH 18.0f
+#define kTagOffset 100
+
+@interface MMHomeHeadView()<SDCycleScrollViewDelegate,UIScrollViewDelegate>
+@property(nonatomic,strong)SDCycleScrollView *cycleView;//轮播图
+@property(nonatomic,strong)UIView *subContentView;
+@property(nonatomic,strong)UIScrollView *funcScrollerView;//功能scrollerview
+@property(nonatomic,strong)UIView  *funcContent;//功能Content
+@property(nonatomic,strong)UIPageControl *pageControl;//page控制
+@property(nonatomic,strong)NSArray *ItemsArray;//按钮数组
+@end
+
+@implementation MMHomeHeadView
+
+-(SDCycleScrollView *)cycleView{
+    if(_cycleView == nil){
+//  _cycleView =  [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, -kNavigationBarAndStateBarHeight, kScreenWidth, kcycleViewH) delegate:self placeholderImage:[UIImage imageNamed:@"camera"]];
+        _cycleView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0,0, kScreenWidth, kcycleViewH) shouldInfiniteLoop:YES imageNamesGroup:@[@"bg",@"bg",@"bg"]];
+        _cycleView.pageDotColor = HEXCOLOR(0xcccccc);
+        _cycleView.currentPageDotColor = HEXCOLOR(kBlueColor);
+        _cycleView.delegate = self;
+    }
+    return _cycleView;
+}
+
+-(UIView *)subContentView{
+
+    if(_subContentView == nil){
+        _subContentView = [[UIView alloc]initWithFrame:CGRectMake(0, kcycleViewH, kScreenWidth, ksubContentH)];
+        _subContentView.backgroundColor = [UIColor whiteColor];
+    }
+    return _subContentView;
+}
+
+-(UIScrollView *)funcScrollerView{
+    if(_funcScrollerView == nil){
+        _funcScrollerView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kfuncScrollerH)];
+        _funcScrollerView.showsVerticalScrollIndicator = NO;
+        _funcScrollerView.showsHorizontalScrollIndicator = NO;
+        _funcScrollerView.bounces = NO;
+        _funcScrollerView.contentSize = CGSizeMake(kScreenWidth * 2, kfuncScrollerH);
+        _funcScrollerView.indicatorStyle = UIScrollViewIndicatorStyleDefault;
+        _funcScrollerView.pagingEnabled = YES;
+        _funcScrollerView.delegate = self;
+    }
+    return _funcScrollerView;
+}
+
+-(UIView *)funcContent{
+    if(_funcContent == nil){
+        _funcContent = [UIView new];
+        _funcContent.backgroundColor = [UIColor whiteColor];
+        _funcContent.frame = CGRectMake(0, 0, kScreenWidth*2, kfuncScrollerH);
+        //添加按钮
+       [_ItemsArray enumerateObjectsUsingBlock:^(MMHomeBtnItemModel*  _Nonnull model, NSUInteger idx, BOOL * _Nonnull stop) {
+           CGFloat BtnItemW = kScreenWidth / 4;
+           CGFloat BtnItemH = kfuncScrollerH;
+           MMHomeFuncBtnItem *btnItem = [[MMHomeFuncBtnItem alloc]initWithFrame:CGRectMake(idx+idx*BtnItemW, 0, BtnItemW, BtnItemH)];
+           [btnItem setImage:[UIImage imageNamed:model.icon] forState:UIControlStateNormal];
+           [btnItem setTitle:model.title forState:UIControlStateNormal];
+           [btnItem setTitleColor:HEXCOLOR(0x333333) forState:UIControlStateNormal];
+           [btnItem.titleLabel setFont:[UIFont systemFontOfSize:14.0f]];
+           [btnItem.titleLabel setTextAlignment:NSTextAlignmentCenter];
+           btnItem.tag = kTagOffset + idx;
+           [btnItem addTarget:self action:@selector(HHFuncBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+           [_funcContent addSubview:btnItem];
+       }];
+    }
+    return _funcContent;
+}
+
+-(UIPageControl *)pageControl{
+    if(_pageControl  == nil){
+        _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, ksubContentH - kpageControlH, kScreenWidth, kpageControlH)];
+        _pageControl.currentPage = 0;
+        _pageControl.numberOfPages = 2.0f;
+        _pageControl.pageIndicatorTintColor = HEXCOLOR(0xcccccc);
+        _pageControl.currentPageIndicatorTintColor = HEXCOLOR(kBlueColor);
+        [_pageControl addTarget:self action:@selector(pageChange:)
+         
+              forControlEvents:UIControlEventValueChanged];
+    }
+    return _pageControl;
+    
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self HHSetUpSubviews];
+    }
+    return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self HHSetUpSubviews];
+    }
+    return self;
+}
+
+-(instancetype)initWithItems:(NSArray *)array Frame:(CGRect)frame{
+    self = [super initWithFrame:frame];
+    if (self) {
+        _ItemsArray = [array copy];
+        [self HHSetUpSubviews];
+    }
+    return self;
+}
+
+#pragma mark  - SetUpSubviews
+-(void)HHSetUpSubviews{
+    [self addSubview:self.cycleView];
+    [self addSubview:self.subContentView];
+    [self.subContentView addSubview:self.funcScrollerView];
+    [self.funcScrollerView addSubview:self.funcContent];
+    [self.subContentView addSubview:self.pageControl];
+}
+
+#pragma mark - 功能按钮点击
+-(void)HHFuncBtnClick:(UIButton *)sender{
+    NSUInteger tag = sender.tag - kTagOffset;
+    NSLog(@"%lu",tag);
+    _FuncBtnClickBlock?_FuncBtnClickBlock(tag):nil;
+}
+
+#pragma mark - scrollViewDidScroll
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    if(scrollView == _funcScrollerView){
+    int current = scrollView.contentOffset.x/kScreenWidth;
+    _pageControl.currentPage = current;
+    }
+}
+
+#pragma mark - 分页符点击
+-(void)pageChange:(UIPageControl *)control{
+    CGFloat x = control.currentPage * kScreenWidth;
+    [_funcScrollerView setContentOffset:CGPointMake(x,0) animated:YES];
+}
+
+#pragma mark - 轮播器点击
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
+    _ADClickBlock?_ADClickBlock(index):nil;
+}
+
+-(void)setADClickBlock:(ADClick)ADClickBlock FuncBtnClickBlock:(FuncBtnClick)FuncBtnClickBlock{
+    _ADClickBlock = ADClickBlock;
+    _FuncBtnClickBlock = FuncBtnClickBlock;
+}
+
+-(void)setADImagePaths:(NSArray *)ADImagePaths{
+    _ADImagePaths = ADImagePaths;
+    [_cycleView setImageURLStringsGroup:ADImagePaths];
+}
+
+/*
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect {
+    // Drawing code
+}
+*/
+
+@end

@@ -1,0 +1,36 @@
+//
+//  MMHomeFuncBtnItem.m
+//  MicroMannage
+//
+//  Created by 倪望龙 on 2017/3/8.
+//  Copyright © 2017年 xunyijia. All rights reserved.
+//
+
+#import "MMHomeFuncBtnItem.h"
+
+@implementation MMHomeFuncBtnItem
+
+/*
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect {
+    // Drawing code
+}
+*/
+-(void)layoutSubviews{
+    [super layoutSubviews];
+    
+    
+    CGFloat imageH = 46.0f;
+    CGFloat imageW = 46.0f;
+    CGFloat imageX = (self.width - imageH)/2;
+    CGFloat imageY = 13.0f;
+    self.imageView.frame = CGRectMake(imageX,imageY,imageW,imageH);
+    self.imageView.contentMode = UIViewContentModeScaleToFill;
+    
+    CGFloat  lableY = CGRectGetMaxY(self.imageView.frame) + 7.0f;
+    CGFloat  lableH = self.height - lableY;
+    self.titleLabel.frame  = CGRectMake(0, lableY, self.width, lableH);
+}
+
+@end

@@ -1,0 +1,189 @@
+//
+//  MMEvaluationDetailHeadView.m
+//  MicroMannage
+//
+//  Created by 倪望龙 on 2017/3/16.
+//  Copyright © 2017年 xunyijia. All rights reserved.
+//
+
+#import "MMEvaluationDetailHeadView.h"
+#import "MMEvaluationDetailItem.h"
+#import "PNChart.h"
+@interface MMEvaluationDetailHeadView()
+@property(nonatomic,strong)UIView *headerContent;
+@property(nonatomic,strong)UILabel *lableHeadTitle;
+@property(nonatomic,strong)UIView *contentView;
+@property(nonatomic,strong)MMEvaluationDetailItem *itemLowScore;
+@property(nonatomic,strong)MMEvaluationDetailItem *itemMiddleScore;
+@property(nonatomic,strong)MMEvaluationDetailItem *itemHighScore;
+@property(nonatomic,strong)PNLineChart *lineChart;
+@property(nonatomic,strong)UIView *footerContent;
+@property(nonatomic,strong)UILabel *lablefooterTitle;
+
+@end
+
+@implementation MMEvaluationDetailHeadView
+
+-(UIView *)headerContent{
+    if(_headerContent == nil){
+        _headerContent = [UIView new];
+        _headerContent.backgroundColor = HEXCOLOR(0xf0f3f8);
+    }
+    return _headerContent;
+}
+
+-(UILabel *)lableHeadTitle{
+    if(_lableHeadTitle == nil){
+        _lableHeadTitle = [UILabel new];
+        [_lableHeadTitle setTextColor:HEXCOLOR(0x666666)];
+        [_lableHeadTitle setFont:[UIFont systemFontOfSize:15.0f]];
+        _lableHeadTitle.text = @"分数统计(人)";
+    }
+    return _lableHeadTitle;
+}
+
+-(UIView *)footerContent{
+    if(_footerContent == nil){
+        _footerContent = [UIView new];
+        _footerContent.backgroundColor = HEXCOLOR(0xf0f3f8);
+    }
+    return _footerContent;
+}
+
+-(UILabel *)lablefooterTitle{
+    if(_lablefooterTitle == nil){
+        _lablefooterTitle = [UILabel new];
+        [_lablefooterTitle setTextColor:HEXCOLOR(0x666666)];
+        [_lablefooterTitle setFont:[UIFont systemFontOfSize:15.0f]];
+        _lablefooterTitle.text = @"排名统计";
+    }
+    return _lablefooterTitle;
+}
+
+-(UIView *)contentView{
+    if(_contentView == nil){
+        _contentView = [UIView new];
+        _contentView.backgroundColor = [UIColor whiteColor];
+    }
+    return _contentView;
+}
+
+-(MMEvaluationDetailItem *)itemLowScore{
+    if(_itemLowScore == nil){
+        _itemLowScore = [[MMEvaluationDetailItem alloc]initWithTitle:@"0-59分"];
+        _itemLowScore.num = @"20";
+    }
+    return _itemLowScore;
+}
+
+-(MMEvaluationDetailItem *)itemMiddleScore{
+    if(_itemMiddleScore == nil){
+        _itemMiddleScore = [[MMEvaluationDetailItem alloc]initWithTitle:@"60-79分"];
+        _itemMiddleScore.num = @"60";
+    }
+    return _itemMiddleScore;
+}
+
+-(MMEvaluationDetailItem *)itemHighScore{
+    if(_itemHighScore == nil){
+        _itemHighScore = [[MMEvaluationDetailItem alloc]initWithTitle:@"80-100分"];
+        _itemHighScore.num = @"20";
+    }
+    return _itemHighScore;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self EDSetUpSubviews];
+    }
+    return self;
+}
+
+-(void)EDSetUpSubviews{
+    [self addSubview:self.headerContent];
+    [self addSubview:self.contentView];
+    [self addSubview:self.footerContent];
+    [self.headerContent addSubview:self.lableHeadTitle];
+    [self.footerContent addSubview:self.lablefooterTitle];
+    [self.contentView addSubview:self.itemLowScore];
+    [self.contentView addSubview:self.itemMiddleScore];
+    [self.contentView addSubview:self.itemHighScore];
+    
+    CGFloat headerContentH = 44.0f;
+    self.headerContent.frame = CGRectMake(0, 0, self.width, headerContentH);
+    self.contentView.frame = CGRectMake(0, headerContentH, self.width, 98.0f);
+    CGFloat lineChartY = CGRectGetMaxY(self.contentView.frame);
+    _lineChart = [[PNLineChart alloc]initWithFrame:CGRectMake(0, lineChartY, self.width,178.0f)];
+    _lineChart.showGenYLabels = YES;
+    _lineChart.showYGridLines = YES;
+    [self addSubview:self.lineChart];
+    CGFloat footerContentY = CGRectGetMaxY(self.lineChart.frame) + 10;
+    self.footerContent.frame = CGRectMake(0,footerContentY, self.width, 44.0f);
+    
+    [_lableHeadTitle mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(_headerContent).with.insets(UIEdgeInsetsMake(0, 12.0f, 0, 12.0f));
+    }];
+    
+    [_lablefooterTitle mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(_footerContent).with.insets(UIEdgeInsetsMake(0, 12.0f, 0, 12.0f));
+    }];
+    
+    [_itemLowScore mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.mas_equalTo(self.contentView).with.offset(12.0f);
+        make.bottom.mas_equalTo(self.contentView).with.offset(-12.0f);
+        make.width.mas_equalTo(self.itemMiddleScore);
+    }];
+    [_itemMiddleScore mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(_itemLowScore.mas_right);
+        make.top.bottom.mas_equalTo(_itemLowScore);
+        make.width.mas_equalTo(_itemLowScore);
+    }];
+    
+    [_itemHighScore mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(_itemMiddleScore.mas_right);
+        make.top.bottom.mas_equalTo(_itemMiddleScore);
+        make.width.mas_equalTo(_itemMiddleScore);
+        make.right.mas_equalTo(self.contentView).with.offset(-12.0f);
+    }];
+    
+}
+
+-(void)redraw{
+    [_lineChart setXLabels:@[@"SEP 1",@"SEP 2",@"SEP 3",@"SEP 4",@"SEP 5"]];
+    // Line Chart No.1
+    NSArray * data01Array = @[@60.1, @160.1, @126.4, @262.2, @186.2];
+    PNLineChartData *data01 = [PNLineChartData new];
+    data01.color = PNFreshGreen;
+    data01.itemCount = _lineChart.xLabels.count;
+    data01.getData = ^(NSUInteger index) {
+        CGFloat yValue = [data01Array[index] floatValue];
+        return [PNLineChartDataItem dataItemWithY:yValue];
+    };
+    // Line Chart No.2
+    NSArray * data02Array = @[@20.1, @180.1, @26.4, @202.2, @126.2];
+    PNLineChartData *data02 = [PNLineChartData new];
+    data02.color = PNTwitterColor;
+    data02.itemCount = _lineChart.xLabels.count;
+    data02.getData = ^(NSUInteger index) {
+        CGFloat yValue = [data02Array[index] floatValue];
+        return [PNLineChartDataItem dataItemWithY:yValue];
+    };
+    
+    _lineChart.chartData = @[data01, data02];
+    [_lineChart strokeChart];
+    
+}
+
+
+
+/*
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect {
+    // Drawing code
+}
+*/
+
+@end

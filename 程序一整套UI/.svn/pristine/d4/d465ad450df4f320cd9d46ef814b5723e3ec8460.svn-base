@@ -1,0 +1,259 @@
+//
+//  MMRecommendTableViewCell.m
+//  MicroMannage
+//
+//  Created by 倪望龙 on 2017/3/7.
+//  Copyright © 2017年 xunyijia. All rights reserved.
+//
+
+#import "MMRecommendTableViewCell.h"
+#import "YYText.h"
+@interface MMRecommendTableViewCell()
+@property(nonatomic,strong)UIImageView *iconImage;
+@property(nonatomic,strong)YYLabel *lableTitle;
+@property(nonatomic,strong)UILabel *lableContent;
+@property(nonatomic,strong)UIImageView *logoImage;
+@property(nonatomic,strong)UIButton *btnFunc;
+
+@property(nonatomic,strong)UIView *socialBar;//社交bar
+@property(nonatomic,strong)UILabel *lableSupport;//点赞
+@property(nonatomic,strong)UILabel *lableDiscuss;//讨论
+@property(nonatomic,strong)UILabel *lableAward;//打赏
+@property(nonatomic,strong)UILabel *lableCollect;//收藏
+
+
+@end
+
+@implementation MMRecommendTableViewCell
+
+-(UIImageView *)iconImage{
+    if(_iconImage == nil){
+        _iconImage = [UIImageView new];
+        _iconImage.layer.cornerRadius = 13.0f;
+        _iconImage.backgroundColor = [UIColor redColor];
+        _iconImage.layer.masksToBounds = YES;
+    }
+    return _iconImage;
+}
+
+-(YYLabel *)lableTitle{
+    if(_lableTitle == nil){
+        _lableTitle = [YYLabel new];
+        NSMutableAttributedString *text = [self RTGetAttributedStringUserName:@"柳叶叶" dateStr:@"17:55"];
+        _lableTitle.attributedText = text;
+    }
+    return _lableTitle;
+}
+
+-(UILabel *)lableContent{
+    if(_lableContent == nil){
+        _lableContent = [UILabel new];
+        [_lableContent setTextColor:HEXCOLOR(0x333333)];
+        [_lableContent setFont:[UIFont systemFontOfSize:15.0f]];
+        [_lableContent setNumberOfLines:2];
+        [_lableContent setLineBreakMode:NSLineBreakByTruncatingTail];
+        _lableContent.text = @"测试新闻测试新闻测试新闻测试新闻测试新闻测试新闻测试新闻测试新闻测试新闻";
+    }
+    return _lableContent;
+}
+
+-(UIImageView *)logoImage{
+    if(_logoImage == nil){
+        _logoImage = [UIImageView new];
+        _logoImage.layer.cornerRadius = 2.5f;
+        _logoImage.backgroundColor = [UIColor redColor];
+        _logoImage.layer.masksToBounds = YES;
+    }
+    return _logoImage;
+}
+
+-(UIButton *)btnFunc{
+    if(_btnFunc == nil){
+        _btnFunc = [UIButton new];
+        [_btnFunc setTitleColor:HEXCOLOR(kBlueColor) forState:UIControlStateNormal];
+        [_btnFunc setBackgroundColor:HEXCOLOR(kBlueColor) forState:UIControlStateHighlighted];
+        [_btnFunc setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+        [_btnFunc.titleLabel setFont:[UIFont systemFontOfSize:10.0f]];
+        _btnFunc.layer.cornerRadius = 2.5f;
+        _btnFunc.layer.borderColor = HEXCOLOR(kBlueColor).CGColor;
+        _btnFunc.layer.borderWidth = 1.0f;
+        _btnFunc.layer.masksToBounds = YES;
+        [_btnFunc setTitle:@"话费套餐" forState:UIControlStateNormal];
+        [_btnFunc addTarget:self action:@selector(btnFuncClick) forControlEvents:UIControlEventTouchUpInside];
+ 
+    }
+    return _btnFunc;
+}
+
+-(UIView *)socialBar{
+    if(_socialBar == nil){
+        _socialBar = [UIView new];
+        _socialBar.backgroundColor = [UIColor whiteColor];
+    }
+    return _socialBar;
+}
+
+-(UILabel *)lableSupport{
+    if(_lableSupport == nil){
+        _lableSupport = [UILabel new];
+        [_lableSupport setTextColor:HEXCOLOR(0x999999)];
+        [_lableSupport setFont:[UIFont systemFontOfSize:11.0f]];
+        [_lableSupport setTextAlignment:NSTextAlignmentCenter];
+        _lableSupport.text = @"点赞";
+    }
+    return _lableSupport;
+}
+
+-(UILabel *)lableDiscuss{
+    if(_lableDiscuss == nil){
+        _lableDiscuss = [UILabel new];
+        [_lableDiscuss setTextColor:HEXCOLOR(0x999999)];
+        [_lableDiscuss setFont:[UIFont systemFontOfSize:11.0f]];
+        [_lableDiscuss setTextAlignment:NSTextAlignmentCenter];
+        _lableDiscuss.text = @"评论";
+    }
+    return _lableDiscuss;
+}
+
+-(UILabel *)lableAward{
+    if(_lableAward == nil){
+        _lableAward = [UILabel new];
+        [_lableAward setTextColor:HEXCOLOR(0x999999)];
+        [_lableAward setFont:[UIFont systemFontOfSize:11.0f]];
+        [_lableAward setTextAlignment:NSTextAlignmentCenter];
+        _lableAward.text = @"打赏";
+    }
+    return _lableAward;
+}
+
+-(UILabel *)lableCollect{
+    if(_lableCollect == nil){
+        _lableCollect = [UILabel new];
+        [_lableCollect setTextColor:HEXCOLOR(0x999999)];
+        [_lableCollect setFont:[UIFont systemFontOfSize:11.0f]];
+        [_lableCollect setTextAlignment:NSTextAlignmentCenter];
+        _lableCollect.text = @"收藏";
+    }
+    return _lableCollect;
+}
+
+-(UIView *)cellLine{
+    if(_cellLine == nil){
+        _cellLine = [UIView new];
+        _cellLine.backgroundColor = HEXCOLOR(0xcccccc);
+    }
+    return _cellLine;
+}
+
+
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if(self){
+        [self RTSetUpSubViews];
+    }
+    return self;
+}
+
+-(void)RTSetUpSubViews{
+    [self.contentView addSubview:self.iconImage];
+    [self.contentView addSubview:self.lableTitle];
+    [self.contentView addSubview:self.lableContent];
+    [self.contentView addSubview:self.btnFunc];
+    [self.contentView addSubview:self.logoImage];
+    [self.contentView addSubview:self.socialBar];
+    [self.socialBar addSubview:self.lableSupport];
+    [self.socialBar addSubview:self.lableDiscuss];
+    [self.socialBar addSubview:self.lableAward];
+    [self.socialBar addSubview:self.lableCollect];
+    [self.contentView addSubview:self.cellLine];
+    
+    [_iconImage mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.contentView).with.offset(12.0f);
+        make.top.mas_equalTo(self.contentView).with.offset(20.0f);
+        make.size.mas_equalTo(CGSizeMake(26.0f, 26.0f));
+    }];
+    
+    [_lableTitle mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.bottom.mas_equalTo(_iconImage);
+        make.left.mas_equalTo(_iconImage.mas_right).with.offset(7.0f);
+        make.right.mas_equalTo(self.contentView).with.offset(-12.0f);
+    }];
+    
+    [_logoImage mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(self.contentView).with.offset(-12.0f);
+        make.top.mas_equalTo(self.iconImage.mas_bottom).with.offset(11.0f);
+        make.size.mas_equalTo(CGSizeMake(80.0f, 80.0f));
+    }];
+    
+    [_lableContent mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(_logoImage);
+        make.left.mas_equalTo(_iconImage);
+        make.right.mas_equalTo(_logoImage.mas_left).with.offset(-12.0f);
+        make.height.mas_equalTo(41.0f);
+    }];
+    
+    [_btnFunc mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.mas_equalTo(_logoImage);
+        make.left.mas_equalTo(_iconImage);
+        make.size.mas_equalTo(CGSizeMake(58.0f, 20.0f));
+    }];
+    
+    [_socialBar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.bottom.mas_equalTo(_btnFunc);
+        make.left.mas_equalTo(_btnFunc.mas_right).with.offset(6.0f);
+        make.right.mas_equalTo(_logoImage.mas_left).with.offset(-12.0f);
+    }];
+    
+    [_lableSupport mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.bottom.mas_equalTo(_socialBar);
+        make.width.mas_equalTo(_lableDiscuss);
+    }];
+    
+    [_lableDiscuss mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.top.bottom.mas_equalTo(_lableSupport);
+        make.left.mas_equalTo(_lableSupport.mas_right);
+    }];
+    
+    [_lableAward mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.top.bottom.mas_equalTo(_lableDiscuss);
+        make.left.mas_equalTo(_lableDiscuss.mas_right);
+    }];
+    
+    [_lableCollect mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.top.bottom.mas_equalTo(_lableAward);
+        make.left.mas_equalTo(_lableAward.mas_right);
+        make.right.mas_equalTo(_socialBar.mas_right);
+    }];
+    
+    [_cellLine mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.right.mas_equalTo(self.contentView);
+        make.left.mas_equalTo(_iconImage);
+        make.height.mas_equalTo(0.5f);
+    }];
+    
+}
+
+-(void)btnFuncClick{
+   
+}
+
+-(NSMutableAttributedString*)RTGetAttributedStringUserName:(NSString *)usr dateStr:(NSString *)date{
+    NSMutableAttributedString *text = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"%@  %@",usr,date]];
+    NSRange range0 = [[text string] rangeOfString:usr options:NSCaseInsensitiveSearch];
+    
+    [text yy_setFont:[UIFont systemFontOfSize:12] range:range0];
+    [text yy_setColor:HEXCOLOR(0x333333) range:range0];
+    
+    NSRange range1 = [[text string] rangeOfString:date options:NSCaseInsensitiveSearch];
+    [text yy_setFont:[UIFont systemFontOfSize:11] range:range1];
+    [text yy_setColor:HEXCOLOR(0x999999) range:range1];
+    return text;
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+
+    // Configure the view for the selected state
+}
+
+@end

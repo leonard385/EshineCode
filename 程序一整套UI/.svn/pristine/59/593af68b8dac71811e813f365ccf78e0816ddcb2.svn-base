@@ -1,0 +1,97 @@
+//
+//  MMHomeViewController.m
+//  MicroMannage
+//
+//  Created by 倪望龙 on 2017/3/6.
+//  Copyright © 2017年 xunyijia. All rights reserved.
+//
+
+#import "MMHomeViewController.h"
+#import "MMHomeHeadView.h"
+@interface MMHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property(nonatomic,strong)MMHomeHeadView *headView;
+@end
+
+@implementation MMHomeViewController
+
+-(MMHomeHeadView *)headView{
+    if(_headView == nil){
+        _headView = [[MMHomeHeadView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 314.0f)];
+    }
+    return _headView;
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+    return self;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self HVSetupSubviews];
+    // Do any additional setup after loading the view.
+}
+
+-(void)HVSetupSubviews{
+    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0,self.view.width,self.view.height ) style:UITableViewStylePlain];
+    self.tableView.rowHeight = 44.0f;
+    self.tableView.sectionHeaderHeight = 11.0f;
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    self.tableView.backgroundColor = HEXCOLOR(0xefeff4);
+    [self.tableView registerNib:[UINib nibWithNibName:@"MMMyTableViewCell" bundle:nil] forCellReuseIdentifier:@"MineCell"];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.tableHeaderView = self.headView;
+    [self.view addSubview:self.tableView];
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 2.0f;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *headView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"sectionHead"];
+    if(headView == nil){
+        UIView *headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.width, 11.0f)];
+        headView.backgroundColor = HEXCOLOR(0xefeff4);
+    }
+    return headView;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 0.0f;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell  = [tableView dequeueReusableCellWithIdentifier:@"MineCell"];
+    if(cell == nil){
+       
+    }
+    return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end

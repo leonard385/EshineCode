@@ -1,0 +1,139 @@
+//
+//  MMHomeHeadView.m
+//  MicroMannage
+//
+//  Created by 倪望龙 on 2017/3/6.
+//  Copyright © 2017年 xunyijia. All rights reserved.
+//
+
+#import "MMHomeHeadView.h"
+#import "SDCycleScrollView.h"
+#define kcycleViewH 209.0f
+#define ksubContentH 105.0f
+#define kfuncScrollerH 87.0f
+#define kpageControlH 18.0f
+
+@interface MMHomeHeadView()<SDCycleScrollViewDelegate,UIScrollViewDelegate>
+@property(nonatomic,strong)SDCycleScrollView *cycleView;//轮播图
+@property(nonatomic,strong)UIView *subContentView;
+@property(nonatomic,strong)UIScrollView *funcScrollerView;//功能scrollerview
+@property(nonatomic,strong)UIView  *funcContent;//功能Content
+@property(nonatomic,strong)UIPageControl *pageControl;//page控制
+
+
+@end
+
+@implementation MMHomeHeadView
+
+-(SDCycleScrollView *)cycleView{
+    if(_cycleView == nil){
+        _cycleView =  [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, kScreenWidth, kcycleViewH) delegate:self placeholderImage:nil];
+        _cycleView.delegate = self;
+    }
+    return _cycleView;
+}
+
+-(UIView *)subContentView{
+
+    if(_subContentView == nil){
+        _subContentView = [[UIView alloc]initWithFrame:CGRectMake(0, kcycleViewH, kScreenWidth, ksubContentH)];
+        _subContentView.backgroundColor = [UIColor whiteColor];
+    }
+    return _subContentView;
+}
+
+-(UIScrollView *)funcScrollerView{
+    if(_funcScrollerView == nil){
+        _funcScrollerView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kfuncScrollerH)];
+        _funcScrollerView.showsVerticalScrollIndicator = NO;
+        _funcScrollerView.showsHorizontalScrollIndicator = NO;
+        _funcScrollerView.contentSize = CGSizeMake(kScreenWidth * 2, kfuncScrollerH);
+        _funcScrollerView.indicatorStyle = UIScrollViewIndicatorStyleDefault;
+        _funcScrollerView.pagingEnabled = YES;
+        _funcScrollerView.delegate = self;
+    }
+    return _funcScrollerView;
+}
+
+-(UIView *)funcContent{
+    if(_funcContent == nil){
+        _funcContent = [UIView new];
+        _funcContent.backgroundColor = [UIColor whiteColor];
+        _funcContent.frame = CGRectMake(0, 0, kScreenWidth*2, kfuncScrollerH);
+        UIView *redView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kfuncScrollerH)];
+        redView.backgroundColor = [UIColor blueColor];
+        [_funcContent addSubview:redView];
+    }
+    return _funcContent;
+}
+
+-(UIPageControl *)pageControl{
+    if(_pageControl  == nil){
+        _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, ksubContentH - kpageControlH, kScreenWidth, kpageControlH)];
+        _pageControl.currentPage = 0;
+        _pageControl.numberOfPages = 2.0f;
+        _pageControl.pageIndicatorTintColor = HEXCOLOR(0xcccccc);
+        _pageControl.currentPageIndicatorTintColor = HEXCOLOR(0x1997eb);
+        [_pageControl addTarget:self action:@selector(pageChange:)
+         
+              forControlEvents:UIControlEventValueChanged];
+    }
+    return _pageControl;
+    
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self HHSetUpSubviews];
+    }
+    return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self HHSetUpSubviews];
+    }
+    return self;
+}
+
+
+-(void)HHSetUpSubviews{
+    //CycleView
+    [self addSubview:self.cycleView];
+    [self addSubview:self.subContentView];
+    [self.subContentView addSubview:self.funcScrollerView];
+    [self.funcScrollerView addSubview:self.funcContent];
+    [self.subContentView addSubview:self.pageControl];
+    //frame subview
+    
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    if(scrollView == _funcScrollerView){
+    int current = scrollView.contentOffset.x/kScreenWidth;
+    _pageControl.currentPage = current;
+    }
+}
+
+-(void)pageChange:(UIPageControl *)control{
+    CGFloat x = control.currentPage * kScreenWidth;
+    _funcScrollerView.contentOffset = CGPointMake(x,0);
+}
+
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
+
+}
+
+/*
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect {
+    // Drawing code
+}
+*/
+
+@end

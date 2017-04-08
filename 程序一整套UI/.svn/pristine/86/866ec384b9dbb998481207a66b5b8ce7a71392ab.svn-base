@@ -1,0 +1,110 @@
+//
+//  MMHomeSectionHeadView.m
+//  MicroMannage
+//
+//  Created by 倪望龙 on 2017/3/7.
+//  Copyright © 2017年 xunyijia. All rights reserved.
+//
+
+#import "MMHomeSectionHeadCell.h"
+@interface MMHomeSectionHeadCell()
+@property(nonatomic,strong)UIView *headContent;
+@property(nonatomic,strong)UIView *line;//竖线
+@property(nonatomic,strong)UILabel *lableTitle;//标题
+@property(nonatomic,strong)UIButton *Btnfunc;//按钮
+@end
+@implementation MMHomeSectionHeadCell
+
+-(UIView *)headContent{
+    if(_headContent == nil){
+        _headContent = [UIView new];
+        _headContent.backgroundColor = [UIColor whiteColor];
+    }
+    return _headContent;
+}
+
+-(UIView *)line{
+    if(_line == nil){
+        _line = [UIView new];
+        _line.backgroundColor = HEXCOLOR(0x1997eb);
+    }
+    return _line;
+}
+
+-(UILabel *)lableTitle{
+    if(_lableTitle  == nil){
+        _lableTitle = [UILabel new];
+        [_lableTitle setFont:[UIFont systemFontOfSize:16.0f]];
+        [_lableTitle setTextAlignment:NSTextAlignmentCenter];
+        [_lableTitle setTextColor:HEXCOLOR(0x333333)];
+    }
+    return _lableTitle;
+}
+
+-(UIButton *)Btnfunc{
+    if(_Btnfunc == nil){
+        _Btnfunc = [UIButton new];
+        [_Btnfunc setTitleColor:HEXCOLOR(0x999999) forState:UIControlStateNormal];
+        [_Btnfunc.titleLabel setFont:[UIFont systemFontOfSize:13.0f]];
+        [_Btnfunc addTarget:self action:@selector(btnfuncClick) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _Btnfunc;
+}
+
+
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if(self){
+        [self HSSetUpSubviews];
+    }
+    return self;
+}
+
+
+-(void)HSSetUpSubviews{
+    self.contentView.backgroundColor = HEXCOLOR(0xefeff4);
+    [self.contentView addSubview:self.headContent];
+    [self.headContent addSubview:self.line];
+    [self.headContent addSubview:self.lableTitle];
+    [self.headContent addSubview:self.Btnfunc];
+    
+    [_headContent mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(self.contentView).with.insets(UIEdgeInsetsMake(10, 0, 0, 0));
+    }];
+    
+    [_line mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.headContent).with.offset(12.0f);
+        make.bottom.mas_equalTo(self.headContent);
+        make.size.mas_equalTo(CGSizeMake(4.0f, 15.0f));
+    }];
+    [_Btnfunc mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(self.headContent).with.offset(-12.0f);
+        make.top.bottom.mas_equalTo(self.line);
+        make.width.mas_equalTo(60.0f);
+    }];
+    [_lableTitle mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.bottom.mas_equalTo(self.line);
+        make.left.mas_equalTo(_line.mas_right).with.offset(6.0f);
+        make.right.mas_equalTo(_Btnfunc.mas_left);
+    }];
+}
+
+-(void)btnfuncClick{
+    _functionBlock?_functionBlock():nil;
+}
+
+-(void)setTitle:(NSString *)title{
+    [_lableTitle setText:title];
+}
+
+-(void)setSubTitle:(NSString *)subTitle{
+    [_Btnfunc setTitle:subTitle forState:UIControlStateNormal];
+}
+-(void)setTitle:(NSString *)title SubTitle:(NSString *)subTitle FunctionBlock:(functionClick)functionBlock{
+     [_lableTitle setText:title];
+    [_Btnfunc setTitle:subTitle forState:UIControlStateNormal];
+    _functionBlock = functionBlock;
+}
+
+
+@end

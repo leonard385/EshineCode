@@ -1,0 +1,79 @@
+//
+//  MMKVStructViewController.m
+//  MicroMannage
+//
+//  Created by 倪望龙 on 2017/3/11.
+//  Copyright © 2017年 xunyijia. All rights reserved.
+//
+
+#import "MMKVStructViewController.h"
+#import "MMKVStructTableViewCell.h"
+@interface MMKVStructViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property(nonatomic,strong)UITableView *tableView;
+@end
+
+@implementation MMKVStructViewController
+
+-(UITableView *)tableView{
+    if(_tableView == nil){
+        self.tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
+        [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+        self.tableView.backgroundColor = [UIColor whiteColor];
+        [self.tableView registerClass:[MMKVStructTableViewCell class] forCellReuseIdentifier:@"MMKVStructTableViewCell"];
+        self.tableView.rowHeight = 137.0f;
+        self.tableView.delegate = self;
+        self.tableView.dataSource = self;
+    }
+    return _tableView;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self SVSetUpSubviews];
+    // Do any additional setup after loading the view.
+}
+
+-(void)SVSetUpSubviews{
+    [self.view addSubview:self.tableView];
+    
+    [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(self.view).with.insets(UIEdgeInsetsMake(0, 0, 43.0f, 0));
+    }];
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1.0f;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 10.0f;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    MMKVStructTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MMKVStructTableViewCell"];
+    if(cell == nil){
+        cell = [[MMKVStructTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MMKVStructTableViewCell"];
+    }
+    [cell SVsetTagViews:@[@"流量特惠",@"手机流量叠加包",@"4G套餐",@"流量特惠",@"国际漫游定向流量包"]];
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    return cell;
+}
+
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MMMineHeadView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="81"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Xl-k1-8m3">
+                    <rect key="frame" x="12" y="15" width="50" height="50"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="nM7-yr-rb2"/>
+                        <constraint firstAttribute="width" constant="50" id="tMJ-8z-68X"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5k-aS-nDg">
+                    <rect key="frame" x="334" y="23" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="973-f8-t4A"/>
+                        <constraint firstAttribute="width" constant="35" id="pfc-F6-hIg"/>
+                    </constraints>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYt-Lm-PvD">
+                    <rect key="frame" x="80" y="17" width="236" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="23" id="wa3-uO-bJ7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="查看或编辑个人信息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFz-As-Bb2">
+                    <rect key="frame" x="80" y="44" width="236" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="23" id="1dn-u8-wwB"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4Xl-k1-8m3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="1cH-gS-PTx"/>
+                <constraint firstItem="F5k-aS-nDg" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Hq6-e6-wOf"/>
+                <constraint firstItem="bFz-As-Bb2" firstAttribute="bottom" secondItem="4Xl-k1-8m3" secondAttribute="bottom" constant="2" id="PTj-5t-BMf"/>
+                <constraint firstItem="4Xl-k1-8m3" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="d4i-UB-e8i"/>
+                <constraint firstItem="oYt-Lm-PvD" firstAttribute="leading" secondItem="4Xl-k1-8m3" secondAttribute="trailing" constant="18" id="eFq-R8-DcO"/>
+                <constraint firstItem="oYt-Lm-PvD" firstAttribute="top" secondItem="4Xl-k1-8m3" secondAttribute="top" constant="2" id="h84-5I-G40"/>
+                <constraint firstItem="bFz-As-Bb2" firstAttribute="trailing" secondItem="oYt-Lm-PvD" secondAttribute="trailing" id="jrm-cb-72m"/>
+                <constraint firstItem="F5k-aS-nDg" firstAttribute="leading" secondItem="oYt-Lm-PvD" secondAttribute="trailing" constant="18" id="ma7-si-F7F"/>
+                <constraint firstItem="bFz-As-Bb2" firstAttribute="leading" secondItem="oYt-Lm-PvD" secondAttribute="leading" id="ois-6X-Lq2"/>
+                <constraint firstAttribute="trailing" secondItem="F5k-aS-nDg" secondAttribute="trailing" constant="6" id="wJl-Dt-pUu"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="BtnQrcode" destination="F5k-aS-nDg" id="NcJ-Tz-Mzh"/>
+                <outlet property="ImageHeadView" destination="4Xl-k1-8m3" id="HEr-BR-rWf"/>
+                <outlet property="LableSubTitle" destination="bFz-As-Bb2" id="ou5-0n-okO"/>
+                <outlet property="LableUserName" destination="oYt-Lm-PvD" id="Azc-Vk-fgs"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="116.5"/>
+        </view>
+    </objects>
+</document>

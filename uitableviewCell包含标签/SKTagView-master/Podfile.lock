@@ -1,0 +1,18 @@
+PODS:
+  - HexColors (3.0.0)
+  - Masonry (0.6.3)
+  - YYText (1.0.7)
+
+DEPENDENCIES:
+  - HexColors (~> 3.0)
+  - Masonry (~> 0.6.3)
+  - YYText (~> 1.0.7)
+
+SPEC CHECKSUMS:
+  HexColors: 8b83e3fe90c0d466dae7b98c9d22da95799f99cb
+  Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
+  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
+
+PODFILE CHECKSUM: 8058f9b245eaaf3759236ada51c6fe23f5d90063
+
+COCOAPODS: 1.2.0

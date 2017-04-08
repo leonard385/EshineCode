@@ -1,0 +1,626 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DE7143679528ADF99701C05 /* libPods-SKTagView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9E05D2D65859803638A4F1 /* libPods-SKTagView.a */; };
+		682ABA701A36933300D57A1A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 682ABA6F1A36933300D57A1A /* main.m */; };
+		682ABA731A36933300D57A1A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 682ABA721A36933300D57A1A /* AppDelegate.m */; };
+		682ABA761A36933300D57A1A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 682ABA751A36933300D57A1A /* ViewController.m */; };
+		682ABA791A36933300D57A1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 682ABA771A36933300D57A1A /* Main.storyboard */; };
+		682ABA7B1A36933300D57A1A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 682ABA7A1A36933300D57A1A /* Images.xcassets */; };
+		682ABA7E1A36933300D57A1A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 682ABA7C1A36933300D57A1A /* LaunchScreen.xib */; };
+		682ABA951A3693BC00D57A1A /* SKTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 682ABA941A3693BC00D57A1A /* SKTagView.m */; };
+		6AB277B71AE2A80700D92167 /* SKTagViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AB277B61AE2A80700D92167 /* SKTagViewTests.m */; };
+		D865CB921A6415B200F3592C /* TagsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D865CB911A6415B200F3592C /* TagsTableViewController.m */; };
+		D865CB951A64160500F3592C /* TagsTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D865CB941A64160500F3592C /* TagsTableCell.m */; };
+		E198833B70106A7B969AF9D2 /* SKTag.m in Sources */ = {isa = PBXBuildFile; fileRef = E198883D944B29B6488A5B34 /* SKTag.m */; };
+		E1988E0CF76D59E86E94A7CC /* SKTagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E1988DC652E4B5A7DD3FC44D /* SKTagButton.m */; };
+		E59794CC3C0D387341542A99 /* libPods-SKTagViewTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B3C8483D32FE06FA5202F90 /* libPods-SKTagViewTests.a */; };
+		F7069B1D1E97B564000FEF2A /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7069B1C1E97B564000FEF2A /* YYFPSLabel.m */; };
+		F7069B201E97B5AF000FEF2A /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F7069B1F1E97B5AF000FEF2A /* YYWeakProxy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		682ABA841A36933300D57A1A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 682ABA621A36933300D57A1A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 682ABA691A36933300D57A1A;
+			remoteInfo = WrapViewWithAutolayout;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04755CFDD4F811E6C059F9C9 /* Pods-SKTagView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKTagView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKTagView/Pods-SKTagView.debug.xcconfig"; sourceTree = "<group>"; };
+		1D0E79A2085546506B0A17B1 /* Pods-SKTagView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKTagView.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKTagView/Pods-SKTagView.release.xcconfig"; sourceTree = "<group>"; };
+		682ABA6A1A36933300D57A1A /* SKTagView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKTagView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		682ABA6E1A36933300D57A1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		682ABA6F1A36933300D57A1A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		682ABA711A36933300D57A1A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		682ABA721A36933300D57A1A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		682ABA741A36933300D57A1A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		682ABA751A36933300D57A1A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		682ABA781A36933300D57A1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		682ABA7A1A36933300D57A1A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		682ABA7D1A36933300D57A1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		682ABA831A36933300D57A1A /* SKTagViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKTagViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		682ABA881A36933300D57A1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		682ABA931A3693BC00D57A1A /* SKTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTagView.h; sourceTree = "<group>"; };
+		682ABA941A3693BC00D57A1A /* SKTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTagView.m; sourceTree = "<group>"; };
+		6AB277B61AE2A80700D92167 /* SKTagViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTagViewTests.m; sourceTree = "<group>"; };
+		718F5B5405BA63E4133402A0 /* Pods-SKTagViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKTagViewTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKTagViewTests/Pods-SKTagViewTests.release.xcconfig"; sourceTree = "<group>"; };
+		8B3C8483D32FE06FA5202F90 /* libPods-SKTagViewTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKTagViewTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA9E05D2D65859803638A4F1 /* libPods-SKTagView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKTagView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C30E335A9D17132968EB4D47 /* Pods-SKTagViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKTagViewTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKTagViewTests/Pods-SKTagViewTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D865CB901A6415B200F3592C /* TagsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagsTableViewController.h; sourceTree = "<group>"; };
+		D865CB911A6415B200F3592C /* TagsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagsTableViewController.m; sourceTree = "<group>"; };
+		D865CB931A64160500F3592C /* TagsTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagsTableCell.h; sourceTree = "<group>"; };
+		D865CB941A64160500F3592C /* TagsTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagsTableCell.m; sourceTree = "<group>"; };
+		E19884C2F2577114719748BD /* SKTagButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTagButton.h; sourceTree = "<group>"; };
+		E198883D944B29B6488A5B34 /* SKTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTag.m; sourceTree = "<group>"; };
+		E1988A206257CAF7FE6FC77A /* SKTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTag.h; sourceTree = "<group>"; };
+		E1988DC652E4B5A7DD3FC44D /* SKTagButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTagButton.m; sourceTree = "<group>"; };
+		F7069B1B1E97B564000FEF2A /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
+		F7069B1C1E97B564000FEF2A /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
+		F7069B1E1E97B5AF000FEF2A /* YYWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeakProxy.h; sourceTree = "<group>"; };
+		F7069B1F1E97B5AF000FEF2A /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		682ABA671A36933300D57A1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DE7143679528ADF99701C05 /* libPods-SKTagView.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		682ABA801A36933300D57A1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E59794CC3C0D387341542A99 /* libPods-SKTagViewTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		36DCCB995922FF2027730B5D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				04755CFDD4F811E6C059F9C9 /* Pods-SKTagView.debug.xcconfig */,
+				1D0E79A2085546506B0A17B1 /* Pods-SKTagView.release.xcconfig */,
+				C30E335A9D17132968EB4D47 /* Pods-SKTagViewTests.debug.xcconfig */,
+				718F5B5405BA63E4133402A0 /* Pods-SKTagViewTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		682ABA611A36933300D57A1A = {
+			isa = PBXGroup;
+			children = (
+				CB3B6CFF1A5E27C9008911FF /* SKTagView */,
+				682ABA6C1A36933300D57A1A /* Classes */,
+				682ABA861A36933300D57A1A /* SKTagViewTests */,
+				682ABA6B1A36933300D57A1A /* Products */,
+				36DCCB995922FF2027730B5D /* Pods */,
+				A60984C54FFB3AAEDD79AC69 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		682ABA6B1A36933300D57A1A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				682ABA6A1A36933300D57A1A /* SKTagView.app */,
+				682ABA831A36933300D57A1A /* SKTagViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		682ABA6C1A36933300D57A1A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				682ABA711A36933300D57A1A /* AppDelegate.h */,
+				682ABA721A36933300D57A1A /* AppDelegate.m */,
+				F7069B1B1E97B564000FEF2A /* YYFPSLabel.h */,
+				F7069B1C1E97B564000FEF2A /* YYFPSLabel.m */,
+				F7069B1E1E97B5AF000FEF2A /* YYWeakProxy.h */,
+				F7069B1F1E97B5AF000FEF2A /* YYWeakProxy.m */,
+				682ABA741A36933300D57A1A /* ViewController.h */,
+				682ABA751A36933300D57A1A /* ViewController.m */,
+				D865CB901A6415B200F3592C /* TagsTableViewController.h */,
+				D865CB911A6415B200F3592C /* TagsTableViewController.m */,
+				D865CB931A64160500F3592C /* TagsTableCell.h */,
+				D865CB941A64160500F3592C /* TagsTableCell.m */,
+				682ABA771A36933300D57A1A /* Main.storyboard */,
+				682ABA7C1A36933300D57A1A /* LaunchScreen.xib */,
+				682ABA7A1A36933300D57A1A /* Images.xcassets */,
+				682ABA6D1A36933300D57A1A /* Supporting Files */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		682ABA6D1A36933300D57A1A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				682ABA6E1A36933300D57A1A /* Info.plist */,
+				682ABA6F1A36933300D57A1A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		682ABA861A36933300D57A1A /* SKTagViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				6AB277B61AE2A80700D92167 /* SKTagViewTests.m */,
+				682ABA871A36933300D57A1A /* Supporting Files */,
+			);
+			path = SKTagViewTests;
+			sourceTree = "<group>";
+		};
+		682ABA871A36933300D57A1A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				682ABA881A36933300D57A1A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A60984C54FFB3AAEDD79AC69 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA9E05D2D65859803638A4F1 /* libPods-SKTagView.a */,
+				8B3C8483D32FE06FA5202F90 /* libPods-SKTagViewTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB3B6CFF1A5E27C9008911FF /* SKTagView */ = {
+			isa = PBXGroup;
+			children = (
+				682ABA931A3693BC00D57A1A /* SKTagView.h */,
+				682ABA941A3693BC00D57A1A /* SKTagView.m */,
+				E198883D944B29B6488A5B34 /* SKTag.m */,
+				E1988A206257CAF7FE6FC77A /* SKTag.h */,
+				E1988DC652E4B5A7DD3FC44D /* SKTagButton.m */,
+				E19884C2F2577114719748BD /* SKTagButton.h */,
+			);
+			path = SKTagView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		682ABA691A36933300D57A1A /* SKTagView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 682ABA8D1A36933300D57A1A /* Build configuration list for PBXNativeTarget "SKTagView" */;
+			buildPhases = (
+				4F99E86B5CA621A5EBF275C6 /* [CP] Check Pods Manifest.lock */,
+				682ABA661A36933300D57A1A /* Sources */,
+				682ABA671A36933300D57A1A /* Frameworks */,
+				682ABA681A36933300D57A1A /* Resources */,
+				80384D771C3599760C942587 /* [CP] Embed Pods Frameworks */,
+				6921A64A0C0EC4101774A09E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SKTagView;
+			productName = WrapViewWithAutolayout;
+			productReference = 682ABA6A1A36933300D57A1A /* SKTagView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		682ABA821A36933300D57A1A /* SKTagViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 682ABA901A36933300D57A1A /* Build configuration list for PBXNativeTarget "SKTagViewTests" */;
+			buildPhases = (
+				B3EC8EF8827AA1760B24AC33 /* [CP] Check Pods Manifest.lock */,
+				682ABA7F1A36933300D57A1A /* Sources */,
+				682ABA801A36933300D57A1A /* Frameworks */,
+				682ABA811A36933300D57A1A /* Resources */,
+				59C7F9D213B166DB085887CB /* [CP] Embed Pods Frameworks */,
+				953D836C0C76343390377661 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				682ABA851A36933300D57A1A /* PBXTargetDependency */,
+			);
+			name = SKTagViewTests;
+			productName = WrapViewWithAutolayoutTests;
+			productReference = 682ABA831A36933300D57A1A /* SKTagViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		682ABA621A36933300D57A1A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = shiweifu;
+				TargetAttributes = {
+					682ABA691A36933300D57A1A = {
+						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = XHWG785JV3;
+					};
+					682ABA821A36933300D57A1A = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 682ABA691A36933300D57A1A;
+					};
+				};
+			};
+			buildConfigurationList = 682ABA651A36933300D57A1A /* Build configuration list for PBXProject "SKTagView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 682ABA611A36933300D57A1A;
+			productRefGroup = 682ABA6B1A36933300D57A1A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				682ABA691A36933300D57A1A /* SKTagView */,
+				682ABA821A36933300D57A1A /* SKTagViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		682ABA681A36933300D57A1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				682ABA791A36933300D57A1A /* Main.storyboard in Resources */,
+				682ABA7E1A36933300D57A1A /* LaunchScreen.xib in Resources */,
+				682ABA7B1A36933300D57A1A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		682ABA811A36933300D57A1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4F99E86B5CA621A5EBF275C6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		59C7F9D213B166DB085887CB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SKTagViewTests/Pods-SKTagViewTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6921A64A0C0EC4101774A09E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SKTagView/Pods-SKTagView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80384D771C3599760C942587 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SKTagView/Pods-SKTagView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		953D836C0C76343390377661 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SKTagViewTests/Pods-SKTagViewTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3EC8EF8827AA1760B24AC33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		682ABA661A36933300D57A1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7069B1D1E97B564000FEF2A /* YYFPSLabel.m in Sources */,
+				682ABA761A36933300D57A1A /* ViewController.m in Sources */,
+				D865CB951A64160500F3592C /* TagsTableCell.m in Sources */,
+				682ABA731A36933300D57A1A /* AppDelegate.m in Sources */,
+				F7069B201E97B5AF000FEF2A /* YYWeakProxy.m in Sources */,
+				682ABA951A3693BC00D57A1A /* SKTagView.m in Sources */,
+				D865CB921A6415B200F3592C /* TagsTableViewController.m in Sources */,
+				682ABA701A36933300D57A1A /* main.m in Sources */,
+				E198833B70106A7B969AF9D2 /* SKTag.m in Sources */,
+				E1988E0CF76D59E86E94A7CC /* SKTagButton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		682ABA7F1A36933300D57A1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AB277B71AE2A80700D92167 /* SKTagViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		682ABA851A36933300D57A1A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 682ABA691A36933300D57A1A /* SKTagView */;
+			targetProxy = 682ABA841A36933300D57A1A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		682ABA771A36933300D57A1A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				682ABA781A36933300D57A1A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		682ABA7C1A36933300D57A1A /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				682ABA7D1A36933300D57A1A /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		682ABA8B1A36933300D57A1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		682ABA8C1A36933300D57A1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		682ABA8E1A36933300D57A1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04755CFDD4F811E6C059F9C9 /* Pods-SKTagView.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = XHWG785JV3;
+				INFOPLIST_FILE = Classes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.coloshine.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = SKTagView;
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
+			};
+			name = Debug;
+		};
+		682ABA8F1A36933300D57A1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D0E79A2085546506B0A17B1 /* Pods-SKTagView.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = XHWG785JV3;
+				INFOPLIST_FILE = Classes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.coloshine.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = SKTagView;
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
+			};
+			name = Release;
+		};
+		682ABA911A36933300D57A1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C30E335A9D17132968EB4D47 /* Pods-SKTagViewTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SKTagViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "weifu.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = SKTagViewTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SKTagView.app/SKTagView";
+			};
+			name = Debug;
+		};
+		682ABA921A36933300D57A1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 718F5B5405BA63E4133402A0 /* Pods-SKTagViewTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SKTagViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "weifu.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = SKTagViewTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SKTagView.app/SKTagView";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		682ABA651A36933300D57A1A /* Build configuration list for PBXProject "SKTagView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				682ABA8B1A36933300D57A1A /* Debug */,
+				682ABA8C1A36933300D57A1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		682ABA8D1A36933300D57A1A /* Build configuration list for PBXNativeTarget "SKTagView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				682ABA8E1A36933300D57A1A /* Debug */,
+				682ABA8F1A36933300D57A1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		682ABA901A36933300D57A1A /* Build configuration list for PBXNativeTarget "SKTagViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				682ABA911A36933300D57A1A /* Debug */,
+				682ABA921A36933300D57A1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 682ABA621A36933300D57A1A /* Project object */;
+}

@@ -21,12 +21,9 @@
 @property (nonatomic, strong) AVCaptureSession *session;
 //图像预览层，实时显示捕获的图像
 @property (nonatomic ,strong) AVCaptureVideoPreviewLayer *previewLayer;
-
+//人脸识别
 @property(nonatomic,strong)CIDetector *faceDetector;
-
 @property (nonatomic ,strong)FTDetailView *detailsView;
-@property (nonatomic , strong)CAShapeLayer *borderLayer;
-
 @end
 
 @implementation ViewController
@@ -89,24 +86,24 @@
     self.previewLayer.frame = self.view.frame;
 }
 
--(void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self VcSetUpdevice];
+    [self VCSetUpSubviews];
+    
+    // Do any additional setup after loading the view, typically from a nib.
+}
+
+-(void)VCSetUpSubviews{
     [self.view.layer addSublayer:self.previewLayer];
     [self.view addSubview:self.detailsView];
     [self.view bringSubviewToFront:self.detailsView];
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self sessionPrepare];
-    [self.session startRunning];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
--(void)sessionPrepare{
+-(void)VcSetUpdevice{
     [self.session beginConfiguration];
     //session连接输入输出
-    
     NSDictionary *settings = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:kCVPixelFormatType_420YpCbCr8BiPlanarFullRange] forKey:(NSString *)kCVPixelBufferPixelFormatTypeKey];
     self.output.videoSettings = settings;
     self.output.alwaysDiscardsLateVideoFrames = YES;
@@ -117,8 +114,8 @@
     [self.view.layer addSublayer:self.previewLayer];
     dispatch_queue_t queue = dispatch_queue_create("cameraQueue", DISPATCH_QUEUE_SERIAL);
     [self.output setSampleBufferDelegate:self queue:queue];
+    [self.session startRunning];
 }
-
 
 #pragma mark - 获取摄像头设备
 - (AVCaptureDevice *)cameraWithPosition:(AVCaptureDevicePosition)position{
@@ -141,7 +138,8 @@
     CVImageBufferRef pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
     NSDictionary *attachments = CFBridgingRelease(CMCopyDictionaryOfAttachments(kCFAllocatorDefault, sampleBuffer, kCMAttachmentMode_ShouldPropagate));
     CIImage *faceImage = [CIImage imageWithCVImageBuffer:pixelBuffer options:attachments];
-    
+    UIImage *faceOriginImage = [self sampleBufferToImage:sampleBuffer];
+    UIImage *faceImg = [self fixOrientation:faceOriginImage];
     NSMutableDictionary *faceOptions = [NSMutableDictionary new];
     NSNumber *orientNum = [NSNumber numberWithInt:[self exifOrientation:[UIDevice currentDevice].orientation]];
     [faceOptions setObject:orientNum forKey:CIDetectorImageOrientation];
@@ -155,6 +153,16 @@
         CGRect faceRect = [self calculateFaceRectFacePosition:faceFeature.mouthPosition FaceBounds:faceFeature.bounds ClearAperture:cleanAperture];
         NSString *featureDetails = [NSString stringWithFormat:@"has smile: %d \n has closed left eye %d \n has closed right eye %d",faceFeature.hasSmile,faceFeature.leftEyeClosed,faceFeature.rightEyeClosed];
         [self updateWithFaceRect:faceRect Text:featureDetails];
+        
+        //3s后拍照
+        __weak __typeof(self) weakSelf = self;
+        if(faceFeature.leftEyeClosed && faceFeature.rightEyeClosed){
+            //延时3s拍照
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [weakSelf.session stopRunning];
+                _getFacePictureBlock ? _getFacePictureBlock(faceImg):nil;
+            });
+        }
     }
     if(allFaces.count == 0){
        dispatch_async(dispatch_get_main_queue(), ^{
@@ -246,6 +254,100 @@
       }];
   });
 }
+
+
+
+-(UIImage *)sampleBufferToImage:(CMSampleBufferRef)sampleBuffer{
+    
+    CVImageBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
+    CIImage *ciImage = [CIImage imageWithCVPixelBuffer:imageBuffer];
+    CIContext *temporaryContext = [CIContext contextWithOptions:nil];
+    CGImageRef videoImage = [temporaryContext createCGImage:ciImage fromRect:CGRectMake(0, 0, CVPixelBufferGetWidth(imageBuffer), CVPixelBufferGetHeight(imageBuffer))];
+    UIImage *result = [[UIImage alloc] initWithCGImage:videoImage scale:1.0 orientation:UIImageOrientationLeftMirrored];
+    CGImageRelease(videoImage);
+    
+    return result;
+    
+}
+
+#pragma mark - 调整原始数据
+- (UIImage *)fixOrientation:(UIImage *)aImage {
+    
+    // No-op if the orientation is already correct
+    if (aImage.imageOrientation == UIImageOrientationUp)
+        return aImage;
+    
+    // We need to calculate the proper transformation to make the image upright.
+    // We do it in 2 steps: Rotate if Left/Right/Down, and then flip if Mirrored.
+    CGAffineTransform transform = CGAffineTransformIdentity;
+    
+    switch (aImage.imageOrientation) {
+        case UIImageOrientationDown:
+        case UIImageOrientationDownMirrored:
+            transform = CGAffineTransformTranslate(transform, aImage.size.width, aImage.size.height);
+            transform = CGAffineTransformRotate(transform, M_PI);
+            break;
+            
+        case UIImageOrientationLeft:
+        case UIImageOrientationLeftMirrored:
+            transform = CGAffineTransformTranslate(transform, aImage.size.width, 0);
+            transform = CGAffineTransformRotate(transform, M_PI_2);
+            break;
+            
+        case UIImageOrientationRight:
+        case UIImageOrientationRightMirrored:
+            transform = CGAffineTransformTranslate(transform, 0, aImage.size.height);
+            transform = CGAffineTransformRotate(transform, -M_PI_2);
+            break;
+        default:
+            break;
+    }
+    
+    switch (aImage.imageOrientation) {
+        case UIImageOrientationUpMirrored:
+        case UIImageOrientationDownMirrored:
+            transform = CGAffineTransformTranslate(transform, aImage.size.width, 0);
+            transform = CGAffineTransformScale(transform, -1, 1);
+            break;
+            
+        case UIImageOrientationLeftMirrored:
+        case UIImageOrientationRightMirrored:
+            transform = CGAffineTransformTranslate(transform, aImage.size.height, 0);
+            transform = CGAffineTransformScale(transform, -1, 1);
+            break;
+        default:
+            break;
+    }
+    
+    // Now we draw the underlying CGImage into a new context, applying the transform
+    // calculated above.
+    CGContextRef ctx = CGBitmapContextCreate(NULL, aImage.size.width, aImage.size.height,
+                                             CGImageGetBitsPerComponent(aImage.CGImage), 0,
+                                             CGImageGetColorSpace(aImage.CGImage),
+                                             CGImageGetBitmapInfo(aImage.CGImage));
+    CGContextConcatCTM(ctx, transform);
+    switch (aImage.imageOrientation) {
+        case UIImageOrientationLeft:
+        case UIImageOrientationLeftMirrored:
+        case UIImageOrientationRight:
+        case UIImageOrientationRightMirrored:
+            // Grr...
+            CGContextDrawImage(ctx, CGRectMake(0,0,aImage.size.height,aImage.size.width), aImage.CGImage);
+            break;
+            
+        default:
+            CGContextDrawImage(ctx, CGRectMake(0,0,aImage.size.width,aImage.size.height), aImage.CGImage);
+            break;
+    }
+    
+    // And now we just create a new UIImage from the drawing context
+    CGImageRef cgimg = CGBitmapContextCreateImage(ctx);
+    UIImage *img = [UIImage imageWithCGImage:cgimg];
+    CGContextRelease(ctx);
+    CGImageRelease(cgimg);
+    return img;
+}
+
 
 
 

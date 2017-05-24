@@ -1,0 +1,16 @@
+//
+//  PrefixHeader.pch
+//  faceTrackSystem
+//
+//  Created by 倪望龙 on 2017/5/23.
+//  Copyright © 2017年 xunyijia. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import "IFlyHeader.h"
+#define USER_APPID           @"59141db9"
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */

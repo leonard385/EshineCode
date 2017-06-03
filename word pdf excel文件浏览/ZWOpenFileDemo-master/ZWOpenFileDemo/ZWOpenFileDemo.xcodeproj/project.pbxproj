@@ -223,7 +223,7 @@
 				TargetAttributes = {
 					8A66E0081E686E900057017D = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = PT88Q3CF88;
+						DevelopmentTeam = XHWG785JV3;
 						ProvisioningStyle = Automatic;
 					};
 					8A66E0241E686E910057017D = {
@@ -445,8 +445,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = PT88Q3CF88;
+				DEVELOPMENT_TEAM = XHWG785JV3;
 				INFOPLIST_FILE = ZWOpenFileDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhengyawei.ZWOpenFileDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -457,8 +458,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = PT88Q3CF88;
+				DEVELOPMENT_TEAM = XHWG785JV3;
 				INFOPLIST_FILE = ZWOpenFileDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhengyawei.ZWOpenFileDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -534,6 +536,7 @@
 				8A66E03B1E686E910057017D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8A66E03C1E686E910057017D /* Build configuration list for PBXNativeTarget "ZWOpenFileDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +545,7 @@
 				8A66E03E1E686E910057017D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8A66E03F1E686E910057017D /* Build configuration list for PBXNativeTarget "ZWOpenFileDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +554,7 @@
 				8A66E0411E686E910057017D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

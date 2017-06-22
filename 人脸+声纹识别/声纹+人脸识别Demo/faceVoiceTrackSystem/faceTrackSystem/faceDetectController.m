@@ -6,11 +6,11 @@
 //  Copyright © 2017年 xunyijia. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "faceDetectController.h"
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import "FTDetailView.h"
-@interface ViewController ()<AVCaptureVideoDataOutputSampleBufferDelegate,UIAlertViewDelegate>
+@interface faceDetectController ()<AVCaptureVideoDataOutputSampleBufferDelegate,UIAlertViewDelegate>
 //捕获设备，通常是前置摄像头，后置摄像头，麦克风（音频输入）
 @property (nonatomic, strong) AVCaptureDevice *frontCamera;
 //AVCaptureDeviceInput 代表输入设备，他使用AVCaptureDevice 来初始化
@@ -27,7 +27,7 @@
 @property(nonatomic,strong)UIImage *currentFaceImage;
 @end
 
-@implementation ViewController
+@implementation faceDetectController
 
 -(FTDetailView *)detailsView{
     if(_detailsView == nil){

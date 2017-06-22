@@ -7,7 +7,7 @@
 //
 
 #import "faceRegisterViewController.h"
-#import "ViewController.h"
+#import "faceDetectController.h"
 #import <iflyMSC/IFlyFaceSDK.h>
 #import "UIImage+Extensions.h"
 #import "UIImage+compress.h"
@@ -34,7 +34,7 @@
 }
 - (IBAction)btnRegistClick:(id)sender {
   __weak __typeof(self) weakself = self;
-  ViewController *faceVC = [ViewController new];
+  faceDetectController *faceVC = [faceDetectController new];
   [faceVC setGetFacePictureBlock:^(UIImage *faceImage) {
       [weakself.navigationController popToViewController:self animated:YES];
       [weakself.iFlySpFaceRequest setParameter:[IFlySpeechConstant FACE_REG] forKey:[IFlySpeechConstant FACE_SST]];
@@ -50,7 +50,7 @@
 }
 - (IBAction)btnVerifyClick:(id)sender {
     __weak __typeof(self) weakself = self;
-    ViewController *faceVC = [ViewController new];
+    faceDetectController *faceVC = [faceDetectController new];
     [faceVC setGetFacePictureBlock:^(UIImage *faceImage) {
         [weakself.navigationController popToViewController:self animated:YES];
         [weakself.iFlySpFaceRequest setParameter:[IFlySpeechConstant FACE_VERIFY] forKey:[IFlySpeechConstant FACE_SST]];

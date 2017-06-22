@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F7374DB61EFBB4AF00C9588E /* faceDetectController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7374DB51EFBB4AF00C9588E /* faceDetectController.m */; };
 		F77844A01ED3E115007CAD3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F778449F1ED3E115007CAD3C /* main.m */; };
 		F77844A31ED3E115007CAD3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F77844A21ED3E115007CAD3C /* AppDelegate.m */; };
-		F77844A61ED3E115007CAD3C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F77844A51ED3E115007CAD3C /* ViewController.m */; };
 		F77844A91ED3E115007CAD3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F77844A71ED3E115007CAD3C /* Main.storyboard */; };
 		F77844AB1ED3E115007CAD3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F77844AA1ED3E115007CAD3C /* Assets.xcassets */; };
 		F77844AE1ED3E115007CAD3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F77844AC1ED3E115007CAD3C /* LaunchScreen.storyboard */; };
@@ -86,12 +86,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F7374DB41EFBB4AF00C9588E /* faceDetectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = faceDetectController.h; sourceTree = "<group>"; };
+		F7374DB51EFBB4AF00C9588E /* faceDetectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = faceDetectController.m; sourceTree = "<group>"; };
 		F778449B1ED3E115007CAD3C /* faceTrackSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = faceTrackSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F778449F1ED3E115007CAD3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F77844A11ED3E115007CAD3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F77844A21ED3E115007CAD3C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F77844A41ED3E115007CAD3C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F77844A51ED3E115007CAD3C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F77844A81ED3E115007CAD3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F77844AA1ED3E115007CAD3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F77844AD1ED3E115007CAD3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -237,14 +237,14 @@
 				F77844A21ED3E115007CAD3C /* AppDelegate.m */,
 				F77844B51ED3E1D4007CAD3C /* FTDetailView.h */,
 				F77844B61ED3E1D4007CAD3C /* FTDetailView.m */,
-				F77844A41ED3E115007CAD3C /* ViewController.h */,
-				F77844A51ED3E115007CAD3C /* ViewController.m */,
 				F7DA3CF11ED43AD600B4B097 /* voiceViewController.h */,
 				F7DA3CF21ED43AD600B4B097 /* voiceViewController.m */,
 				F7DA3CF31ED43AD600B4B097 /* voiceViewController.xib */,
 				F7A435DE1ED51CE000476922 /* VoiceMannageViewController.h */,
 				F7A435DF1ED51CE000476922 /* VoiceMannageViewController.m */,
 				F7A435E01ED51CE000476922 /* VoiceMannageViewController.xib */,
+				F7374DB41EFBB4AF00C9588E /* faceDetectController.h */,
+				F7374DB51EFBB4AF00C9588E /* faceDetectController.m */,
 				F7DA3C4B1ED41FAF00B4B097 /* faceRegisterViewController.h */,
 				F7DA3C4C1ED41FAF00B4B097 /* faceRegisterViewController.m */,
 				F7DA3CEE1ED4262A00B4B097 /* faceRegisterViewController.xib */,
@@ -536,7 +536,6 @@
 				F7DA3CE81ED424AC00B4B097 /* PermissionDetector.m in Sources */,
 				F7DA3C4D1ED41FAF00B4B097 /* faceRegisterViewController.m in Sources */,
 				F7DA3CE51ED424AC00B4B097 /* IFlyFaceImage.m in Sources */,
-				F77844A61ED3E115007CAD3C /* ViewController.m in Sources */,
 				F7A435DD1ED51B9100476922 /* TrainViewController.m in Sources */,
 				F7DA3CE91ED424AC00B4B097 /* IFlyFaceResultDetector.m in Sources */,
 				F7A435E11ED51CE000476922 /* VoiceMannageViewController.m in Sources */,
@@ -546,6 +545,7 @@
 				F77844A31ED3E115007CAD3C /* AppDelegate.m in Sources */,
 				F7DA3C4A1ED41CB200B4B097 /* rootViewController.m in Sources */,
 				F7DA3CEB1ED424AC00B4B097 /* IFlyFaceResultTrack.m in Sources */,
+				F7374DB61EFBB4AF00C9588E /* faceDetectController.m in Sources */,
 				F7DA3CEA1ED424AC00B4B097 /* IFlyFaceResultKeys.m in Sources */,
 				F77844A01ED3E115007CAD3C /* main.m in Sources */,
 				F7DA3CE41ED424AC00B4B097 /* CalculatorTools.m in Sources */,

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 typedef void(^getFacePicture)(UIImage *faceImage);
-@interface ViewController : UIViewController
+@interface faceDetectController : UIViewController
 @property(nonatomic,copy)getFacePicture getFacePictureBlock;
 -(void)setGetFacePictureBlock:(getFacePicture)getFacePictureBlock;
 @end

@@ -77,7 +77,7 @@
 
 -(CIDetector *)faceDetector{
     if(_faceDetector == nil){
-        _faceDetector = [CIDetector detectorOfType:CIDetectorTypeFace context:nil options:@{CIDetectorAccuracy:CIDetectorAccuracyLow}];
+        _faceDetector = [CIDetector detectorOfType:CIDetectorTypeFace context:nil options:@{CIDetectorAccuracy:CIDetectorAccuracyHigh}];
     }
     return _faceDetector;
 }

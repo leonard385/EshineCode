@@ -9,8 +9,9 @@
 #import "rootViewController.h"
 #import "faceRegisterViewController.h"
 #import "voiceViewController.h"
+#import "SpeechRecognizerViewController.h"
 @interface rootViewController ()<UITableViewDelegate,UITableViewDataSource>
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
 
 @implementation rootViewController
@@ -34,6 +35,10 @@
             [self.navigationController pushViewController:voiceVc animated:YES];
         }
             break;
+        case 2:{//语音识别
+            SpeechRecognizerViewController *speechRecVC = [SpeechRecognizerViewController new];
+            [self.navigationController pushViewController:speechRecVC animated:YES];
+        }break;
         default:
             break;
     }

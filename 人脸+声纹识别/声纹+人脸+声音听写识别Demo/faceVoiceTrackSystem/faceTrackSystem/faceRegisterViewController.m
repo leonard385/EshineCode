@@ -42,7 +42,7 @@
       [weakself.iFlySpFaceRequest setParameter:USER_APPID forKey:@"auth_id"];
       [weakself.iFlySpFaceRequest setParameter:@"del" forKey:@"property"];
       weakself.faceImagePreView.image = faceImage;
-      NSData* imgData=[faceImage compressedData];
+      NSData* imgData = [faceImage compressedData];
       NSLog(@"reg image data length: %lu",(unsigned long)[imgData length]);
       [weakself.iFlySpFaceRequest sendRequest:imgData];
   }];

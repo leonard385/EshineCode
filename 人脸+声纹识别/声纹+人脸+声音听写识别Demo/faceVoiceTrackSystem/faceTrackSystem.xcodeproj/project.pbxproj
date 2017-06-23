@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F7374DB61EFBB4AF00C9588E /* faceDetectController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7374DB51EFBB4AF00C9588E /* faceDetectController.m */; };
+		F7374DB01EFBB19800C9588E /* nameList.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7374DAF1EFBB19800C9588E /* nameList.plist */; };
+		F7374DB31EFBB40900C9588E /* faceDetectController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7374DB21EFBB40900C9588E /* faceDetectController.m */; };
+		F7374DB91EFBBE8200C9588E /* SpeechRecognizerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7374DB81EFBBE8200C9588E /* SpeechRecognizerViewController.m */; };
+		F7374DBB1EFBBEA500C9588E /* SpeechRecognizerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7374DBA1EFBBEA500C9588E /* SpeechRecognizerViewController.xib */; };
+		F74319A01EFBE4C100FEA6A8 /* IATConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F743197D1EFBE4C100FEA6A8 /* IATConfig.m */; };
+		F74319A31EFBE4C100FEA6A8 /* ISRDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F74319831EFBE4C100FEA6A8 /* ISRDataHelper.m */; };
+		F74319AB1EFBEECA00FEA6A8 /* UIButton+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F74319AA1EFBEECA00FEA6A8 /* UIButton+BackgroundColor.m */; };
 		F77844A01ED3E115007CAD3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F778449F1ED3E115007CAD3C /* main.m */; };
 		F77844A31ED3E115007CAD3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F77844A21ED3E115007CAD3C /* AppDelegate.m */; };
 		F77844A91ED3E115007CAD3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F77844A71ED3E115007CAD3C /* Main.storyboard */; };
@@ -86,8 +92,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F7374DB41EFBB4AF00C9588E /* faceDetectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = faceDetectController.h; sourceTree = "<group>"; };
-		F7374DB51EFBB4AF00C9588E /* faceDetectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = faceDetectController.m; sourceTree = "<group>"; };
+		F7374DAF1EFBB19800C9588E /* nameList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = nameList.plist; sourceTree = "<group>"; };
+		F7374DB11EFBB40900C9588E /* faceDetectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = faceDetectController.h; sourceTree = "<group>"; };
+		F7374DB21EFBB40900C9588E /* faceDetectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = faceDetectController.m; sourceTree = "<group>"; };
+		F7374DB71EFBBE8200C9588E /* SpeechRecognizerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeechRecognizerViewController.h; sourceTree = "<group>"; };
+		F7374DB81EFBBE8200C9588E /* SpeechRecognizerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeechRecognizerViewController.m; sourceTree = "<group>"; };
+		F7374DBA1EFBBEA500C9588E /* SpeechRecognizerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeechRecognizerViewController.xib; sourceTree = "<group>"; };
+		F743197C1EFBE4C100FEA6A8 /* IATConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IATConfig.h; sourceTree = "<group>"; };
+		F743197D1EFBE4C100FEA6A8 /* IATConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IATConfig.m; sourceTree = "<group>"; };
+		F74319821EFBE4C100FEA6A8 /* ISRDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISRDataHelper.h; sourceTree = "<group>"; };
+		F74319831EFBE4C100FEA6A8 /* ISRDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISRDataHelper.m; sourceTree = "<group>"; };
+		F74319A91EFBEECA00FEA6A8 /* UIButton+BackgroundColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+BackgroundColor.h"; sourceTree = "<group>"; };
+		F74319AA1EFBEECA00FEA6A8 /* UIButton+BackgroundColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+BackgroundColor.m"; sourceTree = "<group>"; };
 		F778449B1ED3E115007CAD3C /* faceTrackSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = faceTrackSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F778449F1ED3E115007CAD3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F77844A11ED3E115007CAD3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -212,6 +228,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F7374DAE1EFBB16B00C9588E /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F7374DAF1EFBB19800C9588E /* nameList.plist */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		F74319581EFBE4C100FEA6A8 /* speechRecognition */ = {
+			isa = PBXGroup;
+			children = (
+				F74319591EFBE4C100FEA6A8 /* business */,
+			);
+			path = speechRecognition;
+			sourceTree = "<group>";
+		};
+		F74319591EFBE4C100FEA6A8 /* business */ = {
+			isa = PBXGroup;
+			children = (
+				F743197B1EFBE4C100FEA6A8 /* isr */,
+			);
+			path = business;
+			sourceTree = "<group>";
+		};
+		F743197B1EFBE4C100FEA6A8 /* isr */ = {
+			isa = PBXGroup;
+			children = (
+				F743197C1EFBE4C100FEA6A8 /* IATConfig.h */,
+				F743197D1EFBE4C100FEA6A8 /* IATConfig.m */,
+				F74319821EFBE4C100FEA6A8 /* ISRDataHelper.h */,
+				F74319831EFBE4C100FEA6A8 /* ISRDataHelper.m */,
+			);
+			path = isr;
+			sourceTree = "<group>";
+		};
+		F74319A81EFBEEBD00FEA6A8 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				F74319A91EFBEECA00FEA6A8 /* UIButton+BackgroundColor.h */,
+				F74319AA1EFBEECA00FEA6A8 /* UIButton+BackgroundColor.m */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		F77844921ED3E115007CAD3C = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +292,9 @@
 		F778449D1ED3E115007CAD3C /* faceTrackSystem */ = {
 			isa = PBXGroup;
 			children = (
+				F74319A81EFBEEBD00FEA6A8 /* utils */,
+				F7374DAE1EFBB16B00C9588E /* src */,
+				F74319581EFBE4C100FEA6A8 /* speechRecognition */,
 				F7DA3CC01ED424AC00B4B097 /* FaceRecognition */,
 				F77844A11ED3E115007CAD3C /* AppDelegate.h */,
 				F77844A21ED3E115007CAD3C /* AppDelegate.m */,
@@ -243,11 +306,14 @@
 				F7A435DE1ED51CE000476922 /* VoiceMannageViewController.h */,
 				F7A435DF1ED51CE000476922 /* VoiceMannageViewController.m */,
 				F7A435E01ED51CE000476922 /* VoiceMannageViewController.xib */,
-				F7374DB41EFBB4AF00C9588E /* faceDetectController.h */,
-				F7374DB51EFBB4AF00C9588E /* faceDetectController.m */,
+				F7374DB11EFBB40900C9588E /* faceDetectController.h */,
+				F7374DB21EFBB40900C9588E /* faceDetectController.m */,
 				F7DA3C4B1ED41FAF00B4B097 /* faceRegisterViewController.h */,
 				F7DA3C4C1ED41FAF00B4B097 /* faceRegisterViewController.m */,
 				F7DA3CEE1ED4262A00B4B097 /* faceRegisterViewController.xib */,
+				F7374DB71EFBBE8200C9588E /* SpeechRecognizerViewController.h */,
+				F7374DB81EFBBE8200C9588E /* SpeechRecognizerViewController.m */,
+				F7374DBA1EFBBEA500C9588E /* SpeechRecognizerViewController.xib */,
 				F7DA3C481ED41CB200B4B097 /* rootViewController.h */,
 				F7DA3C491ED41CB200B4B097 /* rootViewController.m */,
 				F7A435D81ED51B9100476922 /* DiagleView.h */,
@@ -510,6 +576,7 @@
 				F7A435BC1ED51A8000476922 /* Recognition1.png in Resources */,
 				F7A435C81ED51A8000476922 /* Recognition7.png in Resources */,
 				F7A435B51ED51A8000476922 /* backGround@2x.png in Resources */,
+				F7374DBB1EFBBEA500C9588E /* SpeechRecognizerViewController.xib in Resources */,
 				F7A435CB1ED51A8000476922 /* record1@2x.png in Resources */,
 				F7A435BB1ED51A8000476922 /* mic@2x.png in Resources */,
 				F7A435BD1ED51A8000476922 /* Recognition1@2x.png in Resources */,
@@ -521,6 +588,7 @@
 				F7A435D71ED51A8000476922 /* speekNormal@2x.png in Resources */,
 				F77844A91ED3E115007CAD3C /* Main.storyboard in Resources */,
 				F7A435CF1ED51A8000476922 /* record3@2x.png in Resources */,
+				F7374DB01EFBB19800C9588E /* nameList.plist in Resources */,
 				F7A435D21ED51A8000476922 /* recordNormal.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -533,23 +601,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7A435DC1ED51B9100476922 /* DiagleView.m in Sources */,
+				F74319AB1EFBEECA00FEA6A8 /* UIButton+BackgroundColor.m in Sources */,
 				F7DA3CE81ED424AC00B4B097 /* PermissionDetector.m in Sources */,
 				F7DA3C4D1ED41FAF00B4B097 /* faceRegisterViewController.m in Sources */,
 				F7DA3CE51ED424AC00B4B097 /* IFlyFaceImage.m in Sources */,
+				F74319A01EFBE4C100FEA6A8 /* IATConfig.m in Sources */,
 				F7A435DD1ED51B9100476922 /* TrainViewController.m in Sources */,
 				F7DA3CE91ED424AC00B4B097 /* IFlyFaceResultDetector.m in Sources */,
 				F7A435E11ED51CE000476922 /* VoiceMannageViewController.m in Sources */,
 				F7DA3CF41ED43AD600B4B097 /* voiceViewController.m in Sources */,
 				F77844B71ED3E1D4007CAD3C /* FTDetailView.m in Sources */,
+				F74319A31EFBE4C100FEA6A8 /* ISRDataHelper.m in Sources */,
 				F7DA3CE61ED424AC00B4B097 /* UIImage+compress.m in Sources */,
 				F77844A31ED3E115007CAD3C /* AppDelegate.m in Sources */,
 				F7DA3C4A1ED41CB200B4B097 /* rootViewController.m in Sources */,
 				F7DA3CEB1ED424AC00B4B097 /* IFlyFaceResultTrack.m in Sources */,
-				F7374DB61EFBB4AF00C9588E /* faceDetectController.m in Sources */,
+				F7374DB31EFBB40900C9588E /* faceDetectController.m in Sources */,
 				F7DA3CEA1ED424AC00B4B097 /* IFlyFaceResultKeys.m in Sources */,
 				F77844A01ED3E115007CAD3C /* main.m in Sources */,
 				F7DA3CE41ED424AC00B4B097 /* CalculatorTools.m in Sources */,
 				F7DA3CE71ED424AC00B4B097 /* UIImage+Extensions.m in Sources */,
+				F7374DB91EFBBE8200C9588E /* SpeechRecognizerViewController.m in Sources */,
 				F7DA3CE11ED424AC00B4B097 /* CanvasView.m in Sources */,
 				F7DA3CF91ED43BDD00B4B097 /* Reachability.m in Sources */,
 			);

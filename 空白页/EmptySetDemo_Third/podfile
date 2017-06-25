@@ -1,0 +1,8 @@
+platform :ios,  '8.0'
+target 'EmptySetDemo_Third' do
+pod 'AFNetworking'
+pod 'MJRefresh'
+pod 'MJExtension'
+pod 'SVProgressHUD'
+pod 'Masonry'
+end

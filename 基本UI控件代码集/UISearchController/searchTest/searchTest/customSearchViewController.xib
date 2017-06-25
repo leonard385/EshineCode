@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="customSearchViewController">
+            <connections>
+                <outlet property="btnSearch" destination="TCP-k7-yn6" id="Nyo-RX-2wQ"/>
+                <outlet property="view" destination="iN0-l3-epB" id="kCV-Yq-0B8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCP-k7-yn6">
+                    <rect key="frame" x="0.0" y="84" width="375" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="0zW-Xs-e1H"/>
+                    </constraints>
+                    <state key="normal" title="搜索点击"/>
+                    <connections>
+                        <action selector="btnSearchClick:" destination="-1" eventType="touchUpInside" id="v5N-w7-LVW"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="TCP-k7-yn6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MwH-WK-bL6"/>
+                <constraint firstAttribute="trailing" secondItem="TCP-k7-yn6" secondAttribute="trailing" id="ceX-H1-d5Q"/>
+                <constraint firstItem="TCP-k7-yn6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="84" id="t7e-mE-fqE"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

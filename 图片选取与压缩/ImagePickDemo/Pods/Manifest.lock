@@ -1,0 +1,26 @@
+PODS:
+  - DACircularProgress (2.3.1)
+  - MBProgressHUD (0.9.2)
+  - MWPhotoBrowser (2.1.2):
+    - DACircularProgress (~> 2.3)
+    - MBProgressHUD (~> 0.9)
+    - SDWebImage (!= 3.7.2, ~> 3.7)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - TZImagePickerController (1.8.1)
+
+DEPENDENCIES:
+  - MWPhotoBrowser
+  - TZImagePickerController
+
+SPEC CHECKSUMS:
+  DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MWPhotoBrowser: 5836d7aa041dc05a13de380c246826578adc5ea5
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  TZImagePickerController: 086034156913375cb19c8e4103562f15322c3b36
+
+PODFILE CHECKSUM: a74545c469a8c11829c339659a422da96aa38316
+
+COCOAPODS: 1.2.0

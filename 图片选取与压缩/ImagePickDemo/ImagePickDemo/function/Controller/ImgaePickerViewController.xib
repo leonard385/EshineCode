@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImgaePickerViewController">
+            <connections>
+                <outlet property="ImageView" destination="xSx-Mw-x6S" id="mBb-4d-Kka"/>
+                <outlet property="view" destination="eXy-NR-haY" id="sqy-Ys-Hgq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="eXy-NR-haY">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wlc-Hm-xmC">
+                    <rect key="frame" x="12" y="340" width="351" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="IFm-WI-Mus"/>
+                    </constraints>
+                    <state key="normal" title="selectImage"/>
+                    <connections>
+                        <action selector="btnSelectClick:" destination="-1" eventType="touchUpInside" id="7U4-BY-LlR"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xSx-Mw-x6S">
+                    <rect key="frame" x="12" y="80" width="351" height="200"/>
+                    <color key="backgroundColor" red="0.90182834199999995" green="0.64686414930000002" blue="0.63826497400000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="UTJ-ie-ekG"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="xSx-Mw-x6S" firstAttribute="top" secondItem="eXy-NR-haY" secondAttribute="top" constant="80" id="5xy-yn-7xt"/>
+                <constraint firstAttribute="trailing" secondItem="Wlc-Hm-xmC" secondAttribute="trailing" constant="12" id="WpX-Dn-g0R"/>
+                <constraint firstAttribute="trailing" secondItem="xSx-Mw-x6S" secondAttribute="trailing" constant="12" id="aTN-ha-IGs"/>
+                <constraint firstItem="Wlc-Hm-xmC" firstAttribute="top" secondItem="xSx-Mw-x6S" secondAttribute="bottom" constant="60" id="c38-g5-bnJ"/>
+                <constraint firstItem="Wlc-Hm-xmC" firstAttribute="leading" secondItem="eXy-NR-haY" secondAttribute="leading" constant="12" id="qR8-QF-5DK"/>
+                <constraint firstItem="xSx-Mw-x6S" firstAttribute="leading" secondItem="eXy-NR-haY" secondAttribute="leading" constant="12" id="uKb-B2-sYI"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

@@ -67,7 +67,6 @@
                     [self.dataArray addObjectsFromArray:array];
                 }else{//出错(服务器可以处理的错误)
                     //弹出HUD
-        
                 }
                 [self.tableView reloadData];
                 [self.tableView.mj_header endRefreshing];

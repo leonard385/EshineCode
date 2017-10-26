@@ -79,7 +79,7 @@
     NSLog(@"原数据尺寸: width:%f height:%f",image.size.width,image.size.height);
     
     //图片压缩
-    UIImage *compressImage = [UIImage compressImage:image toByte:(NSUInteger)1024 * (NSUInteger)1024 * 0.5];
+    UIImage *compressImage = [UIImage compressImage:image toByte:(NSUInteger)1024 * (NSUInteger)128 * 0.01];
     NSLog(@"压缩数据尺寸: width:%f height:%f",compressImage.size.width,image.size.height);
     NSData *compressData = UIImageJPEGRepresentation(compressImage, 1.0f);
     NSLog(@"压缩数据大小:%.4f MB",(double)compressData.length/1024.0f/1024.0f);

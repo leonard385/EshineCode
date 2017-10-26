@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8ad7a1e4-d245-4f8c-a8c5-1a570503e5db++5696",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "8ad7a1e4-d245-4f8c-a8c5-1a570503e5db++5696" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8ad7a1e4-d245-4f8c-a8c5-1a570503e5db++5696" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "EE742260-BA03-488B-A583-43A58857291A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8ad7a1e4-d245-4f8c-a8c5-1a570503e5db++5696" : "build-iphone\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "IphoneMapSdkDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "output\/BaiduMap_IOSSDK_v2.10.0_Sample\/BMKOCDemo\/IphoneMapSdkDemo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/svn.baidu.com\/app\/search\/lbs-mobile",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8ad7a1e4-d245-4f8c-a8c5-1a570503e5db++5696"
+    }
+  ]
+}

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0179EBA3CC82DB4AFA247E20 /* libPods-ImagePickDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C2D34F25C3FECCD3FB870F /* libPods-ImagePickDemo.a */; };
-		F739929F1F027598000445A2 /* UIImage+compress.m in Sources */ = {isa = PBXBuildFile; fileRef = F739929E1F027598000445A2 /* UIImage+compress.m */; };
+		F7245FCF1FE51544006F9B18 /* UIImage+WLCompress.m in Sources */ = {isa = PBXBuildFile; fileRef = F7245FCD1FE51543006F9B18 /* UIImage+WLCompress.m */; };
 		F73CC39A1F00AA5800CC364E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F73CC3991F00AA5800CC364E /* main.m */; };
 		F73CC39D1F00AA5800CC364E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F73CC39C1F00AA5800CC364E /* AppDelegate.m */; };
 		F73CC3A01F00AA5800CC364E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F73CC39F1F00AA5800CC364E /* ViewController.m */; };
@@ -47,8 +47,8 @@
 		754363220B1C4EE5BD745130 /* Pods-ImagePickDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImagePickDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImagePickDemo/Pods-ImagePickDemo.release.xcconfig"; sourceTree = "<group>"; };
 		B0C2D34F25C3FECCD3FB870F /* libPods-ImagePickDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ImagePickDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAC6E04876A4A9CB904C8C0 /* Pods-ImagePickDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImagePickDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImagePickDemo/Pods-ImagePickDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		F739929D1F027598000445A2 /* UIImage+compress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+compress.h"; sourceTree = "<group>"; };
-		F739929E1F027598000445A2 /* UIImage+compress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+compress.m"; sourceTree = "<group>"; };
+		F7245FCD1FE51543006F9B18 /* UIImage+WLCompress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WLCompress.m"; sourceTree = "<group>"; };
+		F7245FCE1FE51544006F9B18 /* UIImage+WLCompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WLCompress.h"; sourceTree = "<group>"; };
 		F73CC3951F00AA5800CC364E /* ImagePickDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImagePickDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F73CC3991F00AA5800CC364E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F73CC39B1F00AA5800CC364E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -242,8 +242,8 @@
 		F73CC3D01F00B92F00CC364E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				F739929D1F027598000445A2 /* UIImage+compress.h */,
-				F739929E1F027598000445A2 /* UIImage+compress.m */,
+				F7245FCE1FE51544006F9B18 /* UIImage+WLCompress.h */,
+				F7245FCD1FE51543006F9B18 /* UIImage+WLCompress.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -439,9 +439,9 @@
 			files = (
 				F777394F1F02061800EB6879 /* ImageGridCollectionViewCell.m in Sources */,
 				F73CC3A01F00AA5800CC364E /* ViewController.m in Sources */,
+				F7245FCF1FE51544006F9B18 /* UIImage+WLCompress.m in Sources */,
 				F7D713BF1F02335000D45075 /* compressPhotoController.m in Sources */,
 				F777393F1F01F7E200EB6879 /* ImagePickerThirdDemoController.m in Sources */,
-				F739929F1F027598000445A2 /* UIImage+compress.m in Sources */,
 				F77739441F01FFE200EB6879 /* LxGridViewFlowLayout.m in Sources */,
 				F73CC39D1F00AA5800CC364E /* AppDelegate.m in Sources */,
 				F73CC3D31F00B94700CC364E /* ImgaePickerViewController.m in Sources */,

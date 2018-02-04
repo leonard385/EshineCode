@@ -1,0 +1,760 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		94F6943ECC04D83B4DE63936 /* libPods-autoLayoutDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 972FD6F6AD42A6D2FF5EE47E /* libPods-autoLayoutDemo.a */; };
+		F70BC73C2019B5B800A3D1F9 /* LYLayoutGuideController.m in Sources */ = {isa = PBXBuildFile; fileRef = F70BC73B2019B5B800A3D1F9 /* LYLayoutGuideController.m */; };
+		F70BC73F2019D56300A3D1F9 /* WLAutoSizeTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F70BC73E2019D56300A3D1F9 /* WLAutoSizeTableView.m */; };
+		F7591AF1201E15B400F87E64 /* LYAmbiguousLayoutsDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = F7591AF0201E15B400F87E64 /* LYAmbiguousLayoutsDemo.m */; };
+		F792CDC7202149E80051C53C /* LYLayoutAnchorsDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = F792CDC6202149E80051C53C /* LYLayoutAnchorsDemo.m */; };
+		F792CDCA20214D9C0051C53C /* LYProgramaLayoutDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = F792CDC920214D9C0051C53C /* LYProgramaLayoutDemo.m */; };
+		F792CDCD2021592D0051C53C /* LYLayoutConstraintDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = F792CDCC2021592D0051C53C /* LYLayoutConstraintDemo.m */; };
+		F792CDD020216C120051C53C /* LYVisualFormatDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = F792CDCF20216C120051C53C /* LYVisualFormatDemo.m */; };
+		F7A67FD0200DE3EE003E1B0C /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A67FCF200DE3EE003E1B0C /* 2.png */; };
+		F7A67FD2200DE3F5003E1B0C /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A67FD1200DE3F5003E1B0C /* 1.png */; };
+		F7A67FD5200DFAB9003E1B0C /* LYStackDynamicController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A67FD4200DFAB9003E1B0C /* LYStackDynamicController.m */; };
+		F7A67FD7200E001F003E1B0C /* icon_star.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A67FD6200E001F003E1B0C /* icon_star.png */; };
+		F7AC458220246AA8008FB23B /* LYSelfSizeCellDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AC458120246AA8008FB23B /* LYSelfSizeCellDemo.m */; };
+		F7AC458520246AF6008FB23B /* LYSelfSizeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AC458420246AF6008FB23B /* LYSelfSizeCell.m */; };
+		F7C5A66120181F63001423C9 /* LYLayoutPriorityDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C5A66020181F63001423C9 /* LYLayoutPriorityDemoController.m */; };
+		F7C5A664201832DF001423C9 /* LYDynamicSizeDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C5A663201832DF001423C9 /* LYDynamicSizeDemoController.m */; };
+		F7D659462015906200479572 /* LYIntrinsicSizeDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D659442015906200479572 /* LYIntrinsicSizeDemoController.m */; };
+		F7D659472015906200479572 /* LYIntrinsicSizeDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7D659452015906200479572 /* LYIntrinsicSizeDemoController.xib */; };
+		F7D6594A2015BAFB00479572 /* LYSizeToFitIntrinsicSize.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D659492015BAFB00479572 /* LYSizeToFitIntrinsicSize.m */; };
+		F7DA52272004988500777016 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DA52262004988500777016 /* AppDelegate.m */; };
+		F7DA522A2004988500777016 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DA52292004988500777016 /* ViewController.m */; };
+		F7DA522D2004988500777016 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7DA522B2004988500777016 /* Main.storyboard */; };
+		F7DA522F2004988500777016 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7DA522E2004988500777016 /* Assets.xcassets */; };
+		F7DA52322004988500777016 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7DA52302004988500777016 /* LaunchScreen.storyboard */; };
+		F7DA52352004988500777016 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DA52342004988500777016 /* main.m */; };
+		F7DA523F2004988500777016 /* autoLayoutDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DA523E2004988500777016 /* autoLayoutDemoTests.m */; };
+		F7DA524A2004988600777016 /* autoLayoutDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DA52492004988600777016 /* autoLayoutDemoUITests.m */; };
+		F7DA5259200498C700777016 /* LYStatckViewDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DA5258200498C700777016 /* LYStatckViewDemoController.m */; };
+		F7DA525B200499B200777016 /* LYStatckViewDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7DA525A200499B200777016 /* LYStatckViewDemoController.xib */; };
+		F7E033B520162D86006C69D3 /* LYBaseLayoutDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E033B320162D86006C69D3 /* LYBaseLayoutDemoController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F7DA523B2004988500777016 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7DA521A2004988500777016 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7DA52212004988500777016;
+			remoteInfo = autoLayoutDemo;
+		};
+		F7DA52462004988600777016 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7DA521A2004988500777016 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7DA52212004988500777016;
+			remoteInfo = autoLayoutDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		581A4592C2F4C554B5117E61 /* Pods-autoLayoutDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-autoLayoutDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-autoLayoutDemo/Pods-autoLayoutDemo.release.xcconfig"; sourceTree = "<group>"; };
+		923FBA05C57D993AB8F0EF56 /* Pods-autoLayoutDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-autoLayoutDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-autoLayoutDemo/Pods-autoLayoutDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		972FD6F6AD42A6D2FF5EE47E /* libPods-autoLayoutDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-autoLayoutDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F70BC73A2019B5B800A3D1F9 /* LYLayoutGuideController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYLayoutGuideController.h; sourceTree = "<group>"; };
+		F70BC73B2019B5B800A3D1F9 /* LYLayoutGuideController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYLayoutGuideController.m; sourceTree = "<group>"; };
+		F70BC73D2019D56300A3D1F9 /* WLAutoSizeTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLAutoSizeTableView.h; sourceTree = "<group>"; };
+		F70BC73E2019D56300A3D1F9 /* WLAutoSizeTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLAutoSizeTableView.m; sourceTree = "<group>"; };
+		F7591AEF201E15B400F87E64 /* LYAmbiguousLayoutsDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYAmbiguousLayoutsDemo.h; sourceTree = "<group>"; };
+		F7591AF0201E15B400F87E64 /* LYAmbiguousLayoutsDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYAmbiguousLayoutsDemo.m; sourceTree = "<group>"; };
+		F76CF20D200D9A5D00D3EF35 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		F792CDC5202149E80051C53C /* LYLayoutAnchorsDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYLayoutAnchorsDemo.h; sourceTree = "<group>"; };
+		F792CDC6202149E80051C53C /* LYLayoutAnchorsDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYLayoutAnchorsDemo.m; sourceTree = "<group>"; };
+		F792CDC820214D9C0051C53C /* LYProgramaLayoutDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYProgramaLayoutDemo.h; sourceTree = "<group>"; };
+		F792CDC920214D9C0051C53C /* LYProgramaLayoutDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYProgramaLayoutDemo.m; sourceTree = "<group>"; };
+		F792CDCB2021592D0051C53C /* LYLayoutConstraintDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYLayoutConstraintDemo.h; sourceTree = "<group>"; };
+		F792CDCC2021592D0051C53C /* LYLayoutConstraintDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYLayoutConstraintDemo.m; sourceTree = "<group>"; };
+		F792CDCE20216C120051C53C /* LYVisualFormatDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYVisualFormatDemo.h; sourceTree = "<group>"; };
+		F792CDCF20216C120051C53C /* LYVisualFormatDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYVisualFormatDemo.m; sourceTree = "<group>"; };
+		F7A67FCF200DE3EE003E1B0C /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		F7A67FD1200DE3F5003E1B0C /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		F7A67FD3200DFAB9003E1B0C /* LYStackDynamicController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYStackDynamicController.h; sourceTree = "<group>"; };
+		F7A67FD4200DFAB9003E1B0C /* LYStackDynamicController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYStackDynamicController.m; sourceTree = "<group>"; };
+		F7A67FD6200E001F003E1B0C /* icon_star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_star.png; sourceTree = "<group>"; };
+		F7AC458020246AA8008FB23B /* LYSelfSizeCellDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYSelfSizeCellDemo.h; sourceTree = "<group>"; };
+		F7AC458120246AA8008FB23B /* LYSelfSizeCellDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYSelfSizeCellDemo.m; sourceTree = "<group>"; };
+		F7AC458320246AF6008FB23B /* LYSelfSizeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYSelfSizeCell.h; sourceTree = "<group>"; };
+		F7AC458420246AF6008FB23B /* LYSelfSizeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYSelfSizeCell.m; sourceTree = "<group>"; };
+		F7C5A65F20181F63001423C9 /* LYLayoutPriorityDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYLayoutPriorityDemoController.h; sourceTree = "<group>"; };
+		F7C5A66020181F63001423C9 /* LYLayoutPriorityDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYLayoutPriorityDemoController.m; sourceTree = "<group>"; };
+		F7C5A662201832DF001423C9 /* LYDynamicSizeDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYDynamicSizeDemoController.h; sourceTree = "<group>"; };
+		F7C5A663201832DF001423C9 /* LYDynamicSizeDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYDynamicSizeDemoController.m; sourceTree = "<group>"; };
+		F7D659432015906200479572 /* LYIntrinsicSizeDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYIntrinsicSizeDemoController.h; sourceTree = "<group>"; };
+		F7D659442015906200479572 /* LYIntrinsicSizeDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYIntrinsicSizeDemoController.m; sourceTree = "<group>"; };
+		F7D659452015906200479572 /* LYIntrinsicSizeDemoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYIntrinsicSizeDemoController.xib; sourceTree = "<group>"; };
+		F7D659482015BAFB00479572 /* LYSizeToFitIntrinsicSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYSizeToFitIntrinsicSize.h; sourceTree = "<group>"; };
+		F7D659492015BAFB00479572 /* LYSizeToFitIntrinsicSize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYSizeToFitIntrinsicSize.m; sourceTree = "<group>"; };
+		F7DA52222004988500777016 /* autoLayoutDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = autoLayoutDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7DA52252004988500777016 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F7DA52262004988500777016 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F7DA52282004988500777016 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F7DA52292004988500777016 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F7DA522C2004988500777016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F7DA522E2004988500777016 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F7DA52312004988500777016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F7DA52332004988500777016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7DA52342004988500777016 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F7DA523A2004988500777016 /* autoLayoutDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = autoLayoutDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7DA523E2004988500777016 /* autoLayoutDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = autoLayoutDemoTests.m; sourceTree = "<group>"; };
+		F7DA52402004988600777016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7DA52452004988600777016 /* autoLayoutDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = autoLayoutDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7DA52492004988600777016 /* autoLayoutDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = autoLayoutDemoUITests.m; sourceTree = "<group>"; };
+		F7DA524B2004988600777016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7DA5257200498C700777016 /* LYStatckViewDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYStatckViewDemoController.h; sourceTree = "<group>"; };
+		F7DA5258200498C700777016 /* LYStatckViewDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYStatckViewDemoController.m; sourceTree = "<group>"; };
+		F7DA525A200499B200777016 /* LYStatckViewDemoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYStatckViewDemoController.xib; sourceTree = "<group>"; };
+		F7E033B220162D86006C69D3 /* LYBaseLayoutDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYBaseLayoutDemoController.h; sourceTree = "<group>"; };
+		F7E033B320162D86006C69D3 /* LYBaseLayoutDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYBaseLayoutDemoController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F7DA521F2004988500777016 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94F6943ECC04D83B4DE63936 /* libPods-autoLayoutDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7DA52372004988500777016 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7DA52422004988600777016 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A8B7CBF5DBED4C5F88DBD999 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				972FD6F6AD42A6D2FF5EE47E /* libPods-autoLayoutDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D7685566B7E13B18D4F4D12E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				923FBA05C57D993AB8F0EF56 /* Pods-autoLayoutDemo.debug.xcconfig */,
+				581A4592C2F4C554B5117E61 /* Pods-autoLayoutDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F7DA52192004988500777016 = {
+			isa = PBXGroup;
+			children = (
+				F76CF20D200D9A5D00D3EF35 /* PrefixHeader.pch */,
+				F7DA52242004988500777016 /* autoLayoutDemo */,
+				F7DA523D2004988500777016 /* autoLayoutDemoTests */,
+				F7DA52482004988600777016 /* autoLayoutDemoUITests */,
+				F7DA52232004988500777016 /* Products */,
+				D7685566B7E13B18D4F4D12E /* Pods */,
+				A8B7CBF5DBED4C5F88DBD999 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F7DA52232004988500777016 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7DA52222004988500777016 /* autoLayoutDemo.app */,
+				F7DA523A2004988500777016 /* autoLayoutDemoTests.xctest */,
+				F7DA52452004988600777016 /* autoLayoutDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F7DA52242004988500777016 /* autoLayoutDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F7DA52252004988500777016 /* AppDelegate.h */,
+				F7DA52262004988500777016 /* AppDelegate.m */,
+				F7DA52282004988500777016 /* ViewController.h */,
+				F7DA52292004988500777016 /* ViewController.m */,
+				F7DA5257200498C700777016 /* LYStatckViewDemoController.h */,
+				F7DA5258200498C700777016 /* LYStatckViewDemoController.m */,
+				F7DA525A200499B200777016 /* LYStatckViewDemoController.xib */,
+				F7A67FD3200DFAB9003E1B0C /* LYStackDynamicController.h */,
+				F7A67FD4200DFAB9003E1B0C /* LYStackDynamicController.m */,
+				F7D659432015906200479572 /* LYIntrinsicSizeDemoController.h */,
+				F7D659442015906200479572 /* LYIntrinsicSizeDemoController.m */,
+				F7D659452015906200479572 /* LYIntrinsicSizeDemoController.xib */,
+				F7D659482015BAFB00479572 /* LYSizeToFitIntrinsicSize.h */,
+				F7D659492015BAFB00479572 /* LYSizeToFitIntrinsicSize.m */,
+				F7E033B220162D86006C69D3 /* LYBaseLayoutDemoController.h */,
+				F7E033B320162D86006C69D3 /* LYBaseLayoutDemoController.m */,
+				F7DA522B2004988500777016 /* Main.storyboard */,
+				F7A67FD6200E001F003E1B0C /* icon_star.png */,
+				F7A67FD1200DE3F5003E1B0C /* 1.png */,
+				F7A67FCF200DE3EE003E1B0C /* 2.png */,
+				F7DA522E2004988500777016 /* Assets.xcassets */,
+				F7DA52302004988500777016 /* LaunchScreen.storyboard */,
+				F7DA52332004988500777016 /* Info.plist */,
+				F7DA52342004988500777016 /* main.m */,
+				F7C5A65F20181F63001423C9 /* LYLayoutPriorityDemoController.h */,
+				F7C5A66020181F63001423C9 /* LYLayoutPriorityDemoController.m */,
+				F7C5A662201832DF001423C9 /* LYDynamicSizeDemoController.h */,
+				F7C5A663201832DF001423C9 /* LYDynamicSizeDemoController.m */,
+				F70BC73A2019B5B800A3D1F9 /* LYLayoutGuideController.h */,
+				F70BC73B2019B5B800A3D1F9 /* LYLayoutGuideController.m */,
+				F70BC73D2019D56300A3D1F9 /* WLAutoSizeTableView.h */,
+				F70BC73E2019D56300A3D1F9 /* WLAutoSizeTableView.m */,
+				F7591AEF201E15B400F87E64 /* LYAmbiguousLayoutsDemo.h */,
+				F7591AF0201E15B400F87E64 /* LYAmbiguousLayoutsDemo.m */,
+				F792CDC820214D9C0051C53C /* LYProgramaLayoutDemo.h */,
+				F792CDC920214D9C0051C53C /* LYProgramaLayoutDemo.m */,
+				F792CDC5202149E80051C53C /* LYLayoutAnchorsDemo.h */,
+				F792CDC6202149E80051C53C /* LYLayoutAnchorsDemo.m */,
+				F792CDCB2021592D0051C53C /* LYLayoutConstraintDemo.h */,
+				F792CDCC2021592D0051C53C /* LYLayoutConstraintDemo.m */,
+				F792CDCE20216C120051C53C /* LYVisualFormatDemo.h */,
+				F792CDCF20216C120051C53C /* LYVisualFormatDemo.m */,
+				F7AC458020246AA8008FB23B /* LYSelfSizeCellDemo.h */,
+				F7AC458120246AA8008FB23B /* LYSelfSizeCellDemo.m */,
+				F7AC458320246AF6008FB23B /* LYSelfSizeCell.h */,
+				F7AC458420246AF6008FB23B /* LYSelfSizeCell.m */,
+			);
+			path = autoLayoutDemo;
+			sourceTree = "<group>";
+		};
+		F7DA523D2004988500777016 /* autoLayoutDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				F7DA523E2004988500777016 /* autoLayoutDemoTests.m */,
+				F7DA52402004988600777016 /* Info.plist */,
+			);
+			path = autoLayoutDemoTests;
+			sourceTree = "<group>";
+		};
+		F7DA52482004988600777016 /* autoLayoutDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F7DA52492004988600777016 /* autoLayoutDemoUITests.m */,
+				F7DA524B2004988600777016 /* Info.plist */,
+			);
+			path = autoLayoutDemoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F7DA52212004988500777016 /* autoLayoutDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7DA524E2004988600777016 /* Build configuration list for PBXNativeTarget "autoLayoutDemo" */;
+			buildPhases = (
+				7AA7F390DBC1593F8C8F699C /* [CP] Check Pods Manifest.lock */,
+				F7DA521E2004988500777016 /* Sources */,
+				F7DA521F2004988500777016 /* Frameworks */,
+				F7DA52202004988500777016 /* Resources */,
+				FAA92505B3A525CD125615F4 /* [CP] Embed Pods Frameworks */,
+				79E1DA55D60F4D6A14790146 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = autoLayoutDemo;
+			productName = autoLayoutDemo;
+			productReference = F7DA52222004988500777016 /* autoLayoutDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F7DA52392004988500777016 /* autoLayoutDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7DA52512004988600777016 /* Build configuration list for PBXNativeTarget "autoLayoutDemoTests" */;
+			buildPhases = (
+				F7DA52362004988500777016 /* Sources */,
+				F7DA52372004988500777016 /* Frameworks */,
+				F7DA52382004988500777016 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7DA523C2004988500777016 /* PBXTargetDependency */,
+			);
+			name = autoLayoutDemoTests;
+			productName = autoLayoutDemoTests;
+			productReference = F7DA523A2004988500777016 /* autoLayoutDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F7DA52442004988600777016 /* autoLayoutDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7DA52542004988600777016 /* Build configuration list for PBXNativeTarget "autoLayoutDemoUITests" */;
+			buildPhases = (
+				F7DA52412004988600777016 /* Sources */,
+				F7DA52422004988600777016 /* Frameworks */,
+				F7DA52432004988600777016 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7DA52472004988600777016 /* PBXTargetDependency */,
+			);
+			name = autoLayoutDemoUITests;
+			productName = autoLayoutDemoUITests;
+			productReference = F7DA52452004988600777016 /* autoLayoutDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F7DA521A2004988500777016 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LY;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "倪望龙";
+				TargetAttributes = {
+					F7DA52212004988500777016 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					F7DA52392004988500777016 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F7DA52212004988500777016;
+					};
+					F7DA52442004988600777016 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F7DA52212004988500777016;
+					};
+				};
+			};
+			buildConfigurationList = F7DA521D2004988500777016 /* Build configuration list for PBXProject "autoLayoutDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F7DA52192004988500777016;
+			productRefGroup = F7DA52232004988500777016 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7DA52212004988500777016 /* autoLayoutDemo */,
+				F7DA52392004988500777016 /* autoLayoutDemoTests */,
+				F7DA52442004988600777016 /* autoLayoutDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F7DA52202004988500777016 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7DA52322004988500777016 /* LaunchScreen.storyboard in Resources */,
+				F7DA522F2004988500777016 /* Assets.xcassets in Resources */,
+				F7D659472015906200479572 /* LYIntrinsicSizeDemoController.xib in Resources */,
+				F7DA525B200499B200777016 /* LYStatckViewDemoController.xib in Resources */,
+				F7A67FD7200E001F003E1B0C /* icon_star.png in Resources */,
+				F7A67FD0200DE3EE003E1B0C /* 2.png in Resources */,
+				F7A67FD2200DE3F5003E1B0C /* 1.png in Resources */,
+				F7DA522D2004988500777016 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7DA52382004988500777016 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7DA52432004988600777016 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		79E1DA55D60F4D6A14790146 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-autoLayoutDemo/Pods-autoLayoutDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AA7F390DBC1593F8C8F699C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-autoLayoutDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAA92505B3A525CD125615F4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-autoLayoutDemo/Pods-autoLayoutDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F7DA521E2004988500777016 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F792CDCD2021592D0051C53C /* LYLayoutConstraintDemo.m in Sources */,
+				F7DA522A2004988500777016 /* ViewController.m in Sources */,
+				F7D6594A2015BAFB00479572 /* LYSizeToFitIntrinsicSize.m in Sources */,
+				F7C5A66120181F63001423C9 /* LYLayoutPriorityDemoController.m in Sources */,
+				F7591AF1201E15B400F87E64 /* LYAmbiguousLayoutsDemo.m in Sources */,
+				F7A67FD5200DFAB9003E1B0C /* LYStackDynamicController.m in Sources */,
+				F7DA52352004988500777016 /* main.m in Sources */,
+				F7DA5259200498C700777016 /* LYStatckViewDemoController.m in Sources */,
+				F7AC458220246AA8008FB23B /* LYSelfSizeCellDemo.m in Sources */,
+				F70BC73C2019B5B800A3D1F9 /* LYLayoutGuideController.m in Sources */,
+				F7D659462015906200479572 /* LYIntrinsicSizeDemoController.m in Sources */,
+				F7E033B520162D86006C69D3 /* LYBaseLayoutDemoController.m in Sources */,
+				F792CDC7202149E80051C53C /* LYLayoutAnchorsDemo.m in Sources */,
+				F7C5A664201832DF001423C9 /* LYDynamicSizeDemoController.m in Sources */,
+				F792CDCA20214D9C0051C53C /* LYProgramaLayoutDemo.m in Sources */,
+				F70BC73F2019D56300A3D1F9 /* WLAutoSizeTableView.m in Sources */,
+				F7AC458520246AF6008FB23B /* LYSelfSizeCell.m in Sources */,
+				F792CDD020216C120051C53C /* LYVisualFormatDemo.m in Sources */,
+				F7DA52272004988500777016 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7DA52362004988500777016 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7DA523F2004988500777016 /* autoLayoutDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7DA52412004988600777016 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7DA524A2004988600777016 /* autoLayoutDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F7DA523C2004988500777016 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7DA52212004988500777016 /* autoLayoutDemo */;
+			targetProxy = F7DA523B2004988500777016 /* PBXContainerItemProxy */;
+		};
+		F7DA52472004988600777016 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7DA52212004988500777016 /* autoLayoutDemo */;
+			targetProxy = F7DA52462004988600777016 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F7DA522B2004988500777016 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7DA522C2004988500777016 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F7DA52302004988500777016 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7DA52312004988500777016 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F7DA524C2004988600777016 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F7DA524D2004988600777016 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F7DA524F2004988600777016 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 923FBA05C57D993AB8F0EF56 /* Pods-autoLayoutDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T734GGWG37;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
+				INFOPLIST_FILE = autoLayoutDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bee.jy.autoLayoutDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F7DA52502004988600777016 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 581A4592C2F4C554B5117E61 /* Pods-autoLayoutDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T734GGWG37;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
+				INFOPLIST_FILE = autoLayoutDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bee.jy.autoLayoutDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F7DA52522004988600777016 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T734GGWG37;
+				INFOPLIST_FILE = autoLayoutDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bee.jy.autoLayoutDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/autoLayoutDemo.app/autoLayoutDemo";
+			};
+			name = Debug;
+		};
+		F7DA52532004988600777016 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T734GGWG37;
+				INFOPLIST_FILE = autoLayoutDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bee.jy.autoLayoutDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/autoLayoutDemo.app/autoLayoutDemo";
+			};
+			name = Release;
+		};
+		F7DA52552004988600777016 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T734GGWG37;
+				INFOPLIST_FILE = autoLayoutDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bee.jy.autoLayoutDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = autoLayoutDemo;
+			};
+			name = Debug;
+		};
+		F7DA52562004988600777016 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T734GGWG37;
+				INFOPLIST_FILE = autoLayoutDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bee.jy.autoLayoutDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = autoLayoutDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F7DA521D2004988500777016 /* Build configuration list for PBXProject "autoLayoutDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7DA524C2004988600777016 /* Debug */,
+				F7DA524D2004988600777016 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7DA524E2004988600777016 /* Build configuration list for PBXNativeTarget "autoLayoutDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7DA524F2004988600777016 /* Debug */,
+				F7DA52502004988600777016 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7DA52512004988600777016 /* Build configuration list for PBXNativeTarget "autoLayoutDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7DA52522004988600777016 /* Debug */,
+				F7DA52532004988600777016 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7DA52542004988600777016 /* Build configuration list for PBXNativeTarget "autoLayoutDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7DA52552004988600777016 /* Debug */,
+				F7DA52562004988600777016 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F7DA521A2004988500777016 /* Project object */;
+}
